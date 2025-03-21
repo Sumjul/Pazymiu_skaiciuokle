@@ -1,0 +1,7 @@
+*.exe
+*.txt
+!CMakeLists.txt
+.qodo
+*.qodo
+.vscode
+*.json
