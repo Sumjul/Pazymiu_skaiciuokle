@@ -21,7 +21,6 @@ using std::system_error;
 const int maxStud = 10000000;
 extern double globalTime;
 
-
 // Class that measures time.
 class Timer
 {

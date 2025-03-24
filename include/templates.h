@@ -33,7 +33,7 @@ void ReadFromFile(Container &group, int action)
 						markInput.push_back(mark);
 					if (!markInput.empty())
 					{
-						temp.egzam = markInput.back();
+						temp.exam = markInput.back();
 						markInput.pop_back();
 						temp.marks = std::move(markInput);
 					}
@@ -119,7 +119,7 @@ void Action(Container &group, int action)
 			}
 
 			cout << "Iveskite studento egzamino pazymi: " << endl;
-			temp.egzam = NumberCheck(1, 10);
+			temp.exam = NumberCheck(1, 10);
 			group.push_back(temp);
 		}
 		else if (action == 2 || action == 3)
@@ -127,7 +127,7 @@ void Action(Container &group, int action)
 			int amountMarks = rand() % 100 + 1;
 			for (int j = 0; j < amountMarks; j++)
 				temp.marks.push_back(rand() % 10 + 1);
-			temp.egzam = rand() % 10 + 1;
+			temp.exam = rand() % 10 + 1;
 			group.push_back(temp);
 		}
 
@@ -144,23 +144,9 @@ void Action(Container &group, int action)
 template <typename Container>
 void Calculations(Container &group)
 {
-	for (auto &final : group)
-	{
-		double sum = 0;
-		for (auto temp : final.marks)
-			sum += temp;
-		if (final.marks.empty())
-		{
-			final.average = 0;
-			final.median = 0;
-			continue;
-		}
-		final.average = 0.4 * (sum / final.marks.size()) + 0.6 * final.egzam;
-		sort(final.marks.begin(), final.marks.end());
-		if (final.marks.size() % 2 == 0)
-			final.median = (final.marks[final.marks.size() / 2 - 1] + final.marks[final.marks.size() / 2]) / 2.0;
-		else
-			final.median = final.marks[final.marks.size() / 2];
+	for (auto &final : group) {
+		final.calculateAverage();
+		final.calculateMedian();
 	}
 }
 
@@ -276,7 +262,7 @@ void GenerateFile(Container &group)
 		temp.surname = "PavardeNr" + std::to_string(i);
 		for (int j = 0; j < amountMarks; j++)
 			temp.marks.push_back(rand() % 10 + 1);
-		temp.egzam = rand() % 10 + 1;
+		temp.exam = rand() % 10 + 1;
 		group.push_back(temp);
 	}
 	ofstream out(fout);
@@ -289,7 +275,7 @@ void GenerateFile(Container &group)
 		out << left << setw(20) << final.name << setw(20) << final.surname;
 		for (auto mark : final.marks)
 			out << left << setw(10) << mark;
-		out << setw(10) << final.egzam << endl;
+		out << setw(10) << final.exam << endl;
 	}
 	out.close();
 	cout << "Duomenys buvo sekmingai sukurti faile: " << fout << endl;
