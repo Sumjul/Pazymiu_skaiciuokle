@@ -74,120 +74,64 @@ arba Windows sistemoje tiesiog dukart spustelėkite `run.bat` failą.
 - **RAM:** SODIMM; 16,0 GB
 - **SSD:** Micron_2450; 954 GB
 
-## 1. **Struktūros** našumo testavimas su vektoriumi, taikant trečią strategiją
+## 1. **Struktūros** našumo testavimas su vektoriumi, taikant trečią strategiją (programos veikimo greitis ir .exe failo dydis)
 
-### 1.1. Be optimizavimo (greitis)
+### 1.1. Be optimizavimo
 
-| Failas           | Laikas (s)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+| Failas           | Laikas (s)       | Baitai (B)       |
+|------------------|------------------|------------------|
+| `st100000.txt`   | 1.31115          | 889 156          |
+| `st1000000.txt`  | 10.5171          | 889 156          |
 
-### 1.2. Be optimizavimo (failo dydis)
+### 1.2. Naudojant -O1
 
-| Failas           | Baitai (B)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+| Failas           | Laikas (s)       | Baitai (B)       |
+|------------------|------------------|------------------|
+| `st100000.txt`   | 1.15939          | 1 146 455        |
+| `st1000000.txt`  | 8.29775          | 1 146 455        |
 
-### 1.3. Su -O1 (gretis)
+### 1.3. Naudojant -O2
 
-| Failas           | Laikas (s)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+| Failas           | Laikas (s)       | Baitai (B)       |
+|------------------|------------------|------------------|
+| `st100000.txt`   | 1.14631          | 1 185 457        |
+| `st1000000.txt`  | 7.91273          | 1 185 457        |
 
-### 1.4. Su -O1 (failo dydis)
+### 1.4. Naudojant -O3
 
-| Failas           | Baitai (B)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+| Failas           | Laikas (s)       | Baitai (B)       |
+|------------------|------------------|------------------|
+| `st100000.txt`   | 1.10491          | 1 389 320        |
+| `st1000000.txt`  | 7.56451          | 1 389 320        |
 
-### 1.5. Su -O2 (gretis)
+## 2. **Klasės** našumo testavimas su vektoriumi, taikant trečią strategiją (programos veikimo greitis ir .exe failo dydis)
 
-| Failas           | Laikas (s)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+### 2.1. Be optimizavimo
 
-### 1.6. Su -O2 (failo dydis)
+| Failas           | Laikas (s)       | Baitai (B)       |
+|------------------|------------------|------------------|
+| `st100000.txt`   |           |         |
+| `st1000000.txt`  |           |         |
 
-| Failas           | Baitai (B)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+### 2.2. Naudojant -O1
 
-### 1.7. Su -O3 (greitis)
+| Failas           | Laikas (s)       | Baitai (B)       |
+|------------------|------------------|------------------|
+| `st100000.txt`   |           |         |
+| `st1000000.txt`  |           |         |
 
-| Failas           | Laikas (s)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+### 2.3. Naudojant -O2
 
-### 1.8. Su -O3 (failo dydis)
+| Failas           | Laikas (s)       | Baitai (B)       |
+|------------------|------------------|------------------|
+| `st100000.txt`   |           |         |
+| `st1000000.txt`  |           |         |
 
-| Failas           | Baitai (B)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+### 2.4. Naudojant -O3
 
-## 2. **Klasės** našumo testavimas su vektoriumi, taikant trečią strategiją
-
-### 2.1. Be optimizavimo (greitis)
-
-| Failas           | Laikas (s)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
-
-### 2.2. Be optimizavimo (failo dydis)
-
-| Failas           | Baitai (B)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
-
-### 2.3. Su -O1 (gretis)
-
-| Failas           | Laikas (s)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
-
-### 2.4. Su -O1 (failo dydis)
-
-| Failas           | Baitai (B)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
-
-### 2.5. Su -O2 (gretis)
-
-| Failas           | Laikas (s)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
-
-### 2.6. Su -O2 (failo dydis)
-
-| Failas           | Baitai (B)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
-
-### 2.7. Su -O3 (greitis)
-
-| Failas           | Laikas (s)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
-
-### 2.8. Su -O3 (failo dydis)
-
-| Failas           | Baitai (B)       |
-|------------------|------------------|
-| `st100000.txt`   |           |
-| `st1000000.txt`  |           |
+| Failas           | Laikas (s)       | Baitai (B)       |
+|------------------|------------------|------------------|
+| `st100000.txt`   |           |         |
+| `st1000000.txt`  |           |         |
 
 ## 3. Išvados
