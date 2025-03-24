@@ -21,15 +21,6 @@ using std::system_error;
 const int maxStud = 10000000;
 extern double globalTime;
 
-// Structure that holds student data.
-struct Student
-{
-    string name = "Vardenis", surname = "Pavardenis";
-    vector<int> marks;
-    int egzam = 0;
-    double average = 0;
-    double median = 0;
-};
 
 // Class that measures time.
 class Timer
