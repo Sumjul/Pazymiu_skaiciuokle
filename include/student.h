@@ -3,7 +3,7 @@
 // Class that holds student data.
 class Student
 {
-public:
+private:
     string name, surname;
     vector<int> marks;
     int exam;
@@ -26,6 +26,7 @@ public:
     void setExam(int newExam) { exam = newExam; }
     void addMark(int mark) { marks.push_back(mark); }
 
+    void readLine(string line);
     void calculateAverage();
     void calculateMedian();
 };

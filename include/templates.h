@@ -24,20 +24,9 @@ void ReadFromFile(Container &group, int action)
 				getline(input, line);
 				while (getline(input, line))
 				{
-					istringstream lineStream(line);
 					Student temp;
-					lineStream >> temp.name >> temp.surname;
-					vector<int> markInput;
-					int mark;
-					while (lineStream >> mark)
-						markInput.push_back(mark);
-					if (!markInput.empty())
-					{
-						temp.exam = markInput.back();
-						markInput.pop_back();
-						temp.marks = std::move(markInput);
-					}
-					group.emplace_back(std::move(temp));
+					temp.readLine(line);
+					group.push_back(temp);
 				}
 				input.close();
 				cout << " * Duomenu skaitymas uztruko: " << inputTime.elapsed() << " sekundziu. " << endl;
@@ -79,15 +68,19 @@ void Action(Container &group, int action)
 		Student temp;
 		if (action == 1 || action == 2)
 		{
+			string name;
 			cout << "Iveskite studento varda: " << endl;
-			cin >> temp.name;
+			cin >> name;
+			temp.setName(name);
+			string surname;
 			cout << "Iveskite studento pavarde: " << endl;
-			cin >> temp.surname;
+			cin >> surname;
+			temp.setSurname(name);
 		}
 		else if (action == 3)
 		{
-			temp.name = names[rand() % names.size()];
-			temp.surname = surnames[rand() % surnames.size()];
+			temp.setName(names[rand() % names.size()]);
+			temp.setSurname(surnames[rand() % surnames.size()]);
 		}
 
 		if (action == 1)
@@ -108,26 +101,26 @@ void Action(Container &group, int action)
 					int pazymys = NumberCheck(0, 10);
 					if (pazymys == 0)
 						break;
-					temp.marks.push_back(pazymys);
+					temp.addMark(pazymys);
 				}
 			}
 			else
 			{
 				cout << "Iveskite studento visus atliktu namu darbu rezultatus: " << endl;
 				for (int j = 0; j < kiekPaz; j++)
-					temp.marks.push_back(NumberCheck(1, 10));
+					temp.addMark(NumberCheck(1, 10));
 			}
 
 			cout << "Iveskite studento egzamino pazymi: " << endl;
-			temp.exam = NumberCheck(1, 10);
+			temp.setExam(NumberCheck(1, 10));
 			group.push_back(temp);
 		}
 		else if (action == 2 || action == 3)
 		{
 			int amountMarks = rand() % 100 + 1;
 			for (int j = 0; j < amountMarks; j++)
-				temp.marks.push_back(rand() % 10 + 1);
-			temp.exam = rand() % 10 + 1;
+				temp.addMark(rand() % 10 + 1);
+			temp.setExam(rand() % 10 + 1);
 			group.push_back(temp);
 		}
 
@@ -165,11 +158,11 @@ double Sort(Container &group, int &markAction)
 	auto compare = [&](const Student &a, const Student &b)
 	{
 		if (sortAction == 1)
-			return a.name < b.name;
+			return a.getName() < b.getName();
 		if (sortAction == 2)
-			return a.surname < b.surname;
+			return a.getSurname() < b.getSurname();
 		if (sortAction == 3)
-			return (markAction == 1) ? (a.average < b.average) : (a.median < b.median);
+			return (markAction == 1) ? (a.getAverage() < b.getAverage()) : (a.getMedian() < b.getMedian());
 		return false;
 	};
 	if constexpr (std::is_same_v<Container, vector<Student>> || std::is_same_v<Container, deque<Student>>)
@@ -196,11 +189,11 @@ void Output(Container &group, ostream &out, int markAction)
 	out << "------------------------------------------------------------" << endl;
 	for (auto &final : group)
 	{
-		out << left << setw(20) << final.surname << setw(20) << final.name;
+		out << left << setw(20) << final.getSurname() << setw(20) << final.getName();
 		if (markAction == 1)
-			out << setw(20) << fixed << setprecision(2) << final.average << endl;
+			out << setw(20) << fixed << setprecision(2) << final.getAverage() << endl;
 		else if (markAction == 2)
-			out << setw(20) << fixed << setprecision(2) << final.median << endl;
+			out << setw(20) << fixed << setprecision(2) << final.getMedian() << endl;
 	}
 	globalTime += outputTime.elapsed();
 	cout << " * Rezultatu isvedimas uztruko: " << outputTime.elapsed() << " sekundziu. " << endl;
@@ -212,7 +205,7 @@ void SeparateStudents(Container &group, Container &failed)
 {
 	Timer separationTime;
 	auto it = std::partition(group.begin(), group.end(), [](const Student &final) {
-		return final.average >= 5;
+		return final.getAverage() >= 5;
 	});
 	failed.insert(failed.end(), it, group.end());
 	group.erase(it, group.end());
@@ -258,11 +251,11 @@ void GenerateFile(Container &group)
 	for (int i = 1; i <= amountStud; i++)
 	{
 		Student temp;
-		temp.name = "VardasNr" + std::to_string(i);
-		temp.surname = "PavardeNr" + std::to_string(i);
+		temp.setName("VardasNr" + std::to_string(i));
+		temp.setSurname("PavardeNr" + std::to_string(i));
 		for (int j = 0; j < amountMarks; j++)
-			temp.marks.push_back(rand() % 10 + 1);
-		temp.exam = rand() % 10 + 1;
+			temp.addMark((rand() % 10 + 1));
+		temp.setExam(rand() % 10 + 1);
 		group.push_back(temp);
 	}
 	ofstream out(fout);
@@ -272,10 +265,10 @@ void GenerateFile(Container &group)
 	out << setw(10) << "Egz." << endl;
 	for (auto &final : group)
 	{
-		out << left << setw(20) << final.name << setw(20) << final.surname;
-		for (auto mark : final.marks)
+		out << left << setw(20) << final.getName() << setw(20) << final.getSurname();
+		for (auto mark : final.getMarks())
 			out << left << setw(10) << mark;
-		out << setw(10) << final.exam << endl;
+		out << setw(10) << final.getExam() << endl;
 	}
 	out.close();
 	cout << "Duomenys buvo sekmingai sukurti faile: " << fout << endl;

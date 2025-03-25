@@ -3,12 +3,31 @@
 #include "../include/student.h"
 #include "../include/templates.h"
 
-// Calculate the average of marks and exam (weighted).
+void Student::readLine(string line) {
+	istringstream lineStream(line);
+	lineStream >> name >> surname;
+	vector<int> markInput;
+	int mark;
+	while (lineStream >> mark)
+		markInput.push_back(mark);
+	if (!markInput.empty())
+	{
+		exam = markInput.back();
+		markInput.pop_back();
+		marks = std::move(markInput);
+	}
+}
+
+
+
+
+// Function that calculates the average marks of students.
 void Student::calculateAverage()
 {
 	if (marks.empty())
 	{
 		average = 0;
+		median = 0;
 	}
 	else
 	{
@@ -21,12 +40,12 @@ void Student::calculateAverage()
 	}
 }
 
-// Calculate the median of marks
+// Function that calculates the median marks of students.
 void Student::calculateMedian()
 {
 	if (marks.empty())
 	{
-		median = 0;
+		
 	}
 	else
 	{
