@@ -33,18 +33,18 @@ void Student::calculateMedian()
 }
 
 // Function that reads a line from a file and assigns it to a student.
-void Student::readLine(string line)
+void Student::readLine(const string &line)
 {
 	istringstream lineStream(line);
 	lineStream >> name_ >> surname_;
 	vector<int> markInput;
 	int mark;
 	while (lineStream >> mark)
-		markInput.push_back(mark);
+		markInput.emplace_back(mark);
 	if (!markInput.empty())
 	{
 		exam_ = markInput.back();
 		markInput.pop_back();
-		marks_ = std::move(markInput);
+		marks_ = move(markInput);
 	}
 }

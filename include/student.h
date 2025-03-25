@@ -12,15 +12,8 @@ private:
 public:
     // Constructor and destructor
     Student(const string &name = "Vardenis", const string &surname = "Pavardenis", int exam = 0)
-        : name_(name), surname_(surname), exam_(exam)
-    {
-        marks_.reserve(100);
-        calculateAverage();
-        calculateMedian();
-    }
-    ~Student() {
-        marks_.clear();
-    }
+        : name_(name), surname_(surname), exam_(exam), average_(0.0), median_(0.0) { marks_.reserve(20); }
+    ~Student() { marks_.clear(); }
 
     // Getters
     string getName() const { return name_; }
@@ -39,5 +32,5 @@ public:
     // Functions
     void calculateAverage();
     void calculateMedian();
-    void readLine(string line);
+    void readLine(const string &line);
 };

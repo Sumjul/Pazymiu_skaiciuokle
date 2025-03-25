@@ -7,7 +7,7 @@ int main()
 {
 	// Uncomment the container you want to use
 
-	vector<Student> group, failed; group.reserve(maxStud);
+	vector<Student> group, failed; group.reserve(maxStud); failed.reserve(maxStud);
 	//deque<Student> group, failed;
 	//list<Student> group, failed;
 

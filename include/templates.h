@@ -207,7 +207,7 @@ void SeparateStudents(Container &group, Container &failed)
 	auto it = std::partition(group.begin(), group.end(), [](const Student &final) {
 		return final.getAverage() >= 5;
 	});
-	failed.insert(failed.end(), it, group.end());
+	failed.insert(failed.end(), std::make_move_iterator(it), std::make_move_iterator(group.end()));
 	group.erase(it, group.end());
 	globalTime += separationTime.elapsed();
 	cout << " * Studentu skirstymas i 2 kategorijas uztruko: " << separationTime.elapsed() << " sekundziu. " << endl;
