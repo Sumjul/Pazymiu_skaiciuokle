@@ -7,17 +7,12 @@
 void Student::calculateAverage()
 {
 	if (marks_.empty())
-	{
 		average_ = 0;
-		median_ = 0;
-	}
 	else
 	{
 		double sum = 0;
 		for (auto temp : marks_)
-		{
 			sum += temp;
-		}
 		average_ = 0.4 * (sum / marks_.size()) + 0.6 * exam_;
 	}
 }
@@ -26,8 +21,7 @@ void Student::calculateAverage()
 void Student::calculateMedian()
 {
 	if (marks_.empty())
-	{
-	}
+		median_ = 0;
 	else
 	{
 		sort(marks_.begin(), marks_.end());

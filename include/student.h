@@ -10,6 +10,7 @@ private:
     double average_, median_;
 
 public:
+    // Constructor and destructor
     Student(const string &name = "Vardenis", const string &surname = "Pavardenis", int exam = 0)
         : name_(name), surname_(surname), exam_(exam)
     {

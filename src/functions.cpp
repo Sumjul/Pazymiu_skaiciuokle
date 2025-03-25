@@ -29,6 +29,7 @@ int NumberCheck(int min, int max)
 	return number;
 }
 
+// Function that displays the menu and returns the selected action.
 int Menu()
 {
 	cout << "Sveiki atvyke i pazymiu skaiciuokle! Pasirinkite veiksma spausdami skaiciu ir tada spauskite Enter." << endl;
@@ -55,40 +56,35 @@ void ProgramEnd()
 	cin.get();
 }
 
+// Function that processes exceptions.
 void ProcessException()
 {
 	try
 	{
-		throw; // Rethrow the exception to be caught here
+		throw;
 	}
 	catch (const ios_base::failure &e)
 	{
 		cerr << "Ivesties/isvesties isimtis: " << e.what() << endl;
-		// You can add additional logging or actions if needed
 	}
 	catch (const system_error &e)
 	{
 		cerr << "Sistemos isimtis: " << e.what() << endl;
-		// Additional handling for system errors
 	}
 	catch (const future_error &e)
 	{
 		cerr << "Ateities užduoties isimtis: " << e.what() << endl;
-		// Future error handling
 	}
 	catch (const bad_alloc &e)
 	{
 		cerr << "Priskyrimo klaida (bad_alloc): " << e.what() << endl;
-		// Handling memory allocation errors
 	}
 	catch (const exception &e)
 	{
 		cerr << "Klaida: " << e.what() << endl;
-		// General exception handling
 	}
 	catch (...)
 	{
 		cerr << "Nežinoma klaida. " << endl;
-		// Catch any unknown exceptions
 	}
 }
