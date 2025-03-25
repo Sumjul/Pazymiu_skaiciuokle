@@ -4,29 +4,39 @@
 class Student
 {
 private:
-    string name, surname;
-    vector<int> marks;
-    int exam;
-    double average, median;
-    
+    string name_, surname_;
+    vector<int> marks_;
+    int exam_;
+    double average_, median_;
 
 public:
-    Student() {}
-    ~Student() {}
+    Student(const string &name = "Vardenis", const string &surname = "Pavardenis", int exam = 0)
+        : name_(name), surname_(surname), exam_(exam)
+    {
+        marks_.reserve(100);
+        calculateAverage();
+        calculateMedian();
+    }
+    ~Student() {
+        marks_.clear();
+    }
 
-    string getName() const { return name; }
-    string getSurname() const { return surname; }
-    int getExam() const { return exam; }
-    const vector<int>& getMarks() const { return marks; }
-    double getAverage() const { return average; }
-    double getMedian() const { return median; }
+    // Getters
+    string getName() const { return name_; }
+    string getSurname() const { return surname_; }
+    const vector<int> &getMarks() const { return marks_; }
+    int getExam() const { return exam_; }
+    double getAverage() const { return average_; }
+    double getMedian() const { return median_; }
 
-    void setName(const string& newName) { name = newName; }
-    void setSurname(const string& newSurname) { surname = newSurname; }
-    void setExam(int newExam) { exam = newExam; }
-    void addMark(int mark) { marks.push_back(mark); }
+    // Setters
+    void setName(const string &newName) { name_ = newName; }
+    void setSurname(const string &newSurname) { surname_ = newSurname; }
+    void addMark(int mark) { marks_.push_back(mark); }
+    void setExam(int newExam) { exam_ = newExam; }
 
-    void readLine(string line);
+    // Functions
     void calculateAverage();
     void calculateMedian();
+    void readLine(string line);
 };
