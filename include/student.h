@@ -10,12 +10,20 @@ private:
     double average_, median_;
 
 public:
-    // Constructor and destructor
+    // Constructors
     Student(const string &name = "Vardenis", const string &surname = "Pavardenis", int exam = 0)
         : name_(name), surname_(surname), exam_(exam), average_(0.0), median_(0.0) { marks_.reserve(20); }
+
+    // Copy constructor and move constructor
     Student(const Student &other);
     Student(Student &&other);
-    ~Student() { }
+
+    // Copy assignment operator and move assignment operator
+    Student &operator=(const Student &other);
+    Student &operator=(Student &&other);
+
+    // Destructor
+    ~Student() { cout << "Destruktorius suveike" << endl; }
 
     // Getters
     string getName() const { return name_; }

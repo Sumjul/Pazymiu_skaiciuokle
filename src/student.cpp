@@ -5,26 +5,49 @@
 
 // Copy constructor
 Student::Student(const Student &other)
-	: name_{other.name_}, surname_{other.surname_}, marks_{other.marks_}, exam_{other.exam_},
-	  average_{other.average_}, median_{other.median_}
-{
-	for (int i=0; i<other.marks_.size(); i++)
-		marks_.push_back(other.marks_[i]);
-}
+	: name_(other.name_), surname_(other.surname_), marks_(other.marks_), exam_(other.exam_),
+	  average_(other.average_), median_(other.median_) {}
 
 // Move constructor
 Student::Student(Student &&other)
-	: name_{move(other.name_)}, surname_{move(other.surname_)}, marks_{move(other.marks_)},
-	  exam_{other.exam_}, average_{other.average_}, median_{other.median_}
+	: name_(move(other.name_)), surname_(move(other.surname_)), marks_(move(other.marks_)),
+	  exam_(other.exam_), average_(other.average_), median_(other.median_)
 {
 	other.exam_ = 0;
 	other.average_ = 0;
 	other.median_ = 0;
-	other.marks_.clear();
-	other.marks_ = nullptr;
 }
 
+// Copy assignment operator
+Student &Student::operator=(const Student &other)
+{
+	if (this == &other)
+		return *this;
+	name_ = other.name_;
+	surname_ = other.surname_;
+	marks_ = other.marks_;
+	exam_ = other.exam_;
+	average_ = other.average_;
+	median_ = other.median_;
+	return *this;
+}
 
+// Move assignment operator
+Student &Student::operator=(Student &&other)
+{
+	if (this == &other)
+		return *this;
+	name_ = move(other.name_);
+	surname_ = move(other.surname_);
+	marks_ = move(other.marks_);
+	exam_ = other.exam_;
+	average_ = other.average_;
+	median_ = other.median_;
+	other.exam_ = 0;
+	other.average_ = 0;
+	other.median_ = 0;
+	return *this;
+}
 
 // Function that calculates the average marks of students.
 void Student::calculateAverage()

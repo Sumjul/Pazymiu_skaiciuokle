@@ -41,8 +41,9 @@ int Menu()
 	cout << "4 - nauduoti duomenis is failo;" << endl;
 	cout << "5 - sugeneruoti duomenis ir isvesti i faila;" << endl;
 	cout << "6 - surusiuoti studentus i 2 failus." << endl;
+	cout << "7 - Studento klases testavimas." << endl;
 	cout << "--------------------------------------------" << endl;
-	int action = NumberCheck(0, 6);
+	int action = NumberCheck(0, 7);
 	return action;
 }
 
