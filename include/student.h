@@ -13,7 +13,9 @@ public:
     // Constructor and destructor
     Student(const string &name = "Vardenis", const string &surname = "Pavardenis", int exam = 0)
         : name_(name), surname_(surname), exam_(exam), average_(0.0), median_(0.0) { marks_.reserve(20); }
-    ~Student() { marks_.clear(); }
+    Student(const Student &other);
+    Student(Student &&other);
+    ~Student() { }
 
     // Getters
     string getName() const { return name_; }
