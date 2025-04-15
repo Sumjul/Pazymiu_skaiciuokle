@@ -49,6 +49,14 @@ Student &Student::operator=(Student &&other)
 	return *this;
 }
 
+void Student::printStudent() const
+{
+	cout << "Vardas: " << name_ << ", " << "Pavarde: " << surname_ << ", " << "Galutinis (Vid.): " << average_ << ", " << "Galutinis (Med.): " << median_ << ", " << "Egzaminas: " << exam_ << ", " << "Pazymiai: ";
+	for (auto mark : marks_)
+		cout << mark << " ";
+	cout << endl;
+}
+
 // Function that calculates the average marks of students.
 void Student::calculateAverage()
 {
