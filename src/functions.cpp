@@ -50,7 +50,8 @@ int Menu()
 // Function that ends the program.
 void ProgramEnd()
 {
-	cout << " * Programa veike: " << globalTime << " sekundziu. " << endl;
+	cout << endl;
+	if (globalTime != 0) cout << " * Programa veike: " << globalTime << " sekundziu. " << endl;
 	cout << "Aciu, kad naudojates pazymiu skaiciuokle!" << endl;
 	cout << "Paspauskite Enter, kad uzbaigtumete programos darba." << endl;
 	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

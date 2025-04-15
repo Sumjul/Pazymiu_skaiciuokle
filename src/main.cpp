@@ -52,12 +52,7 @@ int main()
 		cout << endl;
 
 		cout << "=== End of main (destructors will be called) ===" << endl;
-		system("pause");
-		return 0;
 	}
-
-	else if (action == 1 || action == 2 || action == 3)
-		Action(group, action);
 	else if (action == 7)
 		return 0;
 	else if (action == 0)
@@ -75,7 +70,6 @@ int main()
 	else
 	{
 		Action(group, action);
-		Calculations(group);
 		int markAction;
 		Sort(group, markAction);
 		Output(group, cout, markAction);
