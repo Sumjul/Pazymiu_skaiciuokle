@@ -15,7 +15,9 @@ public:
         : name_(name), surname_(surname), exam_(exam), average_(0.0), median_(0.0) { marks_.reserve(20); }
 
     // Destructor
-    ~Student() { cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl; }
+    ~Student() { 
+        cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl; 
+    }
 
     // Copy constructor and move constructor
     Student(const Student &other);
@@ -41,7 +43,7 @@ public:
     // Setters
     void setName(const string &newName) { name_ = newName; }
     void setSurname(const string &newSurname) { surname_ = newSurname; }
-    void addMark(int mark) { marks_.push_back(mark); }
+    void addMark(int mark) { marks_.push_back(move(mark)); }
     void setExam(int newExam) { exam_ = newExam; }
 
     // Functions

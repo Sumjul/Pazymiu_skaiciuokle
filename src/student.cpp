@@ -94,9 +94,9 @@ istream &operator>>(istream &in, Student &student)
 	}
 	cout << "Iveskite studento egzamino pazymi: " << endl;
 	student.setExam(NumberCheck(1, 10));
-    student.calculateAverage();
-    student.calculateMedian();
-    return in;
+	student.calculateAverage();
+	student.calculateMedian();
+	return in;
 }
 
 void Student::printStudent() const

@@ -26,7 +26,7 @@ void ReadFromFile(Container &group, int action)
 				{
 					Student temp;
 					temp.readLine(line);
-					group.push_back(temp);
+					group.push_back(move(temp));
 				}
 				input.close();
 				cout << " * Duomenu skaitymas uztruko: " << inputTime.elapsed() << " sekundziu. " << endl;
@@ -40,7 +40,10 @@ void ReadFromFile(Container &group, int action)
 			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 	}
-	Calculations(group);
+	for (auto &final : group) {
+		final.calculateAverage();
+		final.calculateMedian();
+	}
 	if (action != 6)
 	{
 		string writeName = "rezultatas.txt";
@@ -66,7 +69,16 @@ void Action(Container &group, int action)
 	for (int i = 0; i < amountStud; i++)
 	{
 		Student temp;
-		if (action == 1 || action == 2) cin >> temp;
+		if (action == 2)
+		{
+			string name, surname;
+			cout << "Iveskite studento varda: ";
+			cin >> name;
+			temp.setName(name);
+			cout << "Iveskite studento pavarde: ";
+			cin >> surname;
+			temp.setSurname(surname);
+		}
 		else if (action == 3)
 		{
 			temp.setName(names[rand() % names.size()]);
@@ -75,14 +87,15 @@ void Action(Container &group, int action)
 		if (action == 2 || action == 3)
 		{
 			int amountMarks = rand() % 100 + 1;
-			for (int j = 0; j < amountMarks; j++)
+			for (int j = 0; j < amountMarks; ++j)
 				temp.addMark(rand() % 10 + 1);
 			temp.setExam(rand() % 10 + 1);
 			temp.calculateAverage();
 			temp.calculateMedian();
 		}
-		group.push_back(temp);
-
+		else if (action == 1) cin >> temp;
+	
+		group.push_back(move(temp));
 		if (!amountStudKnown)
 		{
 			cout << "1 - ivesti dar vieno studento duomenis; 0 - baigti ivedima. " << endl;
@@ -205,7 +218,7 @@ void GenerateFile(Container &group)
 		for (int j = 0; j < amountMarks; j++)
 			temp.addMark((rand() % 10 + 1));
 		temp.setExam(rand() % 10 + 1);
-		group.push_back(temp);
+		group.push_back(move(temp));
 	}
 	ofstream out(fout);
 	out << left << setw(20) << "Vardas" << setw(20) << "Pavarde";
