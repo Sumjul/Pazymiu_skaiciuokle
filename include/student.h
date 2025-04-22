@@ -15,7 +15,7 @@ public:
     {
         cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
     }
-    virtual void printStudent() const = 0;
+    virtual void print() const = 0;
 
     // Getters and setters
     string getName() const { return name_; }
@@ -60,7 +60,7 @@ public:
     int getExam() const { return exam_; }
     double getAverage() const { return average_; }
     double getMedian() const { return median_; }
-    void printStudent() const;
+    void print() const;
     void addMark(int mark) { marks_.push_back(move(mark)); }
     void setExam(int newExam) { exam_ = newExam; }
 

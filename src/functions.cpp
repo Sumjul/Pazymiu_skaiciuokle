@@ -49,6 +49,12 @@ void TestStudentClass() {
     output << inputStudent;
     cout << "Isvestas tekstas i stringstream:\n" << output.str();
 
+	cout << "\n=== Abstrakti klase Human: testas ===" << endl;
+    //Human jonas("Jonas", "Jonaitis"); // Klaida – negalima kurti abstraktaus objekto
+    Human* testHuman = new Student("Jonas", "Jonaitis", 10);
+    testHuman->print();
+    delete testHuman;
+
     cout << "\n===== TESTAVIMAS BAIGTAS =====\n" << endl;
 }
 

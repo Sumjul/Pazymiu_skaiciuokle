@@ -97,7 +97,7 @@ istream &operator>>(istream &in, Student &student)
 	return in;
 }
 
-void Student::printStudent() const
+void Student::print() const
 {
 	cout << "Vardas: " << name_ << ", " << "Pavarde: " << surname_ << ", " << "Galutinis (Vid.): " << average_ << ", " << "Galutinis (Med.): " << median_ << ", " << "Egzaminas: " << exam_ << ", " << "Pazymiai: ";
 	for (auto mark : marks_)
