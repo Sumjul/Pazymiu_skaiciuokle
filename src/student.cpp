@@ -5,12 +5,12 @@
 
 // Copy constructor
 Student::Student(const Student &other)
-	: name_(other.name_), surname_(other.surname_), marks_(other.marks_), exam_(other.exam_),
+	: Human(other), marks_(other.marks_), exam_(other.exam_),
 	  average_(other.average_), median_(other.median_) {}
 
 // Move constructor
 Student::Student(Student &&other)
-	: name_(move(other.name_)), surname_(move(other.surname_)), marks_(move(other.marks_)),
+	: Human(move(other)), marks_(move(other.marks_)),
 	  exam_(other.exam_), average_(other.average_), median_(other.median_)
 {
 	other.exam_ = 0;
@@ -23,8 +23,7 @@ Student &Student::operator=(const Student &other)
 {
 	if (this == &other)
 		return *this;
-	name_ = other.name_;
-	surname_ = other.surname_;
+	Human::operator=(other);
 	marks_ = other.marks_;
 	exam_ = other.exam_;
 	average_ = other.average_;
@@ -37,8 +36,7 @@ Student &Student::operator=(Student &&other)
 {
 	if (this == &other)
 		return *this;
-	name_ = move(other.name_);
-	surname_ = move(other.surname_);
+	Human::operator=(move(other));
 	marks_ = move(other.marks_);
 	exam_ = other.exam_;
 	average_ = other.average_;

@@ -7,6 +7,7 @@ protected:
     string surname_;
 
 public:
+    Human() = default;
     Human(const string &name = "Vardenis", const string &surname = "Pavardenis")
         : name_(name), surname_(surname) {}
 
@@ -14,7 +15,7 @@ public:
     {
         cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
     }
-    virtual void print() const = 0;
+    virtual void printStudent() const = 0;
 
     // Getters and setters
     string getName() const { return name_; }
@@ -54,19 +55,12 @@ public:
     friend ostream &operator<<(ostream &out, const Student &student);
     friend istream &operator>>(istream &in, Student &student);
 
-    // Getters
-    string getName() const { return name_; }
-    string getSurname() const { return surname_; }
+    // Getters and setters
     const vector<int> &getMarks() const { return marks_; }
     int getExam() const { return exam_; }
     double getAverage() const { return average_; }
     double getMedian() const { return median_; }
-
     void printStudent() const;
-
-    // Setters
-    void setName(const string &newName) { name_ = newName; }
-    void setSurname(const string &newSurname) { surname_ = newSurname; }
     void addMark(int mark) { marks_.push_back(move(mark)); }
     void setExam(int newExam) { exam_ = newExam; }
 
