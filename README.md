@@ -1,34 +1,22 @@
-# Naujo funkcialumo aprašymas (v1.2)
+# Naujo funkcialumo aprašymas (v1.5)
 
-## 📌 Metodai ir jų paskirtis
+## 🧬 Klasės struktūra
 
-| Metodas                         | Paskirtis                                                                  |
-|---------------------------------|----------------------------------------------------------------------------|
-| `operator>>`                    | Leidžia įvesti studento duomenis per `cin` arba kitą `istream` srautą      |
-| `operator<<`                    | Leidžia išvesti studento duomenis į `cout` arba kitą `ostream` srautą      |
-| Kopijavimo konstruktorius       | Sukuria naują objektą iš esamo, išlaikydamas jo duomenis                   |
-| Perkėlimo konstruktorius        | Efektyviai perkelia duomenis iš kito objekto                               |
-| Kopijavimo priskyrimo operatorius | Priskiria vieno objekto reikšmes kitam                                   |
-| Perkėlimo priskyrimo operatorius | Efektyviai perkelia reikšmes vienam objektui iš kito                      |
+| Klasė     | Tipas     | Aprašymas                                                                 |
+|-----------|-----------|--------------------------------------------------------------------------|
+| `Human`   | Abstrakti | Bendra klasė visiems žmonėms, aprašo vardą, pavardę, turi virtualų metodą `print()` |
+| `Student` | Išvestinė | Paveldi iš `Human`, aprašo studentų pažymius, egzaminą ir visą reikiamą logiką      |
 
----
+## 🧪 Testų sistema
 
-## 📥 Duomenų įvedimo būdai
+Visi testai iš **v1.2** versijos buvo **pakartotinai patikrinti**:
 
-| Būdas       | Paaiškinimas                                                                 |
-|-------------|------------------------------------------------------------------------------|
-| Rankinis    | Naudojama `cin >> student` sintaksė. Vartotojas įveda vardą, pavardę, pažymius |
-| Automatinis | Studentų skaičius ir duomenys generuojami atsitiktinai                       |
-| Iš failo    | Naudojama `ReadFromFile` funkcija. Duomenys skaitomi iš `.txt` failo         |
-
----
-
-## 📤 Duomenų išvedimo būdai
-
-| Tipas      | Paaiškinimas                                                                 |
-|------------|------------------------------------------------------------------------------|
-| Į ekraną   | Spausdinama per `operator<<` arba `printStudent()` funkciją                  |
-| Į failą    | Naudojama `Output()` funkcija. Duomenys išvedami į `rezultatas.txt`          |
+| Testas                         | Būsena     | Paaiškinimas                                                       |
+|--------------------------------|------------|--------------------------------------------------------------------|
+| Rule of Five testai            | ✅ Veikia  | Visi kopijavimo/perkėlimo metodai veikia kaip tikėtasi             |
+| Operatoriai `>>` ir `<<`       | ✅ Veikia  | Įvedimas/išvedimas per srautus veikia korektiškai                  |
+| `print()` per `Human*`         | ✅ Veikia  | Virtuali funkcija `print()` veikia per polimorfizmą                |
+| Bandymas kurti `Human` objektą| ⛔ Užblokuota | Kompiliatorius blokuoja bandymą kurti `Human` objektą             |
 
 ---
 ---

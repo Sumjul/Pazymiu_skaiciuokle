@@ -5,51 +5,57 @@
 double globalTime = 0;
 
 // Function that test the Student class and its methods.
-void TestStudentClass() {
+void TestStudentClass()
+{
 	cout << "===== TESTAVIMAS: Student klases testai =====" << endl;
-		cout << "\n=== Rule of Five: Sukuriamas Student A ===" << endl;
-		Student A;
-		A.setName("Testas");
-		A.setSurname("Testinis");
-		vector<int> testmarks = { 10, 9, 8, 7, 10, 6, 9, 8 };
-		for (int mark : testmarks) {
-			A.addMark(mark);
-		}
-		A.setExam(9);
-		A.calculateAverage();
-		A.calculateMedian();
-		cout << "A:\n" << A;
+	cout << "\n=== Rule of Five: Kuriamas studentas A ===" << endl;
+	Student A;
+	A.setName("Testas");
+	A.setSurname("Testinis");
+	vector<int> testmarks = {10, 9, 8, 7, 10, 6, 9, 8};
+	for (int mark : testmarks)
+	{
+		A.addMark(mark);
+	}
+	A.setExam(9);
+	A.calculateAverage();
+	A.calculateMedian();
+	cout << "A:\n" << A;
 
-    cout << "\n=== Copy constructor: Student B(A) ===" << endl;
-    Student B = A;
-    cout << "B:\n" << B;
+	cout << "\n=== Kopijavimo konstruktorius: Studentas B(A) ===" << endl;
+	Student B = A;
+	cout << "B:\n" << B;
 
-    cout << "\n=== Move constructor: Student C(std::move(B)) ===" << endl;
-    Student C = std::move(B);
-    cout << "C:\n" << C;
+	cout << "\n=== Perkelimo konstruktorius: Studentas C(std::move(B)) ===" << endl;
+	Student C = move(B);
+	cout << "C:\n" << C;
 
-    cout << "\n=== Copy assignment: Student D = A ===" << endl;
-    Student D;
-    D = A;
-    cout << "D:\n" << D;
+	cout << "\n=== Kopijavimo priskyrimas: Studentas D = A ===" << endl;
+	Student D;
+	D = A;
+	cout << "D:\n" << D;
 
-    cout << "\n=== Move assignment: Student E = std::move(A) ===" << endl;
-    Student E;
-    E = std::move(A);
-    cout << "E:\n" << E;
+	cout << "\n=== Perkelimo priskyrimas: Studentas E = std::move(A) ===" << endl;
+	Student E;
+	E = move(A);
+	cout << "E:\n" << E;
 
-    // --- Testing operator >>
-    cout << "\n=== Operator >> test using stringstream ===" << endl;
-    Student inputStudent;
-    cin >> inputStudent;
+	// --- Testing operator >>
+	cout << "\n=== Operatoriaus >> testavimas ===" << endl;
+	Student inputStudent;
+	cin >> inputStudent;
 
-    // --- Testing operator <<
-    cout << "\n=== Operator << test using stringstream ===" << endl;
-    std::stringstream output;
-    output << inputStudent;
-    cout << "Isvestas tekstas i stringstream:\n" << output.str();
+	// --- Testing operator <<
+	cout << "\n=== Operatoriaus << testavimas ===" << endl;
+	cout << inputStudent;
 
-    cout << "\n===== TESTAVIMAS BAIGTAS =====\n" << endl;
+	cout << "\n=== Abstrakti klase Human: testas ===" << endl;
+	// Human jonas("Jonas", "Jonaitis"); // Klaida – negalima kurti abstraktaus objekto
+	Human *testHuman = new Student("Jonas", "Jonaitis", 10);
+	testHuman->print();
+	delete testHuman;
+
+	cout << "\n===== TESTAVIMAS BAIGTAS =====\n" << endl;
 }
 
 // Function that checks if the input is a number and if it is within the specified range.
@@ -99,7 +105,8 @@ int Menu()
 void ProgramEnd()
 {
 	cout << endl;
-	if (globalTime != 0) cout << " * Programa veike: " << globalTime << " sekundziu. " << endl;
+	if (globalTime != 0)
+		cout << " * Programa veike: " << globalTime << " sekundziu. " << endl;
 	cout << "Aciu, kad naudojates pazymiu skaiciuokle!" << endl;
 	cout << "Paspauskite Enter, kad uzbaigtumete programos darba." << endl;
 	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

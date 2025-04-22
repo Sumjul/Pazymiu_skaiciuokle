@@ -13,20 +13,20 @@ void ReadFromFile(Container &group, int action)
 		try
 		{
 			ifstream input(readName, std::ios::binary);
-			if (!input.is_open())
-			{
+			if (!input)
 				throw std::ios_base::failure("Failas nerastas arba negali buti atidarytas.");
-			}
-			else {
+			else
+			{
 				fileLoaded = true;
 				Timer inputTime;
 				string line;
 				getline(input, line);
 				while (getline(input, line))
 				{
-					Student temp;
-					temp.readLine(line);
-					group.push_back(move(temp));
+					group.emplace_back();
+					group.back().readLine(line);
+					group.back().calculateAverage();
+					group.back().calculateMedian();
 				}
 				input.close();
 				cout << " * Duomenu skaitymas uztruko: " << inputTime.elapsed() << " sekundziu. " << endl;
@@ -39,10 +39,6 @@ void ReadFromFile(Container &group, int action)
 			cin.clear();
 			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
-	}
-	for (auto &final : group) {
-		final.calculateAverage();
-		final.calculateMedian();
 	}
 	if (action != 6)
 	{
@@ -93,8 +89,8 @@ void Action(Container &group, int action)
 			temp.calculateAverage();
 			temp.calculateMedian();
 		}
-		else if (action == 1) cin >> temp;
-	
+		else if (action == 1)
+			cin >> temp;
 		group.push_back(move(temp));
 		if (!amountStudKnown)
 		{
@@ -166,9 +162,8 @@ template <typename Container>
 void SeparateStudents(Container &group, Container &failed)
 {
 	Timer separationTime;
-	auto it = std::partition(group.begin(), group.end(), [](const Student &final) {
-		return final.getAverage() >= 5;
-	});
+	auto it = std::partition(group.begin(), group.end(), [](const Student &final)
+							 { return final.getAverage() >= 5; });
 	failed.insert(failed.end(), std::make_move_iterator(it), std::make_move_iterator(group.end()));
 	group.erase(it, group.end());
 	globalTime += separationTime.elapsed();
