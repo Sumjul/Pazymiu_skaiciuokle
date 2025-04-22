@@ -8,30 +8,35 @@ int main()
 	// Uncomment the container you want to use
 
 	vector<Student> group, failed; group.reserve(maxStud); failed.reserve(maxStud);
-	//deque<Student> group, failed;
-	//list<Student> group, failed;
+	// deque<Student> group, failed;
+	// list<Student> group, failed;
 
 	srand(time(NULL));
 	int action = Menu();
-	if (action == 0)
-		return 0;
-	else if (action == 4)
-		ReadFromFile(group, action);
-	else if (action == 5)
-		GenerateFile(group);
-	else if (action == 6)
+	switch (action)
 	{
+	case 0:
+		return 0;
+	case 4:
+		ReadFromFile(group, action);
+		break;
+	case 5:
+		GenerateFile(group);
+		break;
+	case 6:
 		ReadFromFile(group, action);
 		SeparateStudents(group, failed);
 		OutputSeparated(group, failed);
-	}
-	else
-	{
+		break;
+	case 7:
+		TestStudentClass();
+		break;
+	default:
 		Action(group, action);
-		Calculations(group);
 		int markAction;
 		Sort(group, markAction);
 		Output(group, cout, markAction);
+		break;
 	}
 	ProgramEnd();
 	return 0;

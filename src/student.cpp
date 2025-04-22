@@ -3,6 +3,110 @@
 #include "../include/student.h"
 #include "../include/templates.h"
 
+// Copy constructor
+Student::Student(const Student &other)
+	: name_(other.name_), surname_(other.surname_), marks_(other.marks_), exam_(other.exam_),
+	  average_(other.average_), median_(other.median_) {}
+
+// Move constructor
+Student::Student(Student &&other)
+	: name_(move(other.name_)), surname_(move(other.surname_)), marks_(move(other.marks_)),
+	  exam_(other.exam_), average_(other.average_), median_(other.median_)
+{
+	other.exam_ = 0;
+	other.average_ = 0;
+	other.median_ = 0;
+}
+
+// Copy assignment operator
+Student &Student::operator=(const Student &other)
+{
+	if (this == &other)
+		return *this;
+	name_ = other.name_;
+	surname_ = other.surname_;
+	marks_ = other.marks_;
+	exam_ = other.exam_;
+	average_ = other.average_;
+	median_ = other.median_;
+	return *this;
+}
+
+// Move assignment operator
+Student &Student::operator=(Student &&other)
+{
+	if (this == &other)
+		return *this;
+	name_ = move(other.name_);
+	surname_ = move(other.surname_);
+	marks_ = move(other.marks_);
+	exam_ = other.exam_;
+	average_ = other.average_;
+	median_ = other.median_;
+	other.exam_ = 0;
+	other.average_ = 0;
+	other.median_ = 0;
+	return *this;
+}
+
+// Overloaded output operator for Student class
+ostream &operator<<(ostream &out, const Student &student)
+{
+	out << left << setw(20) << student.getSurname() << setw(20) << student.getName() << setw(20) << fixed << setprecision(2) << student.getAverage() << setw(20) << fixed << setprecision(2) << student.getMedian() << endl;
+	return out;
+}
+
+// Overloaded input operator for Student class
+istream &operator>>(istream &in, Student &student)
+{
+	cout << "Iveskite studento varda: " << endl;
+    in >> student.name_;
+    cout << "Iveskite studento pavarde: " << endl;
+    in >> student.surname_;
+    
+    cout << "Iveskite studento atliktu namu darbu kieki (iveskite 0, jei kiekis yra nezinomas): " << endl;
+    int markCount = NumberCheck(0, 100);
+
+	bool knownCount = true;
+	if (markCount == 0)
+	{
+		knownCount = false;
+		markCount = 100;
+	}
+	if (!knownCount)
+	{
+		cout << "Iveskite studento visus atliktu namu darbu rezultatus (0 - baigti ivedima): " << endl;
+		while (true)
+		{
+			int mark = NumberCheck(0, 10);
+			if (mark == 0) break;
+			student.addMark(mark);
+		}
+	}
+	else
+	{
+		cout << "Iveskite studento visus atliktu namu darbu rezultatus: " << endl;
+		for (int j = 0; j < markCount; j++)
+		{
+			int mark = NumberCheck(1, 10);
+			student.addMark(mark);
+		}
+	}
+	cout << "Iveskite studento egzamino pazymi: " << endl;
+	student.setExam(NumberCheck(1, 10));
+	student.calculateAverage();
+	student.calculateMedian();
+	return in;
+}
+
+void Student::printStudent() const
+{
+	cout << "Vardas: " << name_ << ", " << "Pavarde: " << surname_ << ", " << "Galutinis (Vid.): " << average_ << ", " << "Galutinis (Med.): " << median_ << ", " << "Egzaminas: " << exam_ << ", " << "Pazymiai: ";
+	for (auto mark : marks_)
+		cout << mark << " ";
+	cout << endl;
+}
+
 // Function that calculates the average marks of students.
 void Student::calculateAverage()
 {
