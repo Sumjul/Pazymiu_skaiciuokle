@@ -16,16 +16,17 @@ public:
     {
         cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
     }
-    virtual void print() const = 0;
 
     // Getters and setters
     string getName() const { return name_; }
     string getSurname() const { return surname_; }
     void setName(const string &newName) { name_ = newName; }
     void setSurname(const string &newSurname) { surname_ = newSurname; }
+
+    virtual void print() const = 0;
 };
 
-// Class that holds student data.
+// Class that holds student data and inherits from Human
 class Student : public Human
 {
 private:
@@ -60,11 +61,12 @@ public:
     int getExam() const { return exam_; }
     double getAverage() const { return average_; }
     double getMedian() const { return median_; }
-    void print() const;
+
     void addMark(int mark) { marks_.push_back(move(mark)); }
     void setExam(int newExam) { exam_ = newExam; }
 
     // Functions
+    void print() const;
     void calculateAverage();
     void calculateMedian();
     void readLine(const string &line);

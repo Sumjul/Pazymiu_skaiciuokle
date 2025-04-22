@@ -58,12 +58,11 @@ ostream &operator<<(ostream &out, const Student &student)
 istream &operator>>(istream &in, Student &student)
 {
 	cout << "Iveskite studento varda: " << endl;
-    in >> student.name_;
-    cout << "Iveskite studento pavarde: " << endl;
-    in >> student.surname_;
-    
-    cout << "Iveskite studento atliktu namu darbu kieki (iveskite 0, jei kiekis yra nezinomas): " << endl;
-    int markCount = NumberCheck(0, 100);
+	in >> student.name_;
+	cout << "Iveskite studento pavarde: " << endl;
+	in >> student.surname_;
+	cout << "Iveskite studento atliktu namu darbu kieki (iveskite 0, jei kiekis yra nezinomas): " << endl;
+	int markCount = NumberCheck(0, 100);
 
 	bool knownCount = true;
 	if (markCount == 0)
@@ -97,6 +96,7 @@ istream &operator>>(istream &in, Student &student)
 	return in;
 }
 
+// Function that prints the student data to the console.
 void Student::print() const
 {
 	cout << "Vardas: " << name_ << ", " << "Pavarde: " << surname_ << ", " << "Galutinis (Vid.): " << average_ << ", " << "Galutinis (Med.): " << median_ << ", " << "Egzaminas: " << exam_ << ", " << "Pazymiai: ";

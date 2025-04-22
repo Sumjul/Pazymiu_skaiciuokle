@@ -14,10 +14,9 @@ void ReadFromFile(Container &group, int action)
 		{
 			ifstream input(readName, std::ios::binary);
 			if (!input)
-			{
 				throw std::ios_base::failure("Failas nerastas arba negali buti atidarytas.");
-			}
-			else {
+			else
+			{
 				fileLoaded = true;
 				Timer inputTime;
 				string line;
@@ -90,8 +89,8 @@ void Action(Container &group, int action)
 			temp.calculateAverage();
 			temp.calculateMedian();
 		}
-		else if (action == 1) cin >> temp;
-	
+		else if (action == 1)
+			cin >> temp;
 		group.push_back(move(temp));
 		if (!amountStudKnown)
 		{
@@ -163,9 +162,8 @@ template <typename Container>
 void SeparateStudents(Container &group, Container &failed)
 {
 	Timer separationTime;
-	auto it = std::partition(group.begin(), group.end(), [](const Student &final) {
-		return final.getAverage() >= 5;
-	});
+	auto it = std::partition(group.begin(), group.end(), [](const Student &final)
+							 { return final.getAverage() >= 5; });
 	failed.insert(failed.end(), std::make_move_iterator(it), std::make_move_iterator(group.end()));
 	group.erase(it, group.end());
 	globalTime += separationTime.elapsed();
