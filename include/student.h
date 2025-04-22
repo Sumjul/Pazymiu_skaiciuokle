@@ -7,6 +7,7 @@ protected:
     string surname_;
 
 public:
+    // Constructors and destructor
     Human() = default;
     Human(const string &name = "Vardenis", const string &surname = "Pavardenis")
         : name_(name), surname_(surname) {}
@@ -33,11 +34,10 @@ private:
     double average_, median_;
 
 public:
-    // Constructors
+    // Constructors and destructor
     Student(const string &name = "Vardenis", const string &surname = "Pavardenis", int exam = 0)
         : Human(name, surname), exam_(exam), average_(0.0), median_(0.0) { marks_.reserve(20); }
 
-    // Destructor
     ~Student()
     {
         cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl;

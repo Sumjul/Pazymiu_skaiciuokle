@@ -13,7 +13,7 @@ void ReadFromFile(Container &group, int action)
 		try
 		{
 			ifstream input(readName, std::ios::binary);
-			if (!input.is_open())
+			if (!input)
 			{
 				throw std::ios_base::failure("Failas nerastas arba negali buti atidarytas.");
 			}
@@ -24,9 +24,10 @@ void ReadFromFile(Container &group, int action)
 				getline(input, line);
 				while (getline(input, line))
 				{
-					Student temp;
-					temp.readLine(line);
-					group.push_back(move(temp));
+					group.emplace_back();
+					group.back().readLine(line);
+					group.back().calculateAverage();
+					group.back().calculateMedian();
 				}
 				input.close();
 				cout << " * Duomenu skaitymas uztruko: " << inputTime.elapsed() << " sekundziu. " << endl;
@@ -39,10 +40,6 @@ void ReadFromFile(Container &group, int action)
 			cin.clear();
 			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
-	}
-	for (auto &final : group) {
-		final.calculateAverage();
-		final.calculateMedian();
 	}
 	if (action != 6)
 	{

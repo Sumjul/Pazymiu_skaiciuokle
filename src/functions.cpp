@@ -7,7 +7,7 @@ double globalTime = 0;
 // Function that test the Student class and its methods.
 void TestStudentClass() {
 	cout << "===== TESTAVIMAS: Student klases testai =====" << endl;
-		cout << "\n=== Rule of Five: Sukuriamas Student A ===" << endl;
+		cout << "\n=== Rule of Five: Kuriamas studentas A ===" << endl;
 		Student A;
 		A.setName("Testas");
 		A.setSurname("Testinis");
@@ -20,34 +20,32 @@ void TestStudentClass() {
 		A.calculateMedian();
 		cout << "A:\n" << A;
 
-    cout << "\n=== Copy constructor: Student B(A) ===" << endl;
+    cout << "\n=== Kopijavimo konstruktorius: Studentas B(A) ===" << endl;
     Student B = A;
     cout << "B:\n" << B;
 
-    cout << "\n=== Move constructor: Student C(std::move(B)) ===" << endl;
-    Student C = std::move(B);
+    cout << "\n=== Perkelimo konstruktorius: Studentas C(std::move(B)) ===" << endl;
+    Student C = move(B);
     cout << "C:\n" << C;
 
-    cout << "\n=== Copy assignment: Student D = A ===" << endl;
+    cout << "\n=== Kopijavimo priskyrimas: Studentas D = A ===" << endl;
     Student D;
     D = A;
     cout << "D:\n" << D;
 
-    cout << "\n=== Move assignment: Student E = std::move(A) ===" << endl;
+    cout << "\n=== Perkelimo priskyrimas: Studentas E = std::move(A) ===" << endl;
     Student E;
-    E = std::move(A);
+    E = move(A);
     cout << "E:\n" << E;
 
     // --- Testing operator >>
-    cout << "\n=== Operator >> test using stringstream ===" << endl;
+    cout << "\n=== Operatoriaus >> testavimas ===" << endl;
     Student inputStudent;
     cin >> inputStudent;
 
     // --- Testing operator <<
-    cout << "\n=== Operator << test using stringstream ===" << endl;
-    std::stringstream output;
-    output << inputStudent;
-    cout << "Isvestas tekstas i stringstream:\n" << output.str();
+    cout << "\n=== Operatoriaus << testavimas ===" << endl;
+    cout << inputStudent;
 
 	cout << "\n=== Abstrakti klase Human: testas ===" << endl;
     //Human jonas("Jonas", "Jonaitis"); // Klaida – negalima kurti abstraktaus objekto
