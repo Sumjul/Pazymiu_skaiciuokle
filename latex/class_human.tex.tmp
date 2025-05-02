@@ -1,0 +1,129 @@
+\doxysection{Human Klasė}
+\hypertarget{class_human}{}\label{class_human}\index{Human@{Human}}
+
+
+{\ttfamily \#include $<$student.\+h$>$}
+
+
+
+Paveldimumo diagrama Human\+:
+% FIG 0
+\doxysubsubsection*{Vieši Metodai}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_human_a1e7ebe2c710e3026b8f8f0882e2a0475}{Human}} ()=default
+\item 
+\mbox{\hyperlink{class_human_a2bf21e43ee56b5cd1b9db236a8006de1}{Human}} (const string \&name="{}Vardenis"{}, const string \&surname="{}Pavardenis"{})
+\item 
+virtual \mbox{\hyperlink{class_human_a9224ffb7aa2ecb9456d7ed156b616013}{\texorpdfstring{$\sim$}{\string~}\+Human}} ()
+\item 
+string \mbox{\hyperlink{class_human_a69a27e7bc681ed227041ea40e894e401}{get\+Name}} () const
+\item 
+string \mbox{\hyperlink{class_human_aaebff100983c200379f837c9aff67672}{get\+Surname}} () const
+\item 
+void \mbox{\hyperlink{class_human_ab8f1ed2da6a6dd79f113a48e6dd31eee}{set\+Name}} (const string \&new\+Name)
+\item 
+void \mbox{\hyperlink{class_human_ab783da4d406863166d713c6781175df2}{set\+Surname}} (const string \&new\+Surname)
+\item 
+virtual void \mbox{\hyperlink{class_human_ac3adff9d2f933933d46a697f5b824913}{print}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Apsaugoti Atributai}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_human_aae88b7b47fcb48ae282483b89b753927}{name\+\_\+}}
+\item 
+string \mbox{\hyperlink{class_human_aa6632ccd30ebfa087e0d875b2d50340c}{surname\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Smulkus aprašymas}
+Base class for human data 
+
+\doxysubsection{Konstruktoriaus ir Destruktoriaus Dokumentacija}
+\Hypertarget{class_human_a1e7ebe2c710e3026b8f8f0882e2a0475}\index{Human@{Human}!Human@{Human}}
+\index{Human@{Human}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{Human()}{Human()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_human_a1e7ebe2c710e3026b8f8f0882e2a0475} 
+Human\+::\+Human (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_human_a2bf21e43ee56b5cd1b9db236a8006de1}\index{Human@{Human}!Human@{Human}}
+\index{Human@{Human}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{Human()}{Human()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_human_a2bf21e43ee56b5cd1b9db236a8006de1} 
+Human\+::\+Human (\begin{DoxyParamCaption}\item[{const string \&}]{name}{ = {\ttfamily "{}Vardenis"{}}, }\item[{const string \&}]{surname}{ = {\ttfamily "{}Pavardenis"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_human_a9224ffb7aa2ecb9456d7ed156b616013}\index{Human@{Human}!````~Human@{\texorpdfstring{$\sim$}{\string~}Human}}
+\index{````~Human@{\texorpdfstring{$\sim$}{\string~}Human}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Human()}{\string~Human()}}
+{\footnotesize\ttfamily \label{class_human_a9224ffb7aa2ecb9456d7ed156b616013} 
+virtual Human\+::\texorpdfstring{$\sim$}{\string~}\+Human (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Metodų Dokumentacija}
+\Hypertarget{class_human_a69a27e7bc681ed227041ea40e894e401}\index{Human@{Human}!getName@{getName}}
+\index{getName@{getName}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_human_a69a27e7bc681ed227041ea40e894e401} 
+string Human\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{class_human_aaebff100983c200379f837c9aff67672}\index{Human@{Human}!getSurname@{getSurname}}
+\index{getSurname@{getSurname}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{getSurname()}{getSurname()}}
+{\footnotesize\ttfamily \label{class_human_aaebff100983c200379f837c9aff67672} 
+string Human\+::get\+Surname (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_human_ac3adff9d2f933933d46a697f5b824913}\index{Human@{Human}!print@{print}}
+\index{print@{print}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_human_ac3adff9d2f933933d46a697f5b824913} 
+virtual void Human\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Realizuota \mbox{\hyperlink{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f}{Student}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{class_human_ab8f1ed2da6a6dd79f113a48e6dd31eee}\index{Human@{Human}!setName@{setName}}
+\index{setName@{setName}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_human_ab8f1ed2da6a6dd79f113a48e6dd31eee} 
+void Human\+::set\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{new\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{class_human_ab783da4d406863166d713c6781175df2}\index{Human@{Human}!setSurname@{setSurname}}
+\index{setSurname@{setSurname}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{setSurname()}{setSurname()}}
+{\footnotesize\ttfamily \label{class_human_ab783da4d406863166d713c6781175df2} 
+void Human\+::set\+Surname (\begin{DoxyParamCaption}\item[{const string \&}]{new\+Surname}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\doxysubsection{Atributų Dokumentacija}
+\Hypertarget{class_human_aae88b7b47fcb48ae282483b89b753927}\index{Human@{Human}!name\_@{name\_}}
+\index{name\_@{name\_}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily \label{class_human_aae88b7b47fcb48ae282483b89b753927} 
+string Human\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_human_aa6632ccd30ebfa087e0d875b2d50340c}\index{Human@{Human}!surname\_@{surname\_}}
+\index{surname\_@{surname\_}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{surname\_}{surname\_}}
+{\footnotesize\ttfamily \label{class_human_aa6632ccd30ebfa087e0d875b2d50340c} 
+string Human\+::surname\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Dokumentacija šiai klasei sugeneruota iš šio failo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{student_8h}{student.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+var class_student =
+[
+    [ "Student", "class_student.html#ab0566b18e21b62f698cbf4a490c603f7", null ],
+    [ "~Student", "class_student.html#a54a8ea060d6cd04222c3a2f89829f105", null ],
+    [ "Student", "class_student.html#a05b37ffb050ddb039db63a8764d790cb", null ],
+    [ "Student", "class_student.html#ad16f78f16c1eb0e3eee37809602c7701", null ],
+    [ "addMark", "class_student.html#aac4c1b512bd0cc6810324279f2a26d23", null ],
+    [ "calculateAverage", "class_student.html#a1dec1372297b03b74868ac35f29558df", null ],
+    [ "calculateMedian", "class_student.html#a9a4ac80e7bec0ec0eacb6b2af8369641", null ],
+    [ "getAverage", "class_student.html#a2b738bfaac4dce882b05dbb056ac327e", null ],
+    [ "getExam", "class_student.html#a9f22f9beb6dfec1d0f2062636180768a", null ],
+    [ "getMarks", "class_student.html#a93c24954e2f212ce7c78f54744d1e4f9", null ],
+    [ "getMedian", "class_student.html#aabe9a8bc063b2c52064db1d71f640d66", null ],
+    [ "operator=", "class_student.html#ad05dd6148523a2a8b38128b60297b52a", null ],
+    [ "operator=", "class_student.html#a4e8f98630a250a691b385d1b640f863d", null ],
+    [ "print", "class_student.html#abdbb14cd83ef23c09f811bd1e30ddd4f", null ],
+    [ "readLine", "class_student.html#a40bb708617958d6dbb6fe3f345bfc720", null ],
+    [ "setExam", "class_student.html#afe18f0ed8e50682130fb3ebc44f76524", null ],
+    [ "operator<<", "class_student.html#adcabc19a4ec95cb8309ea542ccd5710d", null ],
+    [ "operator>>", "class_student.html#ab2e812a6216bf8bd18ed21f3155f4579", null ],
+    [ "average_", "class_student.html#a256a13e51fcbe3b215cf7bd99950c9f9", null ],
+    [ "exam_", "class_student.html#a80d3533857a99f0cbd0b2db851ac697f", null ],
+    [ "marks_", "class_student.html#aa6c7acf6b5596a79b5908d31177b55a3", null ],
+    [ "median_", "class_student.html#afafaeb711d9f38f6e876804e0132066c", null ]
+];

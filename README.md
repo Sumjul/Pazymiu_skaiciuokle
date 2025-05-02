@@ -1,27 +1,4 @@
-# Naujo funkcialumo aprašymas (v1.5)
-
-## 🧬 Klasės struktūra
-
-| Klasė     | Tipas     | Aprašymas                                                                 |
-|-----------|-----------|--------------------------------------------------------------------------|
-| `Human`   | Abstrakti | Bendra klasė visiems žmonėms, aprašo vardą, pavardę, turi virtualų metodą `print()` |
-| `Student` | Išvestinė | Paveldi iš `Human`, aprašo studentų pažymius, egzaminą ir visą reikiamą logiką      |
-
-## 🧪 Testų sistema
-
-Visi testai iš **v1.2** versijos buvo **pakartotinai patikrinti**:
-
-| Testas                         | Būsena     | Paaiškinimas                                                       |
-|--------------------------------|------------|--------------------------------------------------------------------|
-| Rule of Five testai            | ✅ Veikia  | Visi kopijavimo/perkėlimo metodai veikia kaip tikėtasi             |
-| Operatoriai `>>` ir `<<`       | ✅ Veikia  | Įvedimas/išvedimas per srautus veikia korektiškai                  |
-| `print()` per `Human*`         | ✅ Veikia  | Virtuali funkcija `print()` veikia per polimorfizmą                |
-| Bandymas kurti `Human` objektą| ⛔ Užblokuota | Kompiliatorius blokuoja bandymą kurti `Human` objektą             |
-
----
----
-
-## Programos naudojimosi instrukcija
+# Programos naudojimosi instrukcija
 
 Šis projektas naudoja CMake kompiliavimui ir organizuoja kodą pagal standartinę struktūrą su atskirais include ir src katalogais.
 

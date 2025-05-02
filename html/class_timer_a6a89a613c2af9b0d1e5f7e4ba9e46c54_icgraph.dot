@@ -1,0 +1,32 @@
+digraph "Timer::elapsed"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Timer::elapsed",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="GenerateFile",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#a77e429e8df265a6b240e9c8e00fa4871",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Output",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#a5439dc6cdfd60c4e8e3b30f78cf1a7e6",tooltip=" "];
+  Node4 -> Node3 [id="edge4_Node000004_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node5 [id="edge5_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="OutputSeparated",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#a2a6430f49837fd05ca0cb03d6a0d894f",tooltip=" "];
+  Node5 -> Node3 [id="edge6_Node000005_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node6 [id="edge7_Node000004_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="ReadFromFile",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#afc87868e0f2fe66d3ca3796d0040fa0c",tooltip=" "];
+  Node6 -> Node3 [id="edge8_Node000006_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge9_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge10_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge11_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="SeparateStudents",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#a2c289c50f3fc18d1e33264c1e88156c0",tooltip=" "];
+  Node7 -> Node3 [id="edge12_Node000007_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge13_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Sort",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#a0a4042e993dc0128a11c4dd1eed4a391",tooltip=" "];
+  Node8 -> Node3 [id="edge14_Node000008_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node5 [id="edge15_Node000008_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node6 [id="edge16_Node000008_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}
