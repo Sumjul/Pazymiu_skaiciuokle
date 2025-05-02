@@ -21,7 +21,7 @@ using std::system_error;
 const int maxStud = 10000000;
 extern double globalTime;
 
-// Class that measures time.
+/** Class that measures time. */
 class Timer
 {
 private:
@@ -41,13 +41,13 @@ public:
     }
 };
 
-// Functions that are used in the main function.
+/** Functions that are used in the main function. */
 void TestStudentClass();
 int NumberCheck(int min, int max);
 int Menu();
 void ProgramEnd();
 void ProcessException();
 
-// Global variables that hold names and surnames.
+/** Global variables that hold names and surnames. */
 const vector<string> names = {"Jonas", "Petras", "Antanas", "Kazys", "Marius", "Lukas", "Tadas", "Dainius", "Arvydas", "Vytautas", "Mindaugas", "Rokas", "Dovydas", "Paulius", "Tomas", "Andrius", "Giedrius", "Saulius", "Algirdas", "Simas", "Egidijus", "Justas", "Laurynas", "Martynas", "Edvinas", "Kestutis", "Julius", "Raimondas", "Deividas", "Arnoldas"};
 const vector<string> surnames = {"Jonaitis", "Petraitis", "Antanaitis", "Kazlauskas", "Marciulionis", "Baltrusaitis", "Grigonis", "Kairys", "Landsbergis", "Zemaitis", "Mikalauskas", "Butkus", "Vaiciulis", "Bagdonas", "Salkauskas", "Daukantas", "Jankauskas", "Tamulevicius", "Skvernelis", "Navickas", "Kupcinskas", "Simkus", "Masiulis", "Zukauskas", "Cepaitis", "Vaitkus", "Urbsys", "Brazys", "Petrusaitis", "Daugela"};

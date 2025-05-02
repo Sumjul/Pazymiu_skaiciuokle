@@ -4,7 +4,7 @@
 #include "../include/templates.h"
 double globalTime = 0;
 
-// Function that test the Student class and its methods.
+/** Function that test the Student class and its methods. */
 void TestStudentClass()
 {
 	cout << "===== TESTAVIMAS: Student klases testai =====" << endl;
@@ -58,7 +58,7 @@ void TestStudentClass()
 	cout << "\n===== TESTAVIMAS BAIGTAS =====\n" << endl;
 }
 
-// Function that checks if the input is a number and if it is within the specified range.
+/** Function that checks if the input is a number and if it is within the specified range. */
 int NumberCheck(int min, int max)
 {
 	int number;
@@ -83,7 +83,7 @@ int NumberCheck(int min, int max)
 	return number;
 }
 
-// Function that displays the menu and returns the selected action.
+/** Function that displays the menu and returns the selected action. */
 int Menu()
 {
 	cout << "Sveiki atvyke i pazymiu skaiciuokle! Pasirinkite veiksma spausdami skaiciu ir tada spauskite Enter." << endl;
@@ -101,7 +101,7 @@ int Menu()
 	return action;
 }
 
-// Function that ends the program.
+/** Function that ends the program. */
 void ProgramEnd()
 {
 	cout << endl;
@@ -113,7 +113,7 @@ void ProgramEnd()
 	cin.get();
 }
 
-// Function that processes exceptions.
+/** Function that processes exceptions. */
 void ProcessException()
 {
 	try
