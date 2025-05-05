@@ -15,7 +15,7 @@ public:
 
     virtual ~Human()
     {
-        cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
+        //cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
     }
 
     // Getters and setters
@@ -42,7 +42,7 @@ public:
 
     ~Student()
     {
-        cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl;
+        //cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl;
     }
 
     // Copy constructor and move constructor

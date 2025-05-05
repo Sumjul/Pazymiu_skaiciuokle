@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['🧪_20testų_20sistema_0',['🧪 Testų sistema',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]]
+  ['_7ehuman_0',['~Human',['../class_human.html#a9224ffb7aa2ecb9456d7ed156b616013',1,'Human']]],
+  ['_7estudent_1',['~Student',['../class_student.html#a54a8ea060d6cd04222c3a2f89829f105',1,'Student']]]
 ];

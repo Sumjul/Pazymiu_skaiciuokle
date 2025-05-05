@@ -4,60 +4,6 @@
 #include "../include/templates.h"
 double globalTime = 0;
 
-/** Function that test the Student class and its methods. */
-void TestStudentClass()
-{
-	cout << "===== TESTAVIMAS: Student klases testai =====" << endl;
-	cout << "\n=== Rule of Five: Kuriamas studentas A ===" << endl;
-	Student A;
-	A.setName("Testas");
-	A.setSurname("Testinis");
-	vector<int> testmarks = {10, 9, 8, 7, 10, 6, 9, 8};
-	for (int mark : testmarks)
-	{
-		A.addMark(mark);
-	}
-	A.setExam(9);
-	A.calculateAverage();
-	A.calculateMedian();
-	cout << "A:\n" << A;
-
-	cout << "\n=== Kopijavimo konstruktorius: Studentas B(A) ===" << endl;
-	Student B = A;
-	cout << "B:\n" << B;
-
-	cout << "\n=== Perkelimo konstruktorius: Studentas C(std::move(B)) ===" << endl;
-	Student C = move(B);
-	cout << "C:\n" << C;
-
-	cout << "\n=== Kopijavimo priskyrimas: Studentas D = A ===" << endl;
-	Student D;
-	D = A;
-	cout << "D:\n" << D;
-
-	cout << "\n=== Perkelimo priskyrimas: Studentas E = std::move(A) ===" << endl;
-	Student E;
-	E = move(A);
-	cout << "E:\n" << E;
-
-	// --- Testing operator >>
-	cout << "\n=== Operatoriaus >> testavimas ===" << endl;
-	Student inputStudent;
-	cin >> inputStudent;
-
-	// --- Testing operator <<
-	cout << "\n=== Operatoriaus << testavimas ===" << endl;
-	cout << inputStudent;
-
-	cout << "\n=== Abstrakti klase Human: testas ===" << endl;
-	// Human jonas("Jonas", "Jonaitis"); // Klaida – negalima kurti abstraktaus objekto
-	Human *testHuman = new Student("Jonas", "Jonaitis", 10);
-	testHuman->print();
-	delete testHuman;
-
-	cout << "\n===== TESTAVIMAS BAIGTAS =====\n" << endl;
-}
-
 /** Function that checks if the input is a number and if it is within the specified range. */
 int NumberCheck(int min, int max)
 {
@@ -95,7 +41,6 @@ int Menu()
 	cout << "4 - nauduoti duomenis is failo;" << endl;
 	cout << "5 - sugeneruoti duomenis ir isvesti i faila;" << endl;
 	cout << "6 - surusiuoti studentus i 2 failus." << endl;
-	cout << "7 - Studento klases testavimas." << endl;
 	cout << "--------------------------------------------" << endl;
 	int action = NumberCheck(0, 7);
 	return action;

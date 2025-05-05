@@ -1,55 +1,26 @@
-\chapter{Naujo funkcialumo aprašymas (v1.5)}
-\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Naujo funkcialumo aprašymas (v1.5)@{Naujo funkcialumo aprašymas (v1.5)}}
+\chapter{Programos naudojimosi instrukcija}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Programos naudojimosi instrukcija@{Programos naudojimosi instrukcija}}
 \label{md__r_e_a_d_m_e_autotoc_md0}%
 \Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
-\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{🧬 Klasės struktūra}{🧬 Klasės struktūra}}\label{md__r_e_a_d_m_e_autotoc_md1}
-\tabulinesep=1mm
-\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
-\hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Klasė   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Aprašymas    }\\\cline{1-3}
-\endfirsthead
-\hline
-\endfoot
-\hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Klasė   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Aprašymas    }\\\cline{1-3}
-\endhead
-{\ttfamily \doxylink{class_human}{Human}}   &Abstrakti   &Bendra klasė visiems žmonėms, aprašo vardą, pavardę, turi virtualų metodą {\ttfamily print()}    \\\cline{1-3}
-{\ttfamily \doxylink{class_student}{Student}}   &Išvestinė   &Paveldi iš {\ttfamily \doxylink{class_human}{Human}}, aprašo studentų pažymius, egzaminą ir visą reikiamą logiką   \\\cline{1-3}
-\end{longtabu}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{🧪 Testų sistema}{🧪 Testų sistema}}\label{md__r_e_a_d_m_e_autotoc_md2}
-Visi testai iš {\bfseries{v1.\+2}} versijos buvo {\bfseries{pakartotinai patikrinti}}\+:
-
-\tabulinesep=1mm
-\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
-\hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Testas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Būsena   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Paaiškinimas    }\\\cline{1-3}
-\endfirsthead
-\hline
-\endfoot
-\hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Testas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Būsena   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Paaiškinimas    }\\\cline{1-3}
-\endhead
-Rule of Five testai   &✅ Veikia   &Visi kopijavimo/perkėlimo metodai veikia kaip tikėtasi    \\\cline{1-3}
-Operatoriai {\ttfamily \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}} ir {\ttfamily \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}}   &✅ Veikia   &Įvedimas/išvedimas per srautus veikia korektiškai    \\\cline{1-3}
-{\ttfamily print()} per {\ttfamily Human\texorpdfstring{$\ast$}{*}}   &✅ Veikia   &Virtuali funkcija {\ttfamily print()} veikia per polimorfizmą    \\\cline{1-3}
-Bandymas kurti {\ttfamily \doxylink{class_human}{Human}} objektą   &⛔ Užblokuota   &Kompiliatorius blokuoja bandymą kurti {\ttfamily \doxylink{class_human}{Human}} objektą   \\\cline{1-3}
-\end{longtabu}
 
 
-\DoxyHorRuler{0}
- \DoxyHorRuler{0}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Programos naudojimosi instrukcija}{Programos naudojimosi instrukcija}}\label{md__r_e_a_d_m_e_autotoc_md4}
-Šis projektas naudoja CMake kompiliavimui ir organizuoja kodą pagal standartinę struktūrą su atskirais include ir src katalogais.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Reikalavimai}{Reikalavimai}}\label{md__r_e_a_d_m_e_autotoc_md5}
-Prieš pradedant, įsitikinkite, kad turite įdiegtus šiuos įrankius\+:
+Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su {\ttfamily include/} ir {\ttfamily src/} katalogais.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{✅ Reikalavimai}{✅ Reikalavimai}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Įsitikinkite, kad turite įdiegtus šiuos įrankius savo sistemoje\+:
 
 
 \begin{DoxyItemize}
-\item C++ kompiliatorius (pvz., GCC arba MSVC)
-\item CMake (bent jau 3.\+25 versija)
-\item Git (jei norite klonuoti iš saugyklos)
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{Projekto paruošimas ir paleidimas}{Projekto paruošimas ir paleidimas}}\label{md__r_e_a_d_m_e_autotoc_md6}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{Projekto klonavimas (jei reikia)}{Projekto klonavimas (jei reikia)}}\label{md__r_e_a_d_m_e_autotoc_md7}
-Jei projektas dar nėra jūsų kompiuteryje, galite jį nusiklonuoti naudodami komandą\+:
+\item {\bfseries{C++ kompiliatorius}} (pvz., GCC arba MSVC)
+\item {\bfseries{CMake}} (bent 3.\+25 versija)
+\end{DoxyItemize}
+
+\begin{quote}
+{\bfseries{Pastaba\+:}} Git nebūtinas, jei jau turite projekto failus. \end{quote}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{🔧 Projekto paruošimas ir paleidimas}{🔧 Projekto paruošimas ir paleidimas}}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{1. Projekto failų paruošimas}{1. Projekto failų paruošimas}}\label{md__r_e_a_d_m_e_autotoc_md4}
+Jeigu dar neturite projekto aplanke, galite jį atsisiųsti arba nusiklonuoti iš saugyklos\+:
 
 
 \begin{DoxyCode}{0}
@@ -57,50 +28,62 @@ Jei projektas dar nėra jūsų kompiuteryje, galite jį nusiklonuoti naudodami k
 \DoxyCodeLine{cd\ <projekto\_katalogas>}
 
 \end{DoxyCode}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\texorpdfstring{Projekto kompiliavimas su CMake}{Projekto kompiliavimas su CMake}}\label{md__r_e_a_d_m_e_autotoc_md8}
-Sukurkite naują katalogą, skirtą generuojamiems failams\+:
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{2. Paleidimas naudojant run.\+bat (Windows)}{2. Paleidimas naudojant run.\+bat (Windows)}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Norėdami automatiškai sukompiliuoti ir paleisti programą, tiesiog dukart spustelėkite failą\+:
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{mkdir\ build}
-\DoxyCodeLine{}
-\DoxyCodeLine{cd\ build}
+\DoxyCodeLine{run.bat}
 
 \end{DoxyCode}
 
 
-Generuokite projektą su CMake\+:
+Šis failas\+:
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{cmake\ ..}
-
-\end{DoxyCode}
-
-
-Paleiskite kompiliaciją\+:
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{cmake\ -\/-\/build\ .}
-
-\end{DoxyCode}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Programos paleidimas}{Programos paleidimas}}\label{md__r_e_a_d_m_e_autotoc_md9}
-Po sėkmingo kompiliavimo galite paleisti programą\+:
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{./run}
-
-\end{DoxyCode}
-
-
-arba Windows sistemoje tiesiog dukart spustelėkite {\ttfamily run.\+bat} failą.\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{\texorpdfstring{Projekto struktūra}{Projekto struktūra}}\label{md__r_e_a_d_m_e_autotoc_md10}
 
 \begin{DoxyItemize}
-\item {\ttfamily include/} – antraštiniai failai (.h, .hpp), kuriuose aprašomos klasės ir funkcijų prototipai.
+\item automatiškai sukuria {\ttfamily build/} katalogą (jeigu jo dar nėra),
+\item sugeneruoja ir sukompiliuoja projektą naudojant CMake,
+\item paleidžia sukurtą {\ttfamily .exe} failą ({\ttfamily Pazymiu\+\_\+\+Skaiciuokle.\+exe}).
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{Alternatyvus rankinis paleidimas (jei reikia)}{Alternatyvus rankinis paleidimas (jei reikia)}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Jei norite viską daryti per komandų eilutę\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/B\ build\ -\/S\ .}
+\DoxyCodeLine{cmake\ -\/-\/build\ build}
+\DoxyCodeLine{build\(\backslash\)Pazymiu\_Skaiciuokle.exe}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{🧪 Testavimas}{🧪 Testavimas}}\label{md__r_e_a_d_m_e_autotoc_md8}
+Catch2 testų failas ({\ttfamily \doxylink{tests_8cpp}{tests.\+cpp}}) yra projekte, tačiau testai {\bfseries{nėra}} įtraukiami į automatinį kompiliavimą.
+
+Jeigu reikia paleisti testus\+:
+
+
+\begin{DoxyEnumerate}
+\item Atidarykite projektą Visual Studio Code aplinkoje.
+\item Suraskite ir paleiskite {\ttfamily \doxylink{tests_8cpp}{tests.\+cpp}} failą rankiniu būdu su integruotu Catch2 palaikymu.
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{📁 Projekto struktūra}{📁 Projekto struktūra}}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item {\ttfamily include/} – antraštiniai failai (.h), kuriuose aprašomos klasės ir funkcijų prototipai.
 \item {\ttfamily src/} – pagrindinis programos kodas (.cpp).
-\item {\ttfamily CMake\+Lists.\+txt} – CMake konfigūracijos failas.
+\item {\ttfamily CMake\+Lists.\+txt} – CMake konfigūracijos failas, skirtas kompiliavimui.
+\item {\ttfamily run.\+bat} – skriptas Windows sistemai, kuris automatizuoja kompiliavimą ir paleidimą.
 \item {\ttfamily \doxylink{_r_e_a_d_m_e_8md}{README.\+md}} – ši naudojimosi instrukcija.
-\item {\ttfamily run.\+bat} – Windows skriptas greitam programos paleidimui. 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Dokumentacija}{Dokumentacija}}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyItemize}
+\item {\ttfamily Dokumentacija.\+pdf} – projekto dokumentacija.
+\item {\ttfamily Doxyfile} – Doxygen konfigūracijos failas, skirtas automatiškai generuoti projekto dokumentaciją.
+\item {\ttfamily html/} – Doxygen generuota HTML dokumentacija.
+\item {\ttfamily latex/} – Doxygen generuota La\+TeX dokumentacija.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{\texorpdfstring{Catch2 testavimas}{Catch2 testavimas}}\label{md__r_e_a_d_m_e_autotoc_md11}
+
+\begin{DoxyItemize}
+\item {\ttfamily catch2/} – Catch2 testavimo sistema. 
 \end{DoxyItemize}

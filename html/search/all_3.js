@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['durationdouble_0',['durationDouble',['../class_timer.html#a0774383e69e89a22ea605e6841d1eaca',1,'Timer']]]
+  ['bat_20windows_0',['2. Paleidimas naudojant run.bat (Windows)',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]]
 ];

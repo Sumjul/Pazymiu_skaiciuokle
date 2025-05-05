@@ -14,6 +14,5 @@ digraph "Human::setSurname"
   Node4 [id="Node000004",label="GenerateFile",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#a77e429e8df265a6b240e9c8e00fa4871",tooltip=" "];
   Node4 -> Node3 [id="edge4_Node000004_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node5 [id="edge5_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="TestStudentClass",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$functions_8cpp.html#ae3ab58993bc06d214cb5ec945d35f3a9",tooltip=" "];
-  Node5 -> Node3 [id="edge6_Node000005_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="TEST_CASE",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$tests_8cpp.html#ae19d027314202b1411411229815dbfe8",tooltip=" "];
 }

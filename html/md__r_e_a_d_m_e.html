@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pazymiu Skaiciuokle: Naujo funkcialumo aprašymas (v1.5)</title>
+<title>Pazymiu Skaiciuokle: Programos naudojimosi instrukcija</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,78 +102,75 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Naujo funkcialumo aprašymas (v1.5)</div></div>
+  <div class="headertitle"><div class="title">Programos naudojimosi instrukcija</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<p>Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su <code>include/</code> ir <code>src/</code> katalogais.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-🧬 Klasės struktūra</h1>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Klasė   </th><th class="markdownTableHeadNone">Tipas   </th><th class="markdownTableHeadNone">Aprašymas    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code><a class="el" href="class_human.html">Human</a></code>   </td><td class="markdownTableBodyNone">Abstrakti   </td><td class="markdownTableBodyNone">Bendra klasė visiems žmonėms, aprašo vardą, pavardę, turi virtualų metodą <code>print()</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code><a class="el" href="class_student.html">Student</a></code>   </td><td class="markdownTableBodyNone">Išvestinė   </td><td class="markdownTableBodyNone">Paveldi iš <code><a class="el" href="class_human.html">Human</a></code>, aprašo studentų pažymius, egzaminą ir visą reikiamą logiką   </td></tr>
-</table>
-<h1><a class="anchor" id="autotoc_md2"></a>
-🧪 Testų sistema</h1>
-<p>Visi testai iš <b>v1.2</b> versijos buvo <b>pakartotinai patikrinti</b>:</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Testas   </th><th class="markdownTableHeadNone">Būsena   </th><th class="markdownTableHeadNone">Paaiškinimas    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rule of Five testai   </td><td class="markdownTableBodyNone">✅ Veikia   </td><td class="markdownTableBodyNone">Visi kopijavimo/perkėlimo metodai veikia kaip tikėtasi    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Operatoriai <code>&gt;&gt;</code> ir <code>&lt;&lt;</code>   </td><td class="markdownTableBodyNone">✅ Veikia   </td><td class="markdownTableBodyNone">Įvedimas/išvedimas per srautus veikia korektiškai    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>print()</code> per <code>Human*</code>   </td><td class="markdownTableBodyNone">✅ Veikia   </td><td class="markdownTableBodyNone">Virtuali funkcija <code>print()</code> veikia per polimorfizmą    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Bandymas kurti <code><a class="el" href="class_human.html">Human</a></code> objektą   </td><td class="markdownTableBodyNone">⛔ Užblokuota   </td><td class="markdownTableBodyNone">Kompiliatorius blokuoja bandymą kurti <code><a class="el" href="class_human.html">Human</a></code> objektą   </td></tr>
-</table>
-<hr  />
- <hr  />
-<h1><a class="anchor" id="autotoc_md4"></a>
-Programos naudojimosi instrukcija</h1>
-<p>Šis projektas naudoja CMake kompiliavimui ir organizuoja kodą pagal standartinę struktūrą su atskirais include ir src katalogais.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-Reikalavimai</h1>
-<p>Prieš pradedant, įsitikinkite, kad turite įdiegtus šiuos įrankius:</p>
+✅ Reikalavimai</h1>
+<p>Įsitikinkite, kad turite įdiegtus šiuos įrankius savo sistemoje:</p>
 <ul>
-<li>C++ kompiliatorius (pvz., GCC arba MSVC)</li>
-<li>CMake (bent jau 3.25 versija)</li>
-<li>Git (jei norite klonuoti iš saugyklos)</li>
+<li><b>C++ kompiliatorius</b> (pvz., GCC arba MSVC)</li>
+<li><b>CMake</b> (bent 3.25 versija)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md6"></a>
-Projekto paruošimas ir paleidimas</h1>
-<h2><a class="anchor" id="autotoc_md7"></a>
-Projekto klonavimas (jei reikia)</h2>
-<p>Jei projektas dar nėra jūsų kompiuteryje, galite jį nusiklonuoti naudodami komandą:</p>
+<blockquote class="doxtable">
+<p><b>Pastaba:</b> Git nebūtinas, jei jau turite projekto failus. </p>
+</blockquote>
+<hr  />
+<h1><a class="anchor" id="autotoc_md3"></a>
+🔧 Projekto paruošimas ir paleidimas</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+1. Projekto failų paruošimas</h2>
+<p>Jeigu dar neturite projekto aplanke, galite jį atsisiųsti arba nusiklonuoti iš saugyklos:</p>
 <div class="fragment"><div class="line">git clone &lt;projekto_git_nuoroda&gt;</div>
 <div class="line">cd &lt;projekto_katalogas&gt;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
-Projekto kompiliavimas su CMake</h2>
-<p>Sukurkite naują katalogą, skirtą generuojamiems failams:</p>
-<div class="fragment"><div class="line">mkdir build</div>
-<div class="line"> </div>
-<div class="line">cd build</div>
-</div><!-- fragment --><p>Generuokite projektą su CMake:</p>
-<div class="fragment"><div class="line">cmake ..</div>
-</div><!-- fragment --><p>Paleiskite kompiliaciją:</p>
-<div class="fragment"><div class="line">cmake --build .</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
-Programos paleidimas</h2>
-<p>Po sėkmingo kompiliavimo galite paleisti programą:</p>
-<div class="fragment"><div class="line">./run</div>
-</div><!-- fragment --><p>arba Windows sistemoje tiesiog dukart spustelėkite <code>run.bat</code> failą.</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
-Projekto struktūra</h1>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+2. Paleidimas naudojant run.bat (Windows)</h2>
+<p>Norėdami automatiškai sukompiliuoti ir paleisti programą, tiesiog dukart spustelėkite failą:</p>
+<div class="fragment"><div class="line">run.bat</div>
+</div><!-- fragment --><p>Šis failas:</p>
 <ul>
-<li><code>include/</code> – antraštiniai failai (.h, .hpp), kuriuose aprašomos klasės ir funkcijų prototipai.</li>
+<li>automatiškai sukuria <code>build/</code> katalogą (jeigu jo dar nėra),</li>
+<li>sugeneruoja ir sukompiliuoja projektą naudojant CMake,</li>
+<li>paleidžia sukurtą <code>.exe</code> failą (<code>Pazymiu_Skaiciuokle.exe</code>).</li>
+</ul>
+<hr  />
+<h2><a class="anchor" id="autotoc_md7"></a>
+Alternatyvus rankinis paleidimas (jei reikia)</h2>
+<p>Jei norite viską daryti per komandų eilutę:</p>
+<div class="fragment"><div class="line">cmake -B build -S .</div>
+<div class="line">cmake --build build</div>
+<div class="line">build\Pazymiu_Skaiciuokle.exe</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+🧪 Testavimas</h1>
+<p>Catch2 testų failas (<code><a class="el" href="tests_8cpp.html">tests.cpp</a></code>) yra projekte, tačiau testai <b>nėra</b> įtraukiami į automatinį kompiliavimą.</p>
+<p>Jeigu reikia paleisti testus:</p>
+<ol type="1">
+<li>Atidarykite projektą Visual Studio Code aplinkoje.</li>
+<li>Suraskite ir paleiskite <code><a class="el" href="tests_8cpp.html">tests.cpp</a></code> failą rankiniu būdu su integruotu Catch2 palaikymu.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md9"></a>
+📁 Projekto struktūra</h1>
+<ul>
+<li><code>include/</code> – antraštiniai failai (.h), kuriuose aprašomos klasės ir funkcijų prototipai.</li>
 <li><code>src/</code> – pagrindinis programos kodas (.cpp).</li>
-<li><code>CMakeLists.txt</code> – CMake konfigūracijos failas.</li>
+<li><code>CMakeLists.txt</code> – CMake konfigūracijos failas, skirtas kompiliavimui.</li>
+<li><code>run.bat</code> – skriptas Windows sistemai, kuris automatizuoja kompiliavimą ir paleidimą.</li>
 <li><code><a class="el" href="_r_e_a_d_m_e_8md.html">README.md</a></code> – ši naudojimosi instrukcija.</li>
-<li><code>run.bat</code> – Windows skriptas greitam programos paleidimui. </li>
+</ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Dokumentacija</h2>
+<ul>
+<li><code>Dokumentacija.pdf</code> – projekto dokumentacija.</li>
+<li><code>Doxyfile</code> – Doxygen konfigūracijos failas, skirtas automatiškai generuoti projekto dokumentaciją.</li>
+<li><code>html/</code> – Doxygen generuota HTML dokumentacija.</li>
+<li><code>latex/</code> – Doxygen generuota LaTeX dokumentacija.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Catch2 testavimas</h2>
+<ul>
+<li><code>catch2/</code> – Catch2 testavimo sistema. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

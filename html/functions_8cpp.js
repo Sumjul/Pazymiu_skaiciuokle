@@ -4,6 +4,5 @@ var functions_8cpp =
     [ "NumberCheck", "functions_8cpp.html#a575300a49e319243c7d0ebf158dad3ef", null ],
     [ "ProcessException", "functions_8cpp.html#a659705bbc72f1a795a961d7030a443ee", null ],
     [ "ProgramEnd", "functions_8cpp.html#a197a3d785a60dfd4ede032bc1c25f77d", null ],
-    [ "TestStudentClass", "functions_8cpp.html#ae3ab58993bc06d214cb5ec945d35f3a9", null ],
     [ "globalTime", "functions_8cpp.html#a1f1ee98f0c212517e324923358844c70", null ]
 ];

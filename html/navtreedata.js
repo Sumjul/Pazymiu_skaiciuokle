@@ -25,17 +25,18 @@
 var NAVTREE =
 [
   [ "Pazymiu Skaiciuokle", "index.html", [
-    [ "Naujo funkcialumo aprašymas (v1.5)", "md__r_e_a_d_m_e.html", [
-      [ "🧬 Klasės struktūra", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "🧪 Testų sistema", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
-      [ "Programos naudojimosi instrukcija", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
-      [ "Reikalavimai", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
-      [ "Projekto paruošimas ir paleidimas", "md__r_e_a_d_m_e.html#autotoc_md6", [
-        [ "Projekto klonavimas (jei reikia)", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
-        [ "Projekto kompiliavimas su CMake", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
-        [ "Programos paleidimas", "md__r_e_a_d_m_e.html#autotoc_md9", null ]
+    [ "Programos naudojimosi instrukcija", "md__r_e_a_d_m_e.html", [
+      [ "✅ Reikalavimai", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "🔧 Projekto paruošimas ir paleidimas", "md__r_e_a_d_m_e.html#autotoc_md3", [
+        [ "Projekto failų paruošimas", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+        [ "Paleidimas naudojant run.bat (Windows)", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
+        [ "Alternatyvus rankinis paleidimas (jei reikia)", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
       ] ],
-      [ "Projekto struktūra", "md__r_e_a_d_m_e.html#autotoc_md10", null ]
+      [ "🧪 Testavimas", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
+      [ "📁 Projekto struktūra", "md__r_e_a_d_m_e.html#autotoc_md9", [
+        [ "Dokumentacija", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
+        [ "Catch2 testavimas", "md__r_e_a_d_m_e.html#autotoc_md11", null ]
+      ] ]
     ] ],
     [ "Klasės", "annotated.html", [
       [ "Klasės", "annotated.html", "annotated_dup" ],
@@ -54,7 +55,8 @@ var NAVTREE =
       [ "Failų Nariai", "globals.html", [
         [ "Visi", "globals.html", null ],
         [ "Funkcijos", "globals_func.html", null ],
-        [ "Kintamieji", "globals_vars.html", null ]
+        [ "Kintamieji", "globals_vars.html", null ],
+        [ "Apibrėžimai", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]

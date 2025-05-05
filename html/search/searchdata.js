@@ -1,13 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "5acdefghijkmnoprstv~🧪🧬",
+  0: "12abcdefghijmnoprstw~✅📁🔧🧪",
   1: "hst",
   2: "fghmrst",
   3: "aceghmnoprst~",
   4: "aegmns",
   5: "dh",
   6: "o",
-  7: "5afnv"
+  7: "c",
+  8: "inp"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "variables",
   5: "typedefs",
   6: "related",
-  7: "pages"
+  7: "defines",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "Kintamieji",
   5: "Tipų apibrėžimai",
   6: "Draugai",
-  7: "Puslapiai"
+  7: "Apibrėžimai",
+  8: "Puslapiai"
 };
 

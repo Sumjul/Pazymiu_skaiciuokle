@@ -1,14 +1,8 @@
 var searchData=
 [
-  ['paleidimas_0',['paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'Programos paleidimas'],['../md__r_e_a_d_m_e.html#autotoc_md6',1,'Projekto paruošimas ir paleidimas']]],
-  ['paruošimas_20ir_20paleidimas_1',['Projekto paruošimas ir paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]],
-  ['print_2',['print',['../class_human.html#ac3adff9d2f933933d46a697f5b824913',1,'Human::print()'],['../class_student.html#abdbb14cd83ef23c09f811bd1e30ddd4f',1,'Student::print()']]],
-  ['processexception_3',['ProcessException',['../headers_8h.html#a659705bbc72f1a795a961d7030a443ee',1,'ProcessException():&#160;functions.cpp'],['../functions_8cpp.html#a659705bbc72f1a795a961d7030a443ee',1,'ProcessException():&#160;functions.cpp']]],
-  ['programend_4',['ProgramEnd',['../headers_8h.html#a197a3d785a60dfd4ede032bc1c25f77d',1,'ProgramEnd():&#160;functions.cpp'],['../functions_8cpp.html#a197a3d785a60dfd4ede032bc1c25f77d',1,'ProgramEnd():&#160;functions.cpp']]],
-  ['programos_20naudojimosi_20instrukcija_5',['Programos naudojimosi instrukcija',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
-  ['programos_20paleidimas_6',['Programos paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'']]],
-  ['projekto_20klonavimas_20jei_20reikia_7',['Projekto klonavimas (jei reikia)',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]],
-  ['projekto_20kompiliavimas_20su_20cmake_8',['Projekto kompiliavimas su CMake',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'']]],
-  ['projekto_20paruošimas_20ir_20paleidimas_9',['Projekto paruošimas ir paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]],
-  ['projekto_20struktūra_10',['Projekto struktūra',['../md__r_e_a_d_m_e.html#autotoc_md10',1,'']]]
+  ['operator_3c_3c_0',['operator&lt;&lt;',['../class_student.html#adcabc19a4ec95cb8309ea542ccd5710d',1,'Student::operator&lt;&lt;()'],['../student_8cpp.html#adcabc19a4ec95cb8309ea542ccd5710d',1,'operator&lt;&lt;():&#160;student.cpp']]],
+  ['operator_3d_1',['operator=',['../class_student.html#ad05dd6148523a2a8b38128b60297b52a',1,'Student::operator=(const Student &amp;other)'],['../class_student.html#a4e8f98630a250a691b385d1b640f863d',1,'Student::operator=(Student &amp;&amp;other)']]],
+  ['operator_3e_3e_2',['operator&gt;&gt;',['../class_student.html#ab2e812a6216bf8bd18ed21f3155f4579',1,'Student::operator&gt;&gt;()'],['../student_8cpp.html#ab2e812a6216bf8bd18ed21f3155f4579',1,'operator&gt;&gt;(istream &amp;in, Student &amp;student):&#160;student.cpp']]],
+  ['output_3',['Output',['../templates_8h.html#a5439dc6cdfd60c4e8e3b30f78cf1a7e6',1,'templates.h']]],
+  ['outputseparated_4',['OutputSeparated',['../templates_8h.html#a2a6430f49837fd05ca0cb03d6a0d894f',1,'templates.h']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['5_0',['Naujo funkcialumo aprašymas (v1.5)',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['1_20projekto_20failų_20paruošimas_0',['1. Projekto failų paruošimas',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]]
 ];
