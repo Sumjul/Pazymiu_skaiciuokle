@@ -28,9 +28,6 @@ int main()
 		SeparateStudents(group, failed);
 		OutputSeparated(group, failed);
 		break;
-	case 7:
-		TestStudentClass();
-		break;
 	default:
 		Action(group, action);
 		int markAction;

@@ -1,0 +1,57 @@
+\doxysection{headers.\+h}
+\hypertarget{headers_8h_source}{}\label{headers_8h_source}\index{include/headers.h@{include/headers.h}}
+\mbox{\hyperlink{headers_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <system\_error>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <future>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ }std::bad\_alloc;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }std::cerr;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }std::exception;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }std::future\_error;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }std::ios\_base;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }std::istringstream;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }std::stringstream;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }std::string\_view;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }std::system\_error;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ Global\ variables.}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{headers_8h_ac04144c4c77c9b058f0e4a3ba25c6b7f}{maxStud}}\ =\ 10000000;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{headers_8h_a1f1ee98f0c212517e324923358844c70}{globalTime}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_timer_a5e72191005a6b2238ed91c3839374093}{hrClock}}\ =\ std::chrono::high\_resolution\_clock;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_timer_a0774383e69e89a22ea605e6841d1eaca}{durationDouble}}\ =\ std::chrono::duration<double>;}
+\DoxyCodeLine{00031\ \ \ \ \ std::chrono::time\_point<hrClock>\ \mbox{\hyperlink{class_timer_ad3c6240154d9bcccb88b701849919822}{start}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}()\ :\ \mbox{\hyperlink{class_timer_ad3c6240154d9bcccb88b701849919822}{start}}\{\mbox{\hyperlink{class_timer_a5e72191005a6b2238ed91c3839374093}{hrClock}}::now()\}\ \{\}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_timer_a9020542d73357a4eef512eefaf57524b}{reset}}()}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_timer_ad3c6240154d9bcccb88b701849919822}{start}}\ =\ hrClock::now();}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_timer_a6a89a613c2af9b0d1e5f7e4ba9e46c54}{elapsed}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00040\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_timer_a0774383e69e89a22ea605e6841d1eaca}{durationDouble}}(hrClock::now()\ -\/\ \mbox{\hyperlink{class_timer_ad3c6240154d9bcccb88b701849919822}{start}}).count();}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{headers_8h_ae3ab58993bc06d214cb5ec945d35f3a9}{TestStudentClass}}();}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{headers_8h_a575300a49e319243c7d0ebf158dad3ef}{NumberCheck}}(\textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ max);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{headers_8h_a6b0067666ba7d74453f3a3c2c61d84a6}{Menu}}();}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{headers_8h_a197a3d785a60dfd4ede032bc1c25f77d}{ProgramEnd}}();}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{headers_8h_a659705bbc72f1a795a961d7030a443ee}{ProcessException}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{const}\ vector<string>\ \mbox{\hyperlink{headers_8h_ae5ef839a3c7e5e57135ff02f06f70a5a}{names}}\ =\ \{\textcolor{stringliteral}{"{}Jonas"{}},\ \textcolor{stringliteral}{"{}Petras"{}},\ \textcolor{stringliteral}{"{}Antanas"{}},\ \textcolor{stringliteral}{"{}Kazys"{}},\ \textcolor{stringliteral}{"{}Marius"{}},\ \textcolor{stringliteral}{"{}Lukas"{}},\ \textcolor{stringliteral}{"{}Tadas"{}},\ \textcolor{stringliteral}{"{}Dainius"{}},\ \textcolor{stringliteral}{"{}Arvydas"{}},\ \textcolor{stringliteral}{"{}Vytautas"{}},\ \textcolor{stringliteral}{"{}Mindaugas"{}},\ \textcolor{stringliteral}{"{}Rokas"{}},\ \textcolor{stringliteral}{"{}Dovydas"{}},\ \textcolor{stringliteral}{"{}Paulius"{}},\ \textcolor{stringliteral}{"{}Tomas"{}},\ \textcolor{stringliteral}{"{}Andrius"{}},\ \textcolor{stringliteral}{"{}Giedrius"{}},\ \textcolor{stringliteral}{"{}Saulius"{}},\ \textcolor{stringliteral}{"{}Algirdas"{}},\ \textcolor{stringliteral}{"{}Simas"{}},\ \textcolor{stringliteral}{"{}Egidijus"{}},\ \textcolor{stringliteral}{"{}Justas"{}},\ \textcolor{stringliteral}{"{}Laurynas"{}},\ \textcolor{stringliteral}{"{}Martynas"{}},\ \textcolor{stringliteral}{"{}Edvinas"{}},\ \textcolor{stringliteral}{"{}Kestutis"{}},\ \textcolor{stringliteral}{"{}Julius"{}},\ \textcolor{stringliteral}{"{}Raimondas"{}},\ \textcolor{stringliteral}{"{}Deividas"{}},\ \textcolor{stringliteral}{"{}Arnoldas"{}}\};}
+\DoxyCodeLine{00054\ \textcolor{keyword}{const}\ vector<string>\ \mbox{\hyperlink{headers_8h_adb92fb1851e693d79a86b3fe0aa14244}{surnames}}\ =\ \{\textcolor{stringliteral}{"{}Jonaitis"{}},\ \textcolor{stringliteral}{"{}Petraitis"{}},\ \textcolor{stringliteral}{"{}Antanaitis"{}},\ \textcolor{stringliteral}{"{}Kazlauskas"{}},\ \textcolor{stringliteral}{"{}Marciulionis"{}},\ \textcolor{stringliteral}{"{}Baltrusaitis"{}},\ \textcolor{stringliteral}{"{}Grigonis"{}},\ \textcolor{stringliteral}{"{}Kairys"{}},\ \textcolor{stringliteral}{"{}Landsbergis"{}},\ \textcolor{stringliteral}{"{}Zemaitis"{}},\ \textcolor{stringliteral}{"{}Mikalauskas"{}},\ \textcolor{stringliteral}{"{}Butkus"{}},\ \textcolor{stringliteral}{"{}Vaiciulis"{}},\ \textcolor{stringliteral}{"{}Bagdonas"{}},\ \textcolor{stringliteral}{"{}Salkauskas"{}},\ \textcolor{stringliteral}{"{}Daukantas"{}},\ \textcolor{stringliteral}{"{}Jankauskas"{}},\ \textcolor{stringliteral}{"{}Tamulevicius"{}},\ \textcolor{stringliteral}{"{}Skvernelis"{}},\ \textcolor{stringliteral}{"{}Navickas"{}},\ \textcolor{stringliteral}{"{}Kupcinskas"{}},\ \textcolor{stringliteral}{"{}Simkus"{}},\ \textcolor{stringliteral}{"{}Masiulis"{}},\ \textcolor{stringliteral}{"{}Zukauskas"{}},\ \textcolor{stringliteral}{"{}Cepaitis"{}},\ \textcolor{stringliteral}{"{}Vaitkus"{}},\ \textcolor{stringliteral}{"{}Urbsys"{}},\ \textcolor{stringliteral}{"{}Brazys"{}},\ \textcolor{stringliteral}{"{}Petrusaitis"{}},\ \textcolor{stringliteral}{"{}Daugela"{}}\};}
+
+\end{DoxyCode}

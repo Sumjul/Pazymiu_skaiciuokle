@@ -1,0 +1,89 @@
+\chapter{Programos naudojimosi instrukcija}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Programos naudojimosi instrukcija@{Programos naudojimosi instrukcija}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su {\ttfamily include/} ir {\ttfamily src/} katalogais.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{✅ Reikalavimai}{✅ Reikalavimai}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Įsitikinkite, kad turite įdiegtus šiuos įrankius savo sistemoje\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{C++ kompiliatorius}} (pvz., GCC arba MSVC)
+\item {\bfseries{CMake}} (bent 3.\+25 versija)
+\end{DoxyItemize}
+
+\begin{quote}
+{\bfseries{Pastaba\+:}} Git nebūtinas, jei jau turite projekto failus. \end{quote}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{🔧 Projekto paruošimas ir paleidimas}{🔧 Projekto paruošimas ir paleidimas}}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{1. Projekto failų paruošimas}{1. Projekto failų paruošimas}}\label{md__r_e_a_d_m_e_autotoc_md4}
+Jeigu dar neturite projekto aplanke, galite jį atsisiųsti arba nusiklonuoti iš saugyklos\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ <projekto\_git\_nuoroda>}
+\DoxyCodeLine{cd\ <projekto\_katalogas>}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{2. Paleidimas naudojant run.\+bat (Windows)}{2. Paleidimas naudojant run.\+bat (Windows)}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Norėdami automatiškai sukompiliuoti ir paleisti programą, tiesiog dukart spustelėkite failą\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{run.bat}
+
+\end{DoxyCode}
+
+
+Šis failas\+:
+
+
+\begin{DoxyItemize}
+\item automatiškai sukuria {\ttfamily build/} katalogą (jeigu jo dar nėra),
+\item sugeneruoja ir sukompiliuoja projektą naudojant CMake,
+\item paleidžia sukurtą {\ttfamily .exe} failą ({\ttfamily Pazymiu\+\_\+\+Skaiciuokle.\+exe}).
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{Alternatyvus rankinis paleidimas (jei reikia)}{Alternatyvus rankinis paleidimas (jei reikia)}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Jei norite viską daryti per komandų eilutę\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/B\ build\ -\/S\ .}
+\DoxyCodeLine{cmake\ -\/-\/build\ build}
+\DoxyCodeLine{build\(\backslash\)Pazymiu\_Skaiciuokle.exe}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{🧪 Testavimas}{🧪 Testavimas}}\label{md__r_e_a_d_m_e_autotoc_md8}
+Catch2 testų failas ({\ttfamily \doxylink{tests_8cpp}{tests.\+cpp}}) yra projekte, tačiau testai {\bfseries{nėra}} įtraukiami į automatinį kompiliavimą.
+
+Jeigu reikia paleisti testus\+:
+
+
+\begin{DoxyEnumerate}
+\item Atidarykite projektą Visual Studio Code aplinkoje.
+\item Suraskite ir paleiskite {\ttfamily \doxylink{tests_8cpp}{tests.\+cpp}} failą rankiniu būdu su integruotu Catch2 palaikymu.
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{📁 Projekto struktūra}{📁 Projekto struktūra}}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item {\ttfamily include/} – antraštiniai failai (.h), kuriuose aprašomos klasės ir funkcijų prototipai.
+\item {\ttfamily src/} – pagrindinis programos kodas (.cpp).
+\item {\ttfamily CMake\+Lists.\+txt} – CMake konfigūracijos failas, skirtas kompiliavimui.
+\item {\ttfamily run.\+bat} – skriptas Windows sistemai, kuris automatizuoja kompiliavimą ir paleidimą.
+\item {\ttfamily \doxylink{_r_e_a_d_m_e_8md}{README.\+md}} – ši naudojimosi instrukcija.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Dokumentacija}{Dokumentacija}}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyItemize}
+\item {\ttfamily Dokumentacija.\+pdf} – projekto dokumentacija.
+\item {\ttfamily Doxyfile} – Doxygen konfigūracijos failas, skirtas automatiškai generuoti projekto dokumentaciją.
+\item {\ttfamily html/} – Doxygen generuota HTML dokumentacija.
+\item {\ttfamily latex/} – Doxygen generuota La\+TeX dokumentacija.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{\texorpdfstring{Catch2 testavimas}{Catch2 testavimas}}\label{md__r_e_a_d_m_e_autotoc_md11}
+
+\begin{DoxyItemize}
+\item {\ttfamily catch2/} – Catch2 testavimo sistema. 
+\end{DoxyItemize}

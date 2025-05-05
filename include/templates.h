@@ -1,6 +1,6 @@
 #pragma once
 
-// Function that reads data from a file.
+/** Function that reads data from a file. */
 template <typename Container>
 void ReadFromFile(Container &group, int action)
 {
@@ -52,7 +52,7 @@ void ReadFromFile(Container &group, int action)
 	}
 }
 
-// Function that asks the user to input data manually or generates it randomly.
+/** Function that asks the user to input data manually or generates it randomly. */
 template <typename Container>
 void Action(Container &group, int action)
 {
@@ -101,7 +101,7 @@ void Action(Container &group, int action)
 	}
 }
 
-// Function that sorts the students by name, surname or final mark.
+/** Function that sorts the students by name, surname or final mark. */
 template <typename Container>
 double Sort(Container &group, int &markAction)
 {
@@ -134,7 +134,7 @@ double Sort(Container &group, int &markAction)
 	return sortTime.elapsed();
 }
 
-// Function that outputs the results to the console or a file.
+/** Function that outputs the results to the console or a file. */
 template <typename Container>
 void Output(Container &group, ostream &out, int markAction)
 {
@@ -157,7 +157,7 @@ void Output(Container &group, ostream &out, int markAction)
 	cout << " * Rezultatu isvedimas uztruko: " << outputTime.elapsed() << " sekundziu. " << endl;
 }
 
-// Function that sorts students into two groups - those who passed and those who failed.
+/** Function that sorts students into two groups - those who passed and those who failed. */
 template <typename Container>
 void SeparateStudents(Container &group, Container &failed)
 {
@@ -170,7 +170,7 @@ void SeparateStudents(Container &group, Container &failed)
 	cout << " * Studentu skirstymas i 2 kategorijas uztruko: " << separationTime.elapsed() << " sekundziu. " << endl;
 }
 
-// Function that outputs the sorted students to two files.
+/** Function that outputs the sorted students to two files. */
 template <typename Container>
 void OutputSeparated(Container &group, Container &failed)
 {
@@ -194,7 +194,7 @@ void OutputSeparated(Container &group, Container &failed)
 	cout << " * Rezultatu isvedimas i 2 failus uztruko: " << outTime1 + outTime2 << " sekundziu. " << endl;
 }
 
-// Function that generates data and writes it to a file.
+/** Function that generates data and writes it to a file. */
 template <typename Container>
 void GenerateFile(Container &group)
 {

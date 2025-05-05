@@ -96,7 +96,7 @@ istream &operator>>(istream &in, Student &student)
 	return in;
 }
 
-// Function that prints the student data to the console.
+/** Function that prints the student data to the console. */
 void Student::print() const
 {
 	cout << "Vardas: " << name_ << ", " << "Pavarde: " << surname_ << ", " << "Galutinis (Vid.): " << average_ << ", " << "Galutinis (Med.): " << median_ << ", " << "Egzaminas: " << exam_ << ", " << "Pazymiai: ";
@@ -105,7 +105,7 @@ void Student::print() const
 	cout << endl;
 }
 
-// Function that calculates the average marks of students.
+/** Function that calculates the average marks of students. */
 void Student::calculateAverage()
 {
 	if (marks_.empty())
@@ -119,7 +119,7 @@ void Student::calculateAverage()
 	}
 }
 
-// Function that calculates the median marks of students.
+/** Function that calculates the median marks of students. */
 void Student::calculateMedian()
 {
 	if (marks_.empty())
@@ -134,7 +134,7 @@ void Student::calculateMedian()
 	}
 }
 
-// Function that reads a line from a file and assigns it to a student.
+/** Function that reads a line from a file and assigns it to a student. */
 void Student::readLine(const string &line)
 {
 	istringstream lineStream(line);

@@ -1,0 +1,275 @@
+\doxysection{Student Klasė}
+\hypertarget{class_student}{}\label{class_student}\index{Student@{Student}}
+
+
+{\ttfamily \#include $<$student.\+h$>$}
+
+
+
+Paveldimumo diagrama Student\+:
+% FIG 0
+
+
+Bendradarbiavimo diagrama Student\+:
+% FIG 1
+\doxysubsubsection*{Vieši Metodai}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_student_ab0566b18e21b62f698cbf4a490c603f7}{Student}} (const string \&name="{}Vardenis"{}, const string \&surname="{}Pavardenis"{}, int exam=0)
+\item 
+\mbox{\hyperlink{class_student_a54a8ea060d6cd04222c3a2f89829f105}{\texorpdfstring{$\sim$}{\string~}\+Student}} ()
+\item 
+\mbox{\hyperlink{class_student_a05b37ffb050ddb039db63a8764d790cb}{Student}} (const \mbox{\hyperlink{class_student}{Student}} \&other)
+\item 
+\mbox{\hyperlink{class_student_ad16f78f16c1eb0e3eee37809602c7701}{Student}} (\mbox{\hyperlink{class_student}{Student}} \&\&other)
+\item 
+\mbox{\hyperlink{class_student}{Student}} \& \mbox{\hyperlink{class_student_ad05dd6148523a2a8b38128b60297b52a}{operator=}} (const \mbox{\hyperlink{class_student}{Student}} \&other)
+\item 
+\mbox{\hyperlink{class_student}{Student}} \& \mbox{\hyperlink{class_student_a4e8f98630a250a691b385d1b640f863d}{operator=}} (\mbox{\hyperlink{class_student}{Student}} \&\&other)
+\item 
+const vector$<$ int $>$ \& \mbox{\hyperlink{class_student_a93c24954e2f212ce7c78f54744d1e4f9}{get\+Marks}} () const
+\item 
+int \mbox{\hyperlink{class_student_a9f22f9beb6dfec1d0f2062636180768a}{get\+Exam}} () const
+\item 
+double \mbox{\hyperlink{class_student_a2b738bfaac4dce882b05dbb056ac327e}{get\+Average}} () const
+\item 
+double \mbox{\hyperlink{class_student_aabe9a8bc063b2c52064db1d71f640d66}{get\+Median}} () const
+\item 
+void \mbox{\hyperlink{class_student_aac4c1b512bd0cc6810324279f2a26d23}{add\+Mark}} (int mark)
+\item 
+void \mbox{\hyperlink{class_student_afe18f0ed8e50682130fb3ebc44f76524}{set\+Exam}} (int new\+Exam)
+\item 
+void \mbox{\hyperlink{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f}{print}} () const
+\item 
+void \mbox{\hyperlink{class_student_a1dec1372297b03b74868ac35f29558df}{calculate\+Average}} ()
+\item 
+void \mbox{\hyperlink{class_student_a9a4ac80e7bec0ec0eacb6b2af8369641}{calculate\+Median}} ()
+\item 
+void \mbox{\hyperlink{class_student_a40bb708617958d6dbb6fe3f345bfc720}{read\+Line}} (const string \&line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Vieši Metodai inherited from \mbox{\hyperlink{class_human}{Human}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_human_a1e7ebe2c710e3026b8f8f0882e2a0475}{Human}} ()=default
+\item 
+\mbox{\hyperlink{class_human_a2bf21e43ee56b5cd1b9db236a8006de1}{Human}} (const string \&name="{}Vardenis"{}, const string \&surname="{}Pavardenis"{})
+\item 
+virtual \mbox{\hyperlink{class_human_a9224ffb7aa2ecb9456d7ed156b616013}{\texorpdfstring{$\sim$}{\string~}\+Human}} ()
+\item 
+string \mbox{\hyperlink{class_human_a69a27e7bc681ed227041ea40e894e401}{get\+Name}} () const
+\item 
+string \mbox{\hyperlink{class_human_aaebff100983c200379f837c9aff67672}{get\+Surname}} () const
+\item 
+void \mbox{\hyperlink{class_human_ab8f1ed2da6a6dd79f113a48e6dd31eee}{set\+Name}} (const string \&new\+Name)
+\item 
+void \mbox{\hyperlink{class_human_ab783da4d406863166d713c6781175df2}{set\+Surname}} (const string \&new\+Surname)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Privatūs Atributai}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_student_aa6c7acf6b5596a79b5908d31177b55a3}{marks\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_student_a80d3533857a99f0cbd0b2db851ac697f}{exam\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_student_a256a13e51fcbe3b215cf7bd99950c9f9}{average\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_student_afafaeb711d9f38f6e876804e0132066c}{median\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Draugai}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_student_adcabc19a4ec95cb8309ea542ccd5710d}{operator$<$$<$}} (ostream \&out, const \mbox{\hyperlink{class_student}{Student}} \&student)
+\item 
+istream \& \mbox{\hyperlink{class_student_ab2e812a6216bf8bd18ed21f3155f4579}{operator$>$$>$}} (istream \&in, \mbox{\hyperlink{class_student}{Student}} \&student)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Apsaugoti Atributai inherited from \mbox{\hyperlink{class_human}{Human}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_human_aae88b7b47fcb48ae282483b89b753927}{name\+\_\+}}
+\item 
+string \mbox{\hyperlink{class_human_aa6632ccd30ebfa087e0d875b2d50340c}{surname\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Smulkus aprašymas}
+Class that holds student data and inherits from \doxylink{class_human}{Human} 
+
+\doxysubsection{Konstruktoriaus ir Destruktoriaus Dokumentacija}
+\Hypertarget{class_student_ab0566b18e21b62f698cbf4a490c603f7}\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_student_ab0566b18e21b62f698cbf4a490c603f7} 
+Student\+::\+Student (\begin{DoxyParamCaption}\item[{const string \&}]{name}{ = {\ttfamily "{}Vardenis"{}}, }\item[{const string \&}]{surname}{ = {\ttfamily "{}Pavardenis"{}}, }\item[{int}]{exam}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Funkcijos kvietimo grafas\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_student_a54a8ea060d6cd04222c3a2f89829f105}\index{Student@{Student}!````~Student@{\texorpdfstring{$\sim$}{\string~}Student}}
+\index{````~Student@{\texorpdfstring{$\sim$}{\string~}Student}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Student()}{\string~Student()}}
+{\footnotesize\ttfamily \label{class_student_a54a8ea060d6cd04222c3a2f89829f105} 
+Student\+::\texorpdfstring{$\sim$}{\string~}\+Student (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_student_a05b37ffb050ddb039db63a8764d790cb}\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_student_a05b37ffb050ddb039db63a8764d790cb} 
+Student\+::\+Student (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 4
+\Hypertarget{class_student_ad16f78f16c1eb0e3eee37809602c7701}\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_student_ad16f78f16c1eb0e3eee37809602c7701} 
+Student\+::\+Student (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student}{Student}} \&\&}]{other}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 5
+
+
+\doxysubsection{Metodų Dokumentacija}
+\Hypertarget{class_student_aac4c1b512bd0cc6810324279f2a26d23}\index{Student@{Student}!addMark@{addMark}}
+\index{addMark@{addMark}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{addMark()}{addMark()}}
+{\footnotesize\ttfamily \label{class_student_aac4c1b512bd0cc6810324279f2a26d23} 
+void Student\+::add\+Mark (\begin{DoxyParamCaption}\item[{int}]{mark}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{class_student_a1dec1372297b03b74868ac35f29558df}\index{Student@{Student}!calculateAverage@{calculateAverage}}
+\index{calculateAverage@{calculateAverage}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{calculateAverage()}{calculateAverage()}}
+{\footnotesize\ttfamily \label{class_student_a1dec1372297b03b74868ac35f29558df} 
+void Student\+::calculate\+Average (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Function that calculates the average marks of students. Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{class_student_a9a4ac80e7bec0ec0eacb6b2af8369641}\index{Student@{Student}!calculateMedian@{calculateMedian}}
+\index{calculateMedian@{calculateMedian}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{calculateMedian()}{calculateMedian()}}
+{\footnotesize\ttfamily \label{class_student_a9a4ac80e7bec0ec0eacb6b2af8369641} 
+void Student\+::calculate\+Median (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Function that calculates the median marks of students. Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{class_student_a2b738bfaac4dce882b05dbb056ac327e}\index{Student@{Student}!getAverage@{getAverage}}
+\index{getAverage@{getAverage}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getAverage()}{getAverage()}}
+{\footnotesize\ttfamily \label{class_student_a2b738bfaac4dce882b05dbb056ac327e} 
+double Student\+::get\+Average (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{class_student_a9f22f9beb6dfec1d0f2062636180768a}\index{Student@{Student}!getExam@{getExam}}
+\index{getExam@{getExam}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getExam()}{getExam()}}
+{\footnotesize\ttfamily \label{class_student_a9f22f9beb6dfec1d0f2062636180768a} 
+int Student\+::get\+Exam (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{class_student_a93c24954e2f212ce7c78f54744d1e4f9}\index{Student@{Student}!getMarks@{getMarks}}
+\index{getMarks@{getMarks}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getMarks()}{getMarks()}}
+{\footnotesize\ttfamily \label{class_student_a93c24954e2f212ce7c78f54744d1e4f9} 
+const vector$<$ int $>$ \& Student\+::get\+Marks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_student_aabe9a8bc063b2c52064db1d71f640d66}\index{Student@{Student}!getMedian@{getMedian}}
+\index{getMedian@{getMedian}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getMedian()}{getMedian()}}
+{\footnotesize\ttfamily \label{class_student_aabe9a8bc063b2c52064db1d71f640d66} 
+double Student\+::get\+Median (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{class_student_ad05dd6148523a2a8b38128b60297b52a}\index{Student@{Student}!operator=@{operator=}}
+\index{operator=@{operator=}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_student_ad05dd6148523a2a8b38128b60297b52a} 
+\mbox{\hyperlink{class_student}{Student}} \& Student\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 12
+\Hypertarget{class_student_a4e8f98630a250a691b385d1b640f863d}\index{Student@{Student}!operator=@{operator=}}
+\index{operator=@{operator=}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_student_a4e8f98630a250a691b385d1b640f863d} 
+\mbox{\hyperlink{class_student}{Student}} \& Student\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student}{Student}} \&\&}]{other}{}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 13
+\Hypertarget{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f}\index{Student@{Student}!print@{print}}
+\index{print@{print}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f} 
+void Student\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function that prints the student data to the console. 
+
+Realizuoja \mbox{\hyperlink{class_human_ac3adff9d2f933933d46a697f5b824913}{Human}}.
+
+\Hypertarget{class_student_a40bb708617958d6dbb6fe3f345bfc720}\index{Student@{Student}!readLine@{readLine}}
+\index{readLine@{readLine}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{readLine()}{readLine()}}
+{\footnotesize\ttfamily \label{class_student_a40bb708617958d6dbb6fe3f345bfc720} 
+void Student\+::read\+Line (\begin{DoxyParamCaption}\item[{const string \&}]{line}{}\end{DoxyParamCaption})}
+
+Function that reads a line from a file and assigns it to a student. \Hypertarget{class_student_afe18f0ed8e50682130fb3ebc44f76524}\index{Student@{Student}!setExam@{setExam}}
+\index{setExam@{setExam}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{setExam()}{setExam()}}
+{\footnotesize\ttfamily \label{class_student_afe18f0ed8e50682130fb3ebc44f76524} 
+void Student\+::set\+Exam (\begin{DoxyParamCaption}\item[{int}]{new\+Exam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\doxysubsection{Draugiškų Ir Susijusių Funkcijų Dokumentacija}
+\Hypertarget{class_student_adcabc19a4ec95cb8309ea542ccd5710d}\index{Student@{Student}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_student_adcabc19a4ec95cb8309ea542ccd5710d} 
+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{out}{, }\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{student}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_student_ab2e812a6216bf8bd18ed21f3155f4579}\index{Student@{Student}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \label{class_student_ab2e812a6216bf8bd18ed21f3155f4579} 
+istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{in}{, }\item[{\mbox{\hyperlink{class_student}{Student}} \&}]{student}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Atributų Dokumentacija}
+\Hypertarget{class_student_a256a13e51fcbe3b215cf7bd99950c9f9}\index{Student@{Student}!average\_@{average\_}}
+\index{average\_@{average\_}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{average\_}{average\_}}
+{\footnotesize\ttfamily \label{class_student_a256a13e51fcbe3b215cf7bd99950c9f9} 
+double Student\+::average\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_student_a80d3533857a99f0cbd0b2db851ac697f}\index{Student@{Student}!exam\_@{exam\_}}
+\index{exam\_@{exam\_}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{exam\_}{exam\_}}
+{\footnotesize\ttfamily \label{class_student_a80d3533857a99f0cbd0b2db851ac697f} 
+int Student\+::exam\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_student_aa6c7acf6b5596a79b5908d31177b55a3}\index{Student@{Student}!marks\_@{marks\_}}
+\index{marks\_@{marks\_}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{marks\_}{marks\_}}
+{\footnotesize\ttfamily \label{class_student_aa6c7acf6b5596a79b5908d31177b55a3} 
+vector$<$int$>$ Student\+::marks\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_student_afafaeb711d9f38f6e876804e0132066c}\index{Student@{Student}!median\_@{median\_}}
+\index{median\_@{median\_}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{median\_}{median\_}}
+{\footnotesize\ttfamily \label{class_student_afafaeb711d9f38f6e876804e0132066c} 
+double Student\+::median\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacija šiai klasei sugeneruota iš šių failų\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{student_8h}{student.\+h}}\item 
+src/\mbox{\hyperlink{student_8cpp}{student.\+cpp}}\end{DoxyCompactItemize}

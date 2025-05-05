@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pazymiu Skaiciuokle: include/templates.h išeities tekstas</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Pazymiu Skaiciuokle
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Paieška" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Sugeneruota Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('templates_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">templates.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="templates_8h.html">Eiti į šio failo dokumentaciją.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="templates_8h.html#afc87868e0f2fe66d3ca3796d0040fa0c">    5</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="templates_8h.html#afc87868e0f2fe66d3ca3796d0040fa0c">ReadFromFile</a>(Container &amp;group, <span class="keywordtype">int</span> action)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">string</span> readName;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordtype">bool</span> fileLoaded = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordflow">while</span> (!fileLoaded)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        cout &lt;&lt; <span class="stringliteral">&quot;Iveskite failo pavadinima, is kurio bus skaitomi duomenys: &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        cin &gt;&gt; readName;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            ifstream input(readName, std::ios::binary);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">if</span> (!input)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="keywordflow">throw</span> std::ios_base::failure(<span class="stringliteral">&quot;Failas nerastas arba negali buti atidarytas.&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                fileLoaded = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                <a class="code hl_class" href="class_timer.html">Timer</a> inputTime;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <span class="keywordtype">string</span> line;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                getline(input, line);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <span class="keywordflow">while</span> (getline(input, line))</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                    group.emplace_back();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                    group.back().readLine(line);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                    group.back().calculateAverage();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                    group.back().calculateMedian();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                input.close();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                cout &lt;&lt; <span class="stringliteral">&quot; * Duomenu skaitymas uztruko: &quot;</span> &lt;&lt; inputTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>() &lt;&lt; <span class="stringliteral">&quot; sekundziu. &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <a class="code hl_variable" href="headers_8h.html#a1f1ee98f0c212517e324923358844c70">globalTime</a> += inputTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_function" href="headers_8h.html#a659705bbc72f1a795a961d7030a443ee">ProcessException</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            cin.clear();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (action != 6)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">string</span> writeName = <span class="stringliteral">&quot;rezultatas.txt&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        ofstream output(writeName);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">int</span> markAction;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="templates_8h.html#a0a4042e993dc0128a11c4dd1eed4a391">Sort</a>(group, markAction);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="templates_8h.html#a5439dc6cdfd60c4e8e3b30f78cf1a7e6">Output</a>(group, output, markAction);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        output.close();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        cout &lt;&lt; <span class="stringliteral">&quot;Duomenys nukopijuoti i faila: &quot;</span> &lt;&lt; writeName &lt;&lt; endl;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="templates_8h.html#ac0bbd3311f96b181148d8a971b8c83d1">   57</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="templates_8h.html#ac0bbd3311f96b181148d8a971b8c83d1">Action</a>(Container &amp;group, <span class="keywordtype">int</span> action)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    cout &lt;&lt; <span class="stringliteral">&quot;Iveskite studentu skaiciu (iveskite 0, jei skaicius yra nezinomas): &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">int</span> amountStud = <a class="code hl_function" href="headers_8h.html#a575300a49e319243c7d0ebf158dad3ef">NumberCheck</a>(0, <a class="code hl_variable" href="headers_8h.html#ac04144c4c77c9b058f0e4a3ba25c6b7f">maxStud</a>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> amountStudKnown = (amountStud != 0);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> (!amountStudKnown)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        amountStud = <a class="code hl_variable" href="headers_8h.html#ac04144c4c77c9b058f0e4a3ba25c6b7f">maxStud</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; amountStud; i++)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_class" href="class_student.html">Student</a> temp;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (action == 2)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">string</span> name, surname;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            cout &lt;&lt; <span class="stringliteral">&quot;Iveskite studento varda: &quot;</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            cin &gt;&gt; name;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            temp.<a class="code hl_function" href="class_human.html#ab8f1ed2da6a6dd79f113a48e6dd31eee">setName</a>(name);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            cout &lt;&lt; <span class="stringliteral">&quot;Iveskite studento pavarde: &quot;</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            cin &gt;&gt; surname;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            temp.<a class="code hl_function" href="class_human.html#ab783da4d406863166d713c6781175df2">setSurname</a>(surname);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action == 3)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            temp.<a class="code hl_function" href="class_human.html#ab8f1ed2da6a6dd79f113a48e6dd31eee">setName</a>(<a class="code hl_variable" href="headers_8h.html#ae5ef839a3c7e5e57135ff02f06f70a5a">names</a>[rand() % <a class="code hl_variable" href="headers_8h.html#ae5ef839a3c7e5e57135ff02f06f70a5a">names</a>.size()]);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            temp.<a class="code hl_function" href="class_human.html#ab783da4d406863166d713c6781175df2">setSurname</a>(<a class="code hl_variable" href="headers_8h.html#adb92fb1851e693d79a86b3fe0aa14244">surnames</a>[rand() % <a class="code hl_variable" href="headers_8h.html#adb92fb1851e693d79a86b3fe0aa14244">surnames</a>.size()]);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">if</span> (action == 2 || action == 3)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordtype">int</span> amountMarks = rand() % 100 + 1;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; amountMarks; ++j)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                temp.<a class="code hl_function" href="class_student.html#aac4c1b512bd0cc6810324279f2a26d23">addMark</a>(rand() % 10 + 1);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            temp.<a class="code hl_function" href="class_student.html#afe18f0ed8e50682130fb3ebc44f76524">setExam</a>(rand() % 10 + 1);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            temp.<a class="code hl_function" href="class_student.html#a1dec1372297b03b74868ac35f29558df">calculateAverage</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            temp.<a class="code hl_function" href="class_student.html#a9a4ac80e7bec0ec0eacb6b2af8369641">calculateMedian</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (action == 1)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            cin &gt;&gt; temp;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        group.push_back(move(temp));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> (!amountStudKnown)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            cout &lt;&lt; <span class="stringliteral">&quot;1 - ivesti dar vieno studento duomenis; 0 - baigti ivedima. &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="headers_8h.html#a575300a49e319243c7d0ebf158dad3ef">NumberCheck</a>(0, 1) == 0)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="templates_8h.html#a0a4042e993dc0128a11c4dd1eed4a391">  106</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="templates_8h.html#a0a4042e993dc0128a11c4dd1eed4a391">Sort</a>(Container &amp;group, <span class="keywordtype">int</span> &amp;markAction)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    cout &lt;&lt; <span class="stringliteral">&quot;Pasirinkite rezultatu isvedimo metoda: &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    cout &lt;&lt; <span class="stringliteral">&quot;1 - gauti vidurkius; 2 - gauti medianas. &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    markAction = <a class="code hl_function" href="headers_8h.html#a575300a49e319243c7d0ebf158dad3ef">NumberCheck</a>(1, 2);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    cout &lt;&lt; <span class="stringliteral">&quot;Pairinkite rezultatu rusiavimo metoda: &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    cout &lt;&lt; <span class="stringliteral">&quot;1 - rusiuoti pagal varda (A-Z); 2 - rusiuoti pagal pavarde (A-Z); 3 - rusiuoti pagal galutini pazymi.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">int</span> sortAction = <a class="code hl_function" href="headers_8h.html#a575300a49e319243c7d0ebf158dad3ef">NumberCheck</a>(1, 3);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_class" href="class_timer.html">Timer</a> sortTime;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">auto</span> compare = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="class_student.html">Student</a> &amp;a, <span class="keyword">const</span> <a class="code hl_class" href="class_student.html">Student</a> &amp;b)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">if</span> (sortAction == 1)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">return</span> a.<a class="code hl_function" href="class_human.html#a69a27e7bc681ed227041ea40e894e401">getName</a>() &lt; b.getName();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">if</span> (sortAction == 2)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">return</span> a.<a class="code hl_function" href="class_human.html#aaebff100983c200379f837c9aff67672">getSurname</a>() &lt; b.getSurname();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">if</span> (sortAction == 3)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">return</span> (markAction == 1) ? (a.<a class="code hl_function" href="class_student.html#a2b738bfaac4dce882b05dbb056ac327e">getAverage</a>() &lt; b.getAverage()) : (a.<a class="code hl_function" href="class_student.html#aabe9a8bc063b2c52064db1d71f640d66">getMedian</a>() &lt; b.getMedian());</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    };</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;Container, vector&lt;Student&gt;&gt; || std::is_same_v&lt;Container, deque&lt;Student&gt;&gt;)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        sort(group.begin(), group.end(), compare);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;Container, list&lt;Student&gt;&gt;)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        group.sort(compare);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">return</span> sortTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>}</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="templates_8h.html#a5439dc6cdfd60c4e8e3b30f78cf1a7e6">  139</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="templates_8h.html#a5439dc6cdfd60c4e8e3b30f78cf1a7e6">Output</a>(Container &amp;group, ostream &amp;out, <span class="keywordtype">int</span> markAction)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>{</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_class" href="class_timer.html">Timer</a> outputTime;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    out &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; <span class="stringliteral">&quot;Pavarde&quot;</span> &lt;&lt; setw(20) &lt;&lt; <span class="stringliteral">&quot;Vardas&quot;</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">if</span> (markAction == 1)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        out &lt;&lt; setw(20) &lt;&lt; <span class="stringliteral">&quot;Galutinis (Vid.)&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (markAction == 2)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        out &lt;&lt; setw(20) &lt;&lt; <span class="stringliteral">&quot;Galutinis (Med.)&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    out &lt;&lt; <span class="stringliteral">&quot;------------------------------------------------------------&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<span class="keyword">final</span> : group)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        out &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; <span class="keyword">final</span>.getSurname() &lt;&lt; setw(20) &lt;&lt; <span class="keyword">final</span>.getName();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">if</span> (markAction == 1)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            out &lt;&lt; setw(20) &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; <span class="keyword">final</span>.getAverage() &lt;&lt; endl;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (markAction == 2)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            out &lt;&lt; setw(20) &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; <span class="keyword">final</span>.getMedian() &lt;&lt; endl;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_variable" href="headers_8h.html#a1f1ee98f0c212517e324923358844c70">globalTime</a> += outputTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    cout &lt;&lt; <span class="stringliteral">&quot; * Rezultatu isvedimas uztruko: &quot;</span> &lt;&lt; outputTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>() &lt;&lt; <span class="stringliteral">&quot; sekundziu. &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="foldopen" id="foldopen00162" data-start="{" data-end="}">
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="templates_8h.html#a2c289c50f3fc18d1e33264c1e88156c0">  162</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="templates_8h.html#a2c289c50f3fc18d1e33264c1e88156c0">SeparateStudents</a>(Container &amp;group, Container &amp;failed)</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>{</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_class" href="class_timer.html">Timer</a> separationTime;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keyword">auto</span> it = std::partition(group.begin(), group.end(), [](<span class="keyword">const</span> <a class="code hl_class" href="class_student.html">Student</a> &amp;<span class="keyword">final</span>)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                             { return final.getAverage() &gt;= 5; });</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    failed.insert(failed.end(), std::make_move_iterator(it), std::make_move_iterator(group.end()));</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    group.erase(it, group.end());</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_variable" href="headers_8h.html#a1f1ee98f0c212517e324923358844c70">globalTime</a> += separationTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    cout &lt;&lt; <span class="stringliteral">&quot; * Studentu skirstymas i 2 kategorijas uztruko: &quot;</span> &lt;&lt; separationTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>() &lt;&lt; <span class="stringliteral">&quot; sekundziu. &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
+</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="templates_8h.html#a2a6430f49837fd05ca0cb03d6a0d894f">  175</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="templates_8h.html#a2a6430f49837fd05ca0cb03d6a0d894f">OutputSeparated</a>(Container &amp;group, Container &amp;failed)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>{</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordtype">int</span> markAction;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">double</span> sortTime1 = <a class="code hl_function" href="templates_8h.html#a0a4042e993dc0128a11c4dd1eed4a391">Sort</a>(group, markAction);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    ofstream passedOut(<span class="stringliteral">&quot;kietiakai.txt&quot;</span>);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_class" href="class_timer.html">Timer</a> passedTime;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_function" href="templates_8h.html#a5439dc6cdfd60c4e8e3b30f78cf1a7e6">Output</a>(group, passedOut, markAction);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordtype">double</span> outTime1 = passedTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    passedOut.close();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    cout &lt;&lt; <span class="stringliteral">&quot;Kietiakai surasyti i faila: kietiakai.txt.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">double</span> sortTime2 = <a class="code hl_function" href="templates_8h.html#a0a4042e993dc0128a11c4dd1eed4a391">Sort</a>(failed, markAction);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    cout &lt;&lt; <span class="stringliteral">&quot; * Studentu rusiavimas uztruko: &quot;</span> &lt;&lt; sortTime1 + sortTime2 &lt;&lt; <span class="stringliteral">&quot; sekundziu. &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <a class="code hl_variable" href="headers_8h.html#a1f1ee98f0c212517e324923358844c70">globalTime</a> += sortTime1 + sortTime2;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    ofstream failedOut(<span class="stringliteral">&quot;vargsiukai.txt&quot;</span>);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <a class="code hl_class" href="class_timer.html">Timer</a> failedTime;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_function" href="templates_8h.html#a5439dc6cdfd60c4e8e3b30f78cf1a7e6">Output</a>(failed, failedOut, markAction);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">double</span> outTime2 = failedTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>();</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    failedOut.close();</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    cout &lt;&lt; <span class="stringliteral">&quot;Vargsiukai surasyti i faila: vargsiukai.txt.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    cout &lt;&lt; <span class="stringliteral">&quot; * Rezultatu isvedimas i 2 failus uztruko: &quot;</span> &lt;&lt; outTime1 + outTime2 &lt;&lt; <span class="stringliteral">&quot; sekundziu. &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
+</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="templates_8h.html#a77e429e8df265a6b240e9c8e00fa4871">  199</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="templates_8h.html#a77e429e8df265a6b240e9c8e00fa4871">GenerateFile</a>(Container &amp;group)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>{</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    cout &lt;&lt; <span class="stringliteral">&quot;Iveskite failo pavadinima, i kuri bus irasyti duomenys: &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordtype">string</span> fout;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    cin &gt;&gt; fout;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    cout &lt;&lt; <span class="stringliteral">&quot;Iveskite studentu skaiciu, kuriu informacija norite sugeneruoti: &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordtype">int</span> amountStud = <a class="code hl_function" href="headers_8h.html#a575300a49e319243c7d0ebf158dad3ef">NumberCheck</a>(1, <a class="code hl_variable" href="headers_8h.html#ac04144c4c77c9b058f0e4a3ba25c6b7f">maxStud</a>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <a class="code hl_class" href="class_timer.html">Timer</a> generateTime;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordtype">int</span> amountMarks = rand() % 11 + 10;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= amountStud; i++)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <a class="code hl_class" href="class_student.html">Student</a> temp;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        temp.<a class="code hl_function" href="class_human.html#ab8f1ed2da6a6dd79f113a48e6dd31eee">setName</a>(<span class="stringliteral">&quot;VardasNr&quot;</span> + std::to_string(i));</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        temp.<a class="code hl_function" href="class_human.html#ab783da4d406863166d713c6781175df2">setSurname</a>(<span class="stringliteral">&quot;PavardeNr&quot;</span> + std::to_string(i));</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; amountMarks; j++)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            temp.<a class="code hl_function" href="class_student.html#aac4c1b512bd0cc6810324279f2a26d23">addMark</a>((rand() % 10 + 1));</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        temp.<a class="code hl_function" href="class_student.html#afe18f0ed8e50682130fb3ebc44f76524">setExam</a>(rand() % 10 + 1);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        group.push_back(move(temp));</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    ofstream out(fout);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    out &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; <span class="stringliteral">&quot;Vardas&quot;</span> &lt;&lt; setw(20) &lt;&lt; <span class="stringliteral">&quot;Pavarde&quot;</span>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= amountMarks; i++)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        out &lt;&lt; left &lt;&lt; setw(10) &lt;&lt; (<span class="stringliteral">&quot;ND&quot;</span> + std::to_string(i));</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    out &lt;&lt; setw(10) &lt;&lt; <span class="stringliteral">&quot;Egz.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<span class="keyword">final</span> : group)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        out &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; <span class="keyword">final</span>.getName() &lt;&lt; setw(20) &lt;&lt; <span class="keyword">final</span>.getSurname();</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> mark : <span class="keyword">final</span>.getMarks())</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            out &lt;&lt; left &lt;&lt; setw(10) &lt;&lt; mark;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        out &lt;&lt; setw(10) &lt;&lt; <span class="keyword">final</span>.getExam() &lt;&lt; endl;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    out.close();</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    cout &lt;&lt; <span class="stringliteral">&quot;Duomenys buvo sekmingai sukurti faile: &quot;</span> &lt;&lt; fout &lt;&lt; endl;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    cout &lt;&lt; <span class="stringliteral">&quot; * Duomenu generavimas uztruko: &quot;</span> &lt;&lt; generateTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>() &lt;&lt; <span class="stringliteral">&quot; sekundziu. &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_variable" href="headers_8h.html#a1f1ee98f0c212517e324923358844c70">globalTime</a> += generateTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>();</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}</div>
+</div>
+<div class="ttc" id="aclass_human_html_a69a27e7bc681ed227041ea40e894e401"><div class="ttname"><a href="class_human.html#a69a27e7bc681ed227041ea40e894e401">Human::getName</a></div><div class="ttdeci">string getName() const</div><div class="ttdef"><b>Definition</b> student.h:22</div></div>
+<div class="ttc" id="aclass_human_html_aaebff100983c200379f837c9aff67672"><div class="ttname"><a href="class_human.html#aaebff100983c200379f837c9aff67672">Human::getSurname</a></div><div class="ttdeci">string getSurname() const</div><div class="ttdef"><b>Definition</b> student.h:23</div></div>
+<div class="ttc" id="aclass_human_html_ab783da4d406863166d713c6781175df2"><div class="ttname"><a href="class_human.html#ab783da4d406863166d713c6781175df2">Human::setSurname</a></div><div class="ttdeci">void setSurname(const string &amp;newSurname)</div><div class="ttdef"><b>Definition</b> student.h:25</div></div>
+<div class="ttc" id="aclass_human_html_ab8f1ed2da6a6dd79f113a48e6dd31eee"><div class="ttname"><a href="class_human.html#ab8f1ed2da6a6dd79f113a48e6dd31eee">Human::setName</a></div><div class="ttdeci">void setName(const string &amp;newName)</div><div class="ttdef"><b>Definition</b> student.h:24</div></div>
+<div class="ttc" id="aclass_student_html"><div class="ttname"><a href="class_student.html">Student</a></div><div class="ttdef"><b>Definition</b> student.h:32</div></div>
+<div class="ttc" id="aclass_student_html_a1dec1372297b03b74868ac35f29558df"><div class="ttname"><a href="class_student.html#a1dec1372297b03b74868ac35f29558df">Student::calculateAverage</a></div><div class="ttdeci">void calculateAverage()</div><div class="ttdef"><b>Definition</b> student.cpp:109</div></div>
+<div class="ttc" id="aclass_student_html_a2b738bfaac4dce882b05dbb056ac327e"><div class="ttname"><a href="class_student.html#a2b738bfaac4dce882b05dbb056ac327e">Student::getAverage</a></div><div class="ttdeci">double getAverage() const</div><div class="ttdef"><b>Definition</b> student.h:63</div></div>
+<div class="ttc" id="aclass_student_html_a9a4ac80e7bec0ec0eacb6b2af8369641"><div class="ttname"><a href="class_student.html#a9a4ac80e7bec0ec0eacb6b2af8369641">Student::calculateMedian</a></div><div class="ttdeci">void calculateMedian()</div><div class="ttdef"><b>Definition</b> student.cpp:123</div></div>
+<div class="ttc" id="aclass_student_html_aabe9a8bc063b2c52064db1d71f640d66"><div class="ttname"><a href="class_student.html#aabe9a8bc063b2c52064db1d71f640d66">Student::getMedian</a></div><div class="ttdeci">double getMedian() const</div><div class="ttdef"><b>Definition</b> student.h:64</div></div>
+<div class="ttc" id="aclass_student_html_aac4c1b512bd0cc6810324279f2a26d23"><div class="ttname"><a href="class_student.html#aac4c1b512bd0cc6810324279f2a26d23">Student::addMark</a></div><div class="ttdeci">void addMark(int mark)</div><div class="ttdef"><b>Definition</b> student.h:66</div></div>
+<div class="ttc" id="aclass_student_html_afe18f0ed8e50682130fb3ebc44f76524"><div class="ttname"><a href="class_student.html#afe18f0ed8e50682130fb3ebc44f76524">Student::setExam</a></div><div class="ttdeci">void setExam(int newExam)</div><div class="ttdef"><b>Definition</b> student.h:67</div></div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition</b> headers.h:27</div></div>
+<div class="ttc" id="aclass_timer_html_a6a89a613c2af9b0d1e5f7e4ba9e46c54"><div class="ttname"><a href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">Timer::elapsed</a></div><div class="ttdeci">double elapsed() const</div><div class="ttdef"><b>Definition</b> headers.h:39</div></div>
+<div class="ttc" id="aheaders_8h_html_a1f1ee98f0c212517e324923358844c70"><div class="ttname"><a href="headers_8h.html#a1f1ee98f0c212517e324923358844c70">globalTime</a></div><div class="ttdeci">double globalTime</div><div class="ttdef"><b>Definition</b> functions.cpp:5</div></div>
+<div class="ttc" id="aheaders_8h_html_a575300a49e319243c7d0ebf158dad3ef"><div class="ttname"><a href="headers_8h.html#a575300a49e319243c7d0ebf158dad3ef">NumberCheck</a></div><div class="ttdeci">int NumberCheck(int min, int max)</div><div class="ttdef"><b>Definition</b> functions.cpp:8</div></div>
+<div class="ttc" id="aheaders_8h_html_a659705bbc72f1a795a961d7030a443ee"><div class="ttname"><a href="headers_8h.html#a659705bbc72f1a795a961d7030a443ee">ProcessException</a></div><div class="ttdeci">void ProcessException()</div><div class="ttdef"><b>Definition</b> functions.cpp:62</div></div>
+<div class="ttc" id="aheaders_8h_html_ac04144c4c77c9b058f0e4a3ba25c6b7f"><div class="ttname"><a href="headers_8h.html#ac04144c4c77c9b058f0e4a3ba25c6b7f">maxStud</a></div><div class="ttdeci">const int maxStud</div><div class="ttdef"><b>Definition</b> headers.h:22</div></div>
+<div class="ttc" id="aheaders_8h_html_adb92fb1851e693d79a86b3fe0aa14244"><div class="ttname"><a href="headers_8h.html#adb92fb1851e693d79a86b3fe0aa14244">surnames</a></div><div class="ttdeci">const vector&lt; string &gt; surnames</div><div class="ttdef"><b>Definition</b> headers.h:54</div></div>
+<div class="ttc" id="aheaders_8h_html_ae5ef839a3c7e5e57135ff02f06f70a5a"><div class="ttname"><a href="headers_8h.html#ae5ef839a3c7e5e57135ff02f06f70a5a">names</a></div><div class="ttdeci">const vector&lt; string &gt; names</div><div class="ttdef"><b>Definition</b> headers.h:53</div></div>
+<div class="ttc" id="atemplates_8h_html_a0a4042e993dc0128a11c4dd1eed4a391"><div class="ttname"><a href="templates_8h.html#a0a4042e993dc0128a11c4dd1eed4a391">Sort</a></div><div class="ttdeci">double Sort(Container &amp;group, int &amp;markAction)</div><div class="ttdef"><b>Definition</b> templates.h:106</div></div>
+<div class="ttc" id="atemplates_8h_html_a2a6430f49837fd05ca0cb03d6a0d894f"><div class="ttname"><a href="templates_8h.html#a2a6430f49837fd05ca0cb03d6a0d894f">OutputSeparated</a></div><div class="ttdeci">void OutputSeparated(Container &amp;group, Container &amp;failed)</div><div class="ttdef"><b>Definition</b> templates.h:175</div></div>
+<div class="ttc" id="atemplates_8h_html_a2c289c50f3fc18d1e33264c1e88156c0"><div class="ttname"><a href="templates_8h.html#a2c289c50f3fc18d1e33264c1e88156c0">SeparateStudents</a></div><div class="ttdeci">void SeparateStudents(Container &amp;group, Container &amp;failed)</div><div class="ttdef"><b>Definition</b> templates.h:162</div></div>
+<div class="ttc" id="atemplates_8h_html_a5439dc6cdfd60c4e8e3b30f78cf1a7e6"><div class="ttname"><a href="templates_8h.html#a5439dc6cdfd60c4e8e3b30f78cf1a7e6">Output</a></div><div class="ttdeci">void Output(Container &amp;group, ostream &amp;out, int markAction)</div><div class="ttdef"><b>Definition</b> templates.h:139</div></div>
+<div class="ttc" id="atemplates_8h_html_a77e429e8df265a6b240e9c8e00fa4871"><div class="ttname"><a href="templates_8h.html#a77e429e8df265a6b240e9c8e00fa4871">GenerateFile</a></div><div class="ttdeci">void GenerateFile(Container &amp;group)</div><div class="ttdef"><b>Definition</b> templates.h:199</div></div>
+<div class="ttc" id="atemplates_8h_html_ac0bbd3311f96b181148d8a971b8c83d1"><div class="ttname"><a href="templates_8h.html#ac0bbd3311f96b181148d8a971b8c83d1">Action</a></div><div class="ttdeci">void Action(Container &amp;group, int action)</div><div class="ttdef"><b>Definition</b> templates.h:57</div></div>
+<div class="ttc" id="atemplates_8h_html_afc87868e0f2fe66d3ca3796d0040fa0c"><div class="ttname"><a href="templates_8h.html#afc87868e0f2fe66d3ca3796d0040fa0c">ReadFromFile</a></div><div class="ttdeci">void ReadFromFile(Container &amp;group, int action)</div><div class="ttdef"><b>Definition</b> templates.h:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="templates_8h.html">templates.h</a></li>
+    <li class="footer">Sugeneruota <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

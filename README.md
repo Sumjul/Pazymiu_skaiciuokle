@@ -1,87 +1,79 @@
-# Naujo funkcialumo aprašymas (v1.5)
+# Programos naudojimosi instrukcija
 
-## 🧬 Klasės struktūra
+Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su `include/` ir `src/` katalogais.
 
-| Klasė     | Tipas     | Aprašymas                                                                 |
-|-----------|-----------|--------------------------------------------------------------------------|
-| `Human`   | Abstrakti | Bendra klasė visiems žmonėms, aprašo vardą, pavardę, turi virtualų metodą `print()` |
-| `Student` | Išvestinė | Paveldi iš `Human`, aprašo studentų pažymius, egzaminą ir visą reikiamą logiką      |
+## ✅ Reikalavimai
 
-## 🧪 Testų sistema
+Įsitikinkite, kad turite įdiegtus šiuos įrankius savo sistemoje:
 
-Visi testai iš **v1.2** versijos buvo **pakartotinai patikrinti**:
+- **C++ kompiliatorius** (pvz., GCC arba MSVC)
+- **CMake** (bent 3.25 versija)
 
-| Testas                         | Būsena     | Paaiškinimas                                                       |
-|--------------------------------|------------|--------------------------------------------------------------------|
-| Rule of Five testai            | ✅ Veikia  | Visi kopijavimo/perkėlimo metodai veikia kaip tikėtasi             |
-| Operatoriai `>>` ir `<<`       | ✅ Veikia  | Įvedimas/išvedimas per srautus veikia korektiškai                  |
-| `print()` per `Human*`         | ✅ Veikia  | Virtuali funkcija `print()` veikia per polimorfizmą                |
-| Bandymas kurti `Human` objektą| ⛔ Užblokuota | Kompiliatorius blokuoja bandymą kurti `Human` objektą             |
+> **Pastaba:** Git nebūtinas, jei jau turite projekto failus.
 
 ---
----
 
-## Programos naudojimosi instrukcija
+## 🔧 Projekto paruošimas ir paleidimas
 
-Šis projektas naudoja CMake kompiliavimui ir organizuoja kodą pagal standartinę struktūrą su atskirais include ir src katalogais.
+### 1. Projekto failų paruošimas
 
-## Reikalavimai
-
-Prieš pradedant, įsitikinkite, kad turite įdiegtus šiuos įrankius:
-
-- C++ kompiliatorius (pvz., GCC arba MSVC)
-
-- CMake (bent jau 3.25 versija)
-
-- Git (jei norite klonuoti iš saugyklos)
-
-## Projekto paruošimas ir paleidimas
-
-### Projekto klonavimas (jei reikia)
-
-Jei projektas dar nėra jūsų kompiuteryje, galite jį nusiklonuoti naudodami komandą:
+Jeigu dar neturite projekto aplanke, galite jį atsisiųsti arba nusiklonuoti iš saugyklos:
 
 ```sh
 git clone <projekto_git_nuoroda>
 cd <projekto_katalogas>
 ```
 
-### Projekto kompiliavimas su CMake
+### 2. Paleidimas naudojant run.bat (Windows)
 
-Sukurkite naują katalogą, skirtą generuojamiems failams:
-
-```sh
-mkdir build
-
-cd build
-```
-
-Generuokite projektą su CMake:
+Norėdami automatiškai sukompiliuoti ir paleisti programą, tiesiog dukart spustelėkite failą:
 
 ```sh
-cmake ..
+run.bat
 ```
 
-Paleiskite kompiliaciją:
+Šis failas:
+
+- automatiškai sukuria `build/` katalogą (jeigu jo dar nėra),
+- sugeneruoja ir sukompiliuoja projektą naudojant CMake,
+- paleidžia sukurtą `.exe` failą (`Pazymiu_Skaiciuokle.exe`).
+
+---
+
+### Alternatyvus rankinis paleidimas (jei reikia)
+
+Jei norite viską daryti per komandų eilutę:
 
 ```sh
-cmake --build .
+cmake -B build -S .
+cmake --build build
+build\Pazymiu_Skaiciuokle.exe
 ```
 
-### Programos paleidimas
+## 🧪 Testavimas
 
-Po sėkmingo kompiliavimo galite paleisti programą:
+Catch2 testų failas (`tests.cpp`) yra projekte, tačiau testai **nėra** įtraukiami į automatinį kompiliavimą.
 
-```sh
-./run
-```
+Jeigu reikia paleisti testus:
 
-arba Windows sistemoje tiesiog dukart spustelėkite `run.bat` failą.
+1. Atidarykite projektą Visual Studio Code aplinkoje.
+2. Suraskite ir paleiskite `tests.cpp` failą rankiniu būdu su integruotu Catch2 palaikymu.
 
-## Projekto struktūra
+## 📁 Projekto struktūra
 
-- `include/` – antraštiniai failai (.h, .hpp), kuriuose aprašomos klasės ir funkcijų prototipai.
+- `include/` – antraštiniai failai (.h), kuriuose aprašomos klasės ir funkcijų prototipai.
 - `src/` – pagrindinis programos kodas (.cpp).
-- `CMakeLists.txt` – CMake konfigūracijos failas.
+- `CMakeLists.txt` – CMake konfigūracijos failas, skirtas kompiliavimui.
+- `run.bat` – skriptas Windows sistemai, kuris automatizuoja kompiliavimą ir paleidimą.
 - `README.md` – ši naudojimosi instrukcija.
-- `run.bat` – Windows skriptas greitam programos paleidimui.
+
+### Dokumentacija
+
+- `Dokumentacija.pdf` – projekto dokumentacija.
+- `Doxyfile` – Doxygen konfigūracijos failas, skirtas automatiškai generuoti projekto dokumentaciją.
+- `html/` – Doxygen generuota HTML dokumentacija.
+- `latex/` – Doxygen generuota LaTeX dokumentacija.
+
+### Catch2 testavimas
+
+- `catch2/` – Catch2 testavimo sistema.

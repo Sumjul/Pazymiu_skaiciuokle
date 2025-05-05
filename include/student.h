@@ -1,5 +1,6 @@
 #pragma once
 
+/** Base class for human data */
 class Human
 {
 protected:
@@ -14,7 +15,7 @@ public:
 
     virtual ~Human()
     {
-        cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
+        //cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
     }
 
     // Getters and setters
@@ -26,7 +27,7 @@ public:
     virtual void print() const = 0;
 };
 
-// Class that holds student data and inherits from Human
+/** Class that holds student data and inherits from Human */
 class Student : public Human
 {
 private:
@@ -41,7 +42,7 @@ public:
 
     ~Student()
     {
-        cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl;
+        //cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl;
     }
 
     // Copy constructor and move constructor
