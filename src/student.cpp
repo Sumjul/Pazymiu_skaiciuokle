@@ -10,9 +10,11 @@ Student::Student(const Student &other)
 
 // Move constructor
 Student::Student(Student &&other)
-	: Human(move(other)), marks_(move(other.marks_)),
-	  exam_(other.exam_), average_(other.average_), median_(other.median_)
+	: Human(move(other)), marks_(move(other.marks_)), exam_(move(other.exam_)), average_(move(other.average_)), median_(move(other.median_))
 {
+	other.name_.clear();
+	other.surname_.clear();
+	other.marks_.clear();
 	other.exam_ = 0;
 	other.average_ = 0;
 	other.median_ = 0;
@@ -23,7 +25,8 @@ Student &Student::operator=(const Student &other)
 {
 	if (this == &other)
 		return *this;
-	Human::operator=(other);
+	name_ = other.name_;
+	surname_ = other.surname_;
 	marks_ = other.marks_;
 	exam_ = other.exam_;
 	average_ = other.average_;
@@ -36,7 +39,8 @@ Student &Student::operator=(Student &&other)
 {
 	if (this == &other)
 		return *this;
-	Human::operator=(move(other));
+	name_ = move(other.name_);
+	surname_ = move(other.surname_);
 	marks_ = move(other.marks_);
 	exam_ = other.exam_;
 	average_ = other.average_;
@@ -96,7 +100,7 @@ istream &operator>>(istream &in, Student &student)
 	return in;
 }
 
-/** Function that prints the student data to the console. */
+// Function that prints the student data to the console.
 void Student::print() const
 {
 	cout << "Vardas: " << name_ << ", " << "Pavarde: " << surname_ << ", " << "Galutinis (Vid.): " << average_ << ", " << "Galutinis (Med.): " << median_ << ", " << "Egzaminas: " << exam_ << ", " << "Pazymiai: ";
@@ -105,7 +109,7 @@ void Student::print() const
 	cout << endl;
 }
 
-/** Function that calculates the average marks of students. */
+// Function that calculates the average marks of students.
 void Student::calculateAverage()
 {
 	if (marks_.empty())
@@ -119,7 +123,7 @@ void Student::calculateAverage()
 	}
 }
 
-/** Function that calculates the median marks of students. */
+// Function that calculates the median marks of students.
 void Student::calculateMedian()
 {
 	if (marks_.empty())
@@ -134,7 +138,7 @@ void Student::calculateMedian()
 	}
 }
 
-/** Function that reads a line from a file and assigns it to a student. */
+// Function that reads a line from a file and assigns it to a student.
 void Student::readLine(const string &line)
 {
 	istringstream lineStream(line);

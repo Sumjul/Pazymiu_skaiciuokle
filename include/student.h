@@ -16,6 +16,8 @@ public:
     virtual ~Human()
     {
         //cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
+        name_.clear();
+        surname_.clear();
     }
 
     // Getters and setters
@@ -43,6 +45,7 @@ public:
     ~Student()
     {
         //cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl;
+        marks_.clear();
     }
 
     // Copy constructor and move constructor
