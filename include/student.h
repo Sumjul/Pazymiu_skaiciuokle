@@ -9,7 +9,6 @@ protected:
 
 public:
     // Constructors and destructor
-    Human() = default;
     Human(const string &name = "Vardenis", const string &surname = "Pavardenis")
         : name_(name), surname_(surname) {}
 
