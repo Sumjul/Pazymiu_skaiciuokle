@@ -25,7 +25,7 @@ TEST_CASE("Student klases Rule of five testai")
     REQUIRE(A.getAverage() == 8.75);
     REQUIRE(A.getMedian() == 8.5);
     SECTION("Kopijavimo konstruktorius") {
-        Student B = A;
+        Student B (A);
         REQUIRE(B.getName() == "Testas");
         REQUIRE(B.getSurname() == "Testinis");
         REQUIRE(B.getExam() == 9);
@@ -34,7 +34,7 @@ TEST_CASE("Student klases Rule of five testai")
     }
     SECTION("Perkelimo konstruktorius") {
         Student temp = A;
-        Student C = move(temp);
+        Student C (move(temp));
         REQUIRE(C.getName() == "Testas");
         REQUIRE(C.getSurname() == "Testinis");
         REQUIRE(C.getExam() == 9);
@@ -71,7 +71,7 @@ TEST_CASE("Student konstruktorius su parametrais")
     REQUIRE(F.getName() == "Jonas");
     REQUIRE(F.getSurname() == "Jonaitis");
     REQUIRE(F.getExam() == 10);
-    REQUIRE(F.getAverage() == Approx(9.4));
+    REQUIRE(F.getAverage() == 9.4);
     REQUIRE(F.getMedian() == 8.5);
 }
 TEST_CASE("Student ivesties/isvesties operatoriai")

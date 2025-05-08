@@ -43,7 +43,6 @@ public:
 };
 
 /** Functions that are used in the main function. */
-void TestStudentClass();
 int NumberCheck(int min, int max);
 int Menu();
 void ProgramEnd();

@@ -9,13 +9,14 @@ protected:
 
 public:
     // Constructors and destructor
-    Human() = default;
     Human(const string &name = "Vardenis", const string &surname = "Pavardenis")
         : name_(name), surname_(surname) {}
 
     virtual ~Human()
     {
         //cout << "[~] Base destructor called for: " << name_ << " " << surname_ << endl;
+        name_.clear();
+        surname_.clear();
     }
 
     // Getters and setters
@@ -43,6 +44,7 @@ public:
     ~Student()
     {
         //cout << "[~] Destructor called for: " << name_ << " " << surname_ << endl;
+        marks_.clear();
     }
 
     // Copy constructor and move constructor

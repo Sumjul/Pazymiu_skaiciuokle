@@ -5,6 +5,5 @@ var searchData=
   ['testavimas_2',['🧪 Testavimas',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'']]],
   ['testavimas_3',['Catch2 testavimas',['../md__r_e_a_d_m_e.html#autotoc_md11',1,'']]],
   ['tests_2ecpp_4',['tests.cpp',['../tests_8cpp.html',1,'']]],
-  ['teststudentclass_5',['TestStudentClass',['../headers_8h.html#ae3ab58993bc06d214cb5ec945d35f3a9',1,'headers.h']]],
-  ['timer_6',['Timer',['../class_timer.html',1,'Timer'],['../class_timer.html#a5f16e8da27d2a5a5242dead46de05d97',1,'Timer::Timer()']]]
+  ['timer_5',['Timer',['../class_timer.html',1,'Timer'],['../class_timer.html#a5f16e8da27d2a5a5242dead46de05d97',1,'Timer::Timer()']]]
 ];

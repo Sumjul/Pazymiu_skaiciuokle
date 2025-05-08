@@ -1,6 +1,5 @@
 var class_human =
 [
-    [ "Human", "class_human.html#a1e7ebe2c710e3026b8f8f0882e2a0475", null ],
     [ "Human", "class_human.html#a2bf21e43ee56b5cd1b9db236a8006de1", null ],
     [ "~Human", "class_human.html#a9224ffb7aa2ecb9456d7ed156b616013", null ],
     [ "getName", "class_human.html#a69a27e7bc681ed227041ea40e894e401", null ],

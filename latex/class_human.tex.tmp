@@ -11,8 +11,6 @@ Paveldimumo diagrama Human\+:
 \doxysubsubsection*{Vieši Metodai}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_human_a1e7ebe2c710e3026b8f8f0882e2a0475}{Human}} ()=default
-\item 
 \mbox{\hyperlink{class_human_a2bf21e43ee56b5cd1b9db236a8006de1}{Human}} (const string \&name="{}Vardenis"{}, const string \&surname="{}Pavardenis"{})
 \item 
 virtual \mbox{\hyperlink{class_human_a9224ffb7aa2ecb9456d7ed156b616013}{\texorpdfstring{$\sim$}{\string~}\+Human}} ()
@@ -40,20 +38,14 @@ string \mbox{\hyperlink{class_human_aa6632ccd30ebfa087e0d875b2d50340c}{surname\+
 Base class for human data 
 
 \doxysubsection{Konstruktoriaus ir Destruktoriaus Dokumentacija}
-\Hypertarget{class_human_a1e7ebe2c710e3026b8f8f0882e2a0475}\index{Human@{Human}!Human@{Human}}
-\index{Human@{Human}!Human@{Human}}
-\doxysubsubsection{\texorpdfstring{Human()}{Human()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \label{class_human_a1e7ebe2c710e3026b8f8f0882e2a0475} 
-Human\+::\+Human (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
-
-Here is the caller graph for this function\+:
-% FIG 1
 \Hypertarget{class_human_a2bf21e43ee56b5cd1b9db236a8006de1}\index{Human@{Human}!Human@{Human}}
 \index{Human@{Human}!Human@{Human}}
-\doxysubsubsection{\texorpdfstring{Human()}{Human()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{Human()}{Human()}}
 {\footnotesize\ttfamily \label{class_human_a2bf21e43ee56b5cd1b9db236a8006de1} 
 Human\+::\+Human (\begin{DoxyParamCaption}\item[{const string \&}]{name}{ = {\ttfamily "{}Vardenis"{}}, }\item[{const string \&}]{surname}{ = {\ttfamily "{}Pavardenis"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Here is the caller graph for this function\+:
+% FIG 1
 \Hypertarget{class_human_a9224ffb7aa2ecb9456d7ed156b616013}\index{Human@{Human}!````~Human@{\texorpdfstring{$\sim$}{\string~}Human}}
 \index{````~Human@{\texorpdfstring{$\sim$}{\string~}Human}!Human@{Human}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Human()}{\string~Human()}}
