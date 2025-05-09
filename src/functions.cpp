@@ -2,6 +2,8 @@
 #include "../include/headers.h"
 #include "../include/student.h"
 #include "../include/templates.h"
+#include "../include/vector.h"
+
 double globalTime = 0;
 
 /** Function that checks if the input is a number and if it is within the specified range. */

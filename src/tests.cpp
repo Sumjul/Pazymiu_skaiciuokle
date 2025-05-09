@@ -4,6 +4,8 @@
 #include "../include/headers.h"
 #include "../include/student.h"
 #include "../include/templates.h"
+#include "../include/vector.h"
+
 
 TEST_CASE("Student klases Rule of five testai")
 {

@@ -2,6 +2,8 @@
 #include "../include/headers.h"
 #include "../include/student.h"
 #include "../include/templates.h"
+#include "../include/vector.h"
+
 
 // Copy constructor
 Student::Student(const Student &other)
