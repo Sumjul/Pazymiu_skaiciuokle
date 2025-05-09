@@ -41,9 +41,6 @@ Vector::~Vector()
 }
 
 
-
-
-
 void Vector::Push_back(int value)
 {
     if (size < capacity)
@@ -109,6 +106,55 @@ bool Vector::operator!=(const Vector& other) const
     return !(*this == other);
 }
 
+
+void Vector::Insert(int index, int value)
+{
+    if (index < 0 || index > size)
+    {
+        throw std::out_of_range("Indeksas uz ribu. Negalima iterpti elemento.");
+    }
+    if (size != capacity)
+    {
+        for (int i = size - 1; i >= index; --i)
+        {
+            data[i + 1] = data[i];
+        }
+        data[index] = value;
+        ++size;
+    }
+    else
+    {
+        capacity *= 2;
+        int* newData = new int[capacity];
+        for (int i = 0; i < size; ++i)
+        {
+            newData[i] = data[i];
+        }
+        delete[] data;
+        data = newData;
+        Insert(index, value);
+    }
+}
+
+void Vector::Erase(int index)
+{
+    if (index < 0 || index >= size)
+    {
+        throw std::out_of_range("Indeksas uz ribu. Negalima istrinti elemento.");
+    }
+    for (int i = index; i < size - 1; ++i)
+    {
+        data[i] = data[i + 1];
+    }
+    --size;
+}
+
+void Vector::Clear()
+{
+    size = 0;
+}
+
+
 ostream& operator<<(ostream& out, const Vector& other)
 {
     for (int i = 0; i < other.size; ++i)
@@ -129,7 +175,18 @@ ostream& operator<<(ostream& out, const Vector& other)
 
     Vector& Vector::operator=(const Vector& other)
     {
-        
+        if (other.size > size)
+        {
+            delete[] data;
+            capacity = other.size + 5;
+            data = new int[capacity];
+        }
+        for (int i = 0; i < other.Size(); ++i)
+        {
+            data[i] = other.data[i];
+        }
+        size = other.size;
+        return *this;
     }
     int& Vector::operator[](int index)
     {
@@ -151,3 +208,4 @@ ostream& operator<<(ostream& out, const Vector& other)
     {
         return data[size - 1];
     }
+

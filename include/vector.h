@@ -22,6 +22,10 @@ public:
     bool operator==(const Vector& other) const;
     bool operator!=(const Vector& other) const;
 
+    void Insert(int index, int value);
+    void Erase(int index);
+    void Clear();
+
     friend ostream &operator<<(ostream &out, const Vector &other);
 
     Vector& operator=(const Vector& other);
