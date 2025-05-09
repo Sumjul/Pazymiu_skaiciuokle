@@ -7,13 +7,9 @@
 Vector::Vector()
     : size(0), capacity(5), data(new int[capacity]) {}
 
-Vector::~Vector()
-{
-    delete[] data;
-}
 
 Vector::Vector(const Vector& other)
-    : size(other.size), capacity(other.capacity), data(new int[capacity])
+    : size(other.size), capacity(other.capacity + 5), data(new int[capacity])
 {
     for (int i = 0; i < other.Size(); ++i)
     {
@@ -30,11 +26,56 @@ Vector::Vector(int elements, int value)
     }
 }
 
+Vector::Vector(const std::initializer_list<int>& list)
+    : size(0), capacity(list.size() + 5), data(new int[capacity])
+{
+    for ( int i: list )
+    {
+        Push_back(i);
+    }
+}
+
+Vector::~Vector()
+{
+    delete[] data;
+}
+
+
+
+
+
 void Vector::Push_back(int value)
 {
-    data[size] = value;
-    ++size;
+    if (size < capacity)
+    {
+        data[size] = value;
+        ++size;
+    }
+    else
+    {
+        capacity *= 2;
+        int* newData = new int[capacity];
+        for (int i = 0; i < size; ++i)
+        {
+            newData[i] = data[i];
+        }
+        newData[size] = value;
+        ++size;
+        delete[] data;
+        data = newData;
+    }
+    
 }
+
+void Vector::Pop_back()
+{
+    if (size == 0)
+    {
+        throw std::out_of_range("Vectorius yra tuscias, negalima istrinti elemento.");
+    }
+    --size;
+}
+
 
 bool Vector::Empty() const
 {
@@ -82,3 +123,31 @@ ostream& operator<<(ostream& out, const Vector& other)
     out << endl;
     return out;
 }
+
+
+
+
+    Vector& Vector::operator=(const Vector& other)
+    {
+        
+    }
+    int& Vector::operator[](int index)
+    {
+        return data[index];
+    }
+    int& Vector::At(int index)
+    {
+        if (index < 0 || index >= size)
+        {
+            throw std::out_of_range("Indeksas uz ribu. Negalima pasiekti elemento.");
+        }
+        return data[index];
+    }
+    int& Vector::Front()
+    {
+        return data[0];
+    }
+    int& Vector::Back()
+    {
+        return data[size - 1];
+    }

@@ -7,6 +7,18 @@
 
 int main()
 {
+	Vector v;
+	for (int i = 0; i < 23; ++i)
+	{
+		v.Push_back(i);
+		cout << v << endl;
+	}
+	while (v.Empty() == false)
+	{
+		v.Pop_back();
+		cout << v << endl;
+	}
+
 	// Uncomment the container you want to use
 	vector<Student> group, failed; group.reserve(maxStud); failed.reserve(maxStud);
 	//deque<Student> group, failed;

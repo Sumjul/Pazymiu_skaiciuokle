@@ -4,7 +4,6 @@
 #include "../include/templates.h"
 #include "../include/vector.h"
 
-
 // Copy constructor
 Student::Student(const Student &other)
 	: Human(other), marks_(other.marks_), exam_(other.exam_),
