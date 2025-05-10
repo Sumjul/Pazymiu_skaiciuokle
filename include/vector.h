@@ -32,6 +32,10 @@ public:
     int& Front() {
         return data[0];
     }
+    /* Adds an element to the beginning of the vector */
+    void Push_front(int value);
+    /* Removes the first element from the vector */
+    void Pop_front();
 
     // =======================
     // Last element functions
@@ -52,10 +56,14 @@ public:
     int Size() const {
         return size;
     }
+    /* Resizes the vector to the specified size */
+    void Resize(int newSize);
     /* Returns the capacity of the vector */
     int Capacity() const {
         return capacity;
     }
+    /* Reserves space for the specified number of elements */
+    void Reserve(int newCapacity);
     /* Checks if the vector is empty */
     bool Empty() const {
         return size == 0;
@@ -89,6 +97,20 @@ public:
     /* Compares this vector with another for inequality */
     bool operator!=(const Vector& other) const {
         return !(*this == other);
+    }
+    /* Compares this vector with another for less than */
+    bool operator<(const Vector& other) const;
+    /* Compares this vector with another for greater than */
+    bool operator>(const Vector& other) const {
+        return other < *this;
+    }
+    /* Compares this vector with another for less than or equal to */
+    bool operator<=(const Vector& other) const {
+        return !(other > *this);
+    }
+    /* Compares this vector with another for greater than or equal to */
+    bool operator>=(const Vector& other) const {
+        return !(*this > other);
     }
 
     // ============================

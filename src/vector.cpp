@@ -8,7 +8,7 @@
 // Constructors
 // =============
 /** Copy constructor */
-Vector::Vector(const Vector& other)
+Vector::Vector(const Vector &other)
     : size(other.size), capacity(other.capacity + 5), data(new int[capacity])
 {
     for (int i = 0; i < other.Size(); ++i)
@@ -26,10 +26,10 @@ Vector::Vector(int elements, int value)
     }
 }
 /* Initializer list constructor */
-Vector::Vector(const std::initializer_list<int>& list)
+Vector::Vector(const std::initializer_list<int> &list)
     : size(0), capacity(list.size() + 5), data(new int[capacity])
 {
-    for ( int i: list )
+    for (int i : list)
     {
         Push_back(i);
     }
@@ -38,7 +38,44 @@ Vector::Vector(const std::initializer_list<int>& list)
 // ========================
 // First element functions
 // ========================
-
+void Vector::Push_front(int value)
+{
+    if (size < capacity)
+    {
+        for (int i = size; i > 0; --i)
+        {
+            data[i] = data[i - 1];
+        }
+        data[0] = value;
+        ++size;
+    }
+    else
+    {
+        capacity *= 2;
+        int *newData = new int[capacity];
+        newData[0] = value;
+        for (int i = 0; i < size; ++i)
+        {
+            newData[i + 1] = data[i];
+        }
+        ++size;
+        delete[] data;
+        data = newData;
+    }
+}
+/* Removes the first element from the vector */
+void Vector::Pop_front()
+{
+    if (size == 0)
+    {
+        throw std::out_of_range("Vectorius yra tuscias, negalima istrinti elemento.");
+    }
+    for (int i = 0; i < size - 1; ++i)
+    {
+        data[i] = data[i + 1];
+    }
+    --size;
+}
 
 // =======================
 // Last element functions
@@ -54,7 +91,7 @@ void Vector::Push_back(int value)
     else
     {
         capacity *= 2;
-        int* newData = new int[capacity];
+        int *newData = new int[capacity];
         for (int i = 0; i < size; ++i)
         {
             newData[i] = data[i];
@@ -64,7 +101,6 @@ void Vector::Push_back(int value)
         delete[] data;
         data = newData;
     }
-    
 }
 /* Removes the last element from the vector */
 void Vector::Pop_back()
@@ -76,11 +112,60 @@ void Vector::Pop_back()
     --size;
 }
 
+// ================
+// Other functions
+// ================
+/* Resizes the vector to the specified size */
+void Vector::Resize(int newSize)
+{
+    if (newSize < 0)
+    {
+        throw std::invalid_argument("Neteisingas dydis. Dydis negali buti neigiamas.");
+    }
+    if (newSize > capacity)
+    {
+        capacity = newSize + 5;
+        int *newData = new int[capacity];
+        for (int i = 0; i < size; ++i)
+        {
+            newData[i] = data[i];
+        }
+        for (int i = size; i < newSize; ++i)
+        {
+            newData[i] = 0;
+        }
+        delete[] data;
+        data = newData;
+    }
+    else if (newSize > size)
+    {
+        for (int i = size; i < newSize; ++i)
+        {
+            data[i] = 0;
+        }
+    }
+    size = newSize;
+}
+/* Reserves space for the specified number of elements */
+void Vector::Reserve(int newCapacity)
+{
+    if (newCapacity <= capacity)
+        return;
+    int *newData = new int[newCapacity];
+    for (int i = 0; i < size; ++i)
+    {
+        newData[i] = data[i];
+    }
+    delete[] data;
+    data = newData;
+    capacity = newCapacity;
+}
+
 // =========================
 // Element access functions
 // =========================
 /* Accesses an element by index with bounds checking */
-int& Vector::At(int index)
+int &Vector::At(int index)
 {
     if (index < 0 || index >= size)
     {
@@ -107,7 +192,7 @@ void Vector::Insert(int index, int value)
     else
     {
         capacity *= 2;
-        int* newData = new int[capacity];
+        int *newData = new int[capacity];
         for (int i = 0; i < size; ++i)
         {
             newData[i] = data[i];
@@ -135,7 +220,7 @@ void Vector::Erase(int index)
 // Operators
 // ===========
 /* Assigment operator */
-Vector& Vector::operator=(const Vector& other)
+Vector &Vector::operator=(const Vector &other)
 {
     if (other.size > size)
     {
@@ -151,7 +236,7 @@ Vector& Vector::operator=(const Vector& other)
     return *this;
 }
 /* Compares this vector with another for equality */
-bool Vector::operator==(const Vector& other) const
+bool Vector::operator==(const Vector &other) const
 {
     if (Size() != other.Size())
         return false;
@@ -162,12 +247,25 @@ bool Vector::operator==(const Vector& other) const
     }
     return true;
 }
+/* Compares this vector with another for less than */
+bool Vector::operator<(const Vector &other) const
+{
+    int minSize = std::min(Size(), other.Size()) ? size : other.size;
+    for (int i = 0; i < minSize; ++i)
+    {
+        if (data[i] < other.data[i])
+            return true;
+        else if (data[i] > other.data[i])
+            return false;
+    }
+    return size < other.size;
+}
 
 // ============================
 // Overloaded input and output
 // ============================
 /* Overloads the stream output operator for printing */
-ostream& operator<<(ostream& out, const Vector& other)
+ostream &operator<<(ostream &out, const Vector &other)
 {
     for (int i = 0; i < other.size; ++i)
     {
