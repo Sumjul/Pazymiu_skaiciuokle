@@ -4,30 +4,8 @@
 #include "../include/templates.h"
 #include "../include/vector.h"
 
-
 int main()
 {
-	Vector v;
-	for (int i = 1; i <= 11; ++i)
-	{
-		v.Push_back(i);
-		//cout << v << endl;
-	}
-
-	Vector w {1, 2, 3, 4, 5, 6, 7, 8};
-	cout << w << endl;
-	w.Insert(4, 10);
-	w.Insert(4, 10);
-	w.Insert(4, 10);
-	w.Insert(4, 10);
-	w.Insert(4, 10);
-	cout << w << endl;
-	w.Insert(4, 10);
-	cout << w << endl;
-	w.Erase(7);
-	cout << w << endl;
-	
-
 	// Uncomment the container you want to use
 	vector<Student> group, failed; group.reserve(maxStud); failed.reserve(maxStud);
 	//deque<Student> group, failed;

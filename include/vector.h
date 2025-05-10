@@ -1,11 +1,17 @@
+#pragma once
+
+/* A custom dynamic array class for integers, similar to std::vector<int> */
 class Vector
 {
 private:
-    int size;
-    int capacity;
-    int* data;
+    int size;       // Current number of elements in the vector
+    int capacity;   // Current capacity of the vector
+    int* data;      // Pointer to to dynamically allocated data
 
 public:
+    // ============================
+    // Constructors and Destructor
+    // ============================
     /** Default constructor */ 
     Vector() : size(0), capacity(5), data(new int[capacity]) {};
     /** Copy constructor */
@@ -19,12 +25,18 @@ public:
         delete[] data;
     }
 
-    /* Returns the first element of the vector */
+    // ========================
+    // First element functions
+    // ========================
+    /* Returns reference to the first element */
     int& Front() {
         return data[0];
     }
 
-    /* Returns the last element of the vector */
+    // =======================
+    // Last element functions
+    // =======================
+    /* Returns reference to the last element */
     int& Back() {
         return data[size - 1];
     }
@@ -33,6 +45,9 @@ public:
     /* Removes the last element from the vector */
     void Pop_back();
 
+    // ================
+    // Other functions
+    // ================
     /* Returns the size of the vector */
     int Size() const {
         return size;
@@ -50,6 +65,9 @@ public:
         size = 0;
     }
     
+    // =========================
+    // Element access functions
+    // =========================
     /* Accesses an element by index without bounds checking */
     int& operator[](int index) {
         return data[index];
@@ -61,16 +79,21 @@ public:
     /* Removes an element at the specified index */
     void Erase(int index);
 
+    // ===========
+    // Operators
+    // ===========
+    /* Assignment operator */
+    Vector& operator=(const Vector& other);
     /* Compares this vector with another for equality */
     bool operator==(const Vector& other) const;
     /* Compares this vector with another for inequality */
     bool operator!=(const Vector& other) const {
         return !(*this == other);
     }
-    
-    /* Assignment operator */
-    Vector& operator=(const Vector& other);
 
+    // ============================
+    // Overloaded input and output
+    // ============================
     /* Overloads the stream output operator for printing */
     friend ostream &operator<<(ostream &out, const Vector &other);
 };

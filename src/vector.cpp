@@ -4,6 +4,9 @@
 #include "../include/templates.h"
 #include "../include/vector.h"
 
+// =============
+// Constructors
+// =============
 /** Copy constructor */
 Vector::Vector(const Vector& other)
     : size(other.size), capacity(other.capacity + 5), data(new int[capacity])
@@ -32,6 +35,14 @@ Vector::Vector(const std::initializer_list<int>& list)
     }
 }
 
+// ========================
+// First element functions
+// ========================
+
+
+// =======================
+// Last element functions
+// =======================
 /* Adds an element to the end of the vector */
 void Vector::Push_back(int value)
 {
@@ -65,6 +76,9 @@ void Vector::Pop_back()
     --size;
 }
 
+// =========================
+// Element access functions
+// =========================
 /* Accesses an element by index with bounds checking */
 int& Vector::At(int index)
 {
@@ -117,19 +131,9 @@ void Vector::Erase(int index)
     --size;
 }
 
-/* Compares this vector with another for equality */
-bool Vector::operator==(const Vector& other) const
-{
-    if (Size() != other.Size())
-        return false;
-    for (int i = 0; i < Size(); ++i)
-    {
-        if (data[i] != other.data[i])
-            return false;
-    }
-    return true;
-}
-
+// ===========
+// Operators
+// ===========
 /* Assigment operator */
 Vector& Vector::operator=(const Vector& other)
 {
@@ -146,7 +150,22 @@ Vector& Vector::operator=(const Vector& other)
     size = other.size;
     return *this;
 }
+/* Compares this vector with another for equality */
+bool Vector::operator==(const Vector& other) const
+{
+    if (Size() != other.Size())
+        return false;
+    for (int i = 0; i < Size(); ++i)
+    {
+        if (data[i] != other.data[i])
+            return false;
+    }
+    return true;
+}
 
+// ============================
+// Overloaded input and output
+// ============================
 /* Overloads the stream output operator for printing */
 ostream& operator<<(ostream& out, const Vector& other)
 {
