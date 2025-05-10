@@ -31,9 +31,7 @@ public:
     // First element functions
     // ========================
     /* Returns reference to the first element */
-    int& Front() {
-        return data[0];
-    }
+    const int& Front() const;
     /* Adds an element to the beginning of the vector */
     void Push_front(int value);
     /* Removes the first element from the vector */
@@ -43,9 +41,7 @@ public:
     // Last element functions
     // =======================
     /* Returns reference to the last element */
-    int& Back() {
-        return data[size - 1];
-    }
+    const int& Back() const;
     /* Adds an element to the end of the vector */
     void Push_back(int value);
     /* Removes the last element from the vector */
@@ -55,17 +51,13 @@ public:
     // Other functions
     // ================
     /* Returns the size of the vector */
-    int Size() const {
+    int Size() const noexcept{
         return size;
-    }
-    /* Returns the maximum size of the vector */
-    int MaxSize() const {
-        return capacity;
     }
     /* Resizes the vector to the specified size */
     void Resize(int newSize);
     /* Returns the capacity of the vector */
-    int Capacity() const {
+    int Capacity() const noexcept{
         return capacity;
     }
     /* Reserves space for the specified number of elements */
@@ -73,7 +65,7 @@ public:
     /* Shrinks the capacity of the vector to fit its size */
     void Shrink_to_fit();
     /* Checks if the vector is empty */
-    bool Empty() const {
+    bool Empty() const noexcept{
         return size == 0;
     }
     /* Clears the vector */
@@ -87,11 +79,11 @@ public:
     // Element access functions
     // =========================
     /* Accesses an element by index without bounds checking */
-    int& operator[](int index) {
+    const int& operator[](int index) const {
         return data[index];
     }
     /* Accesses an element by index with bounds checking */
-    int& At(int index);
+    const int& At(int index) const;
     /* Inserts an element at the specified index */
     void Insert(int index, int value);
     /* Removes an element at the specified index */
@@ -114,7 +106,7 @@ public:
     bool operator<(const Vector& other) const;
     /* Compares this vector with another for less than or equal to */
     bool operator<=(const Vector& other) const {
-        return !(other > *this);
+        return (*this < other) || (*this == other);
     }
     /* Compares this vector with another for greater than */
     bool operator>(const Vector& other) const {
@@ -122,7 +114,7 @@ public:
     }
     /* Compares this vector with another for greater than or equal to */
     bool operator>=(const Vector& other) const {
-        return !(*this > other);
+        return (other < *this) || (*this == other);
     }
 
     // ============================
@@ -130,4 +122,6 @@ public:
     // ============================
     /* Overloads the stream output operator for printing */
     friend ostream &operator<<(ostream &out, const Vector &other);
+    /* Overloads the stream input operator for reading */
+    friend istream &operator>>(istream &in, Vector &other);
 };

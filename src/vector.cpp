@@ -46,6 +46,16 @@ Vector::Vector(const std::initializer_list<int> &list)
 // ========================
 // First element functions
 // ========================
+/* Returns reference to the first element */
+const int &Vector::Front() const
+{
+    if (Empty())
+    {
+        throw std::out_of_range("Vectorius yra tuscias, negalima pasiekti elemento.");
+    }
+    return data[0];
+}
+/* Adds an element to the beggining of the vector */
 void Vector::Push_front(int value)
 {
     if (size < capacity)
@@ -59,7 +69,8 @@ void Vector::Push_front(int value)
     }
     else
     {
-        Reserve(capacity * 2);
+        int newCapacity = (capacity == 0) ? 5 : capacity * 2;
+        Reserve(newCapacity);
         for (int i = size; i > 0; --i)
         {
             data[i] = data[i - 1];
@@ -85,6 +96,15 @@ void Vector::Pop_front()
 // =======================
 // Last element functions
 // =======================
+/* Returns reference to the last element */
+const int &Vector::Back() const
+{
+    if (Empty())
+    {
+        throw std::out_of_range("Vectorius yra tuscias, negalima pasiekti elemento.");
+    }
+    return data[size - 1];
+}
 /* Adds an element to the end of the vector */
 void Vector::Push_back(int value)
 {
@@ -95,7 +115,8 @@ void Vector::Push_back(int value)
     }
     else
     {
-        Reserve(capacity * 2);
+        int newCapacity = (capacity == 0) ? 5 : capacity * 2;
+        Reserve(newCapacity);
         data[size] = value;
         ++size;
     }
@@ -150,6 +171,8 @@ void Vector::Reserve(int newCapacity)
 /* Shrinks the capacity of the vector to fit its size */
 void Vector::Shrink_to_fit()
 {
+    if (size == capacity)
+        return;
     if (size == 0)
     {
         delete[] data;
@@ -173,7 +196,7 @@ void Vector::Swap(Vector &other)
 // Element access functions
 // =========================
 /* Accesses an element by index with bounds checking */
-int &Vector::At(int index)
+const int &Vector::At(int index) const
 {
     if (index < 0 || index >= size)
     {
@@ -199,7 +222,8 @@ void Vector::Insert(int index, int value)
     }
     else
     {
-        Reserve(capacity * 2);
+        int newCapacity = (capacity == 0) ? 5 : capacity * 2;
+        Reserve(newCapacity);
         Insert(index, value);
     }
 }
@@ -269,7 +293,7 @@ bool Vector::operator==(const Vector &other) const
 /* Compares this vector with another for less than */
 bool Vector::operator<(const Vector &other) const
 {
-    int minSize = std::min(Size(), other.Size()) ? size : other.size;
+    int minSize = std::min(size, other.size);
     for (int i = 0; i < minSize; ++i)
     {
         if (data[i] < other.data[i])
@@ -297,4 +321,17 @@ ostream &operator<<(ostream &out, const Vector &other)
     }
     out << endl;
     return out;
+}
+/* Overloads the stream input operator for reading */
+istream &operator>>(istream &in, Vector &other)
+{
+    cout << "Iveskite vektoriaus elementus (pabaigti ivedima - 'q'): " << endl;
+    int value;
+    while (in >> value)
+    {
+        other.Push_back(value);
+    }
+    in.clear();
+    in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    return in;
 }
