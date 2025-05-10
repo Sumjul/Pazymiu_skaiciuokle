@@ -160,6 +160,34 @@ void Vector::Reserve(int newCapacity)
     data = newData;
     capacity = newCapacity;
 }
+/* Shrinks the capacity of the vector to fit its size */
+void Vector::Shrink_to_fit()
+{
+    if (size == 0)
+    {
+        delete[] data;
+        data = nullptr;
+        capacity = 0;
+    }
+    else
+    {
+        int *newData = new int[size];
+        for (int i = 0; i < size; ++i)
+        {
+            newData[i] = data[i];
+        }
+        delete[] data;
+        data = newData;
+        capacity = size;
+    }
+}
+/* Swaps the contents of this vector with another */
+void Vector::Swap(Vector &other)
+{
+    std::swap(size, other.size);
+    std::swap(capacity, other.capacity);
+    std::swap(data, other.data);
+}
 
 // =========================
 // Element access functions

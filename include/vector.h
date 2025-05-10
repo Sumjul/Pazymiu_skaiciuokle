@@ -64,6 +64,8 @@ public:
     }
     /* Reserves space for the specified number of elements */
     void Reserve(int newCapacity);
+    /* Shrinks the capacity of the vector to fit its size */
+    void Shrink_to_fit();
     /* Checks if the vector is empty */
     bool Empty() const {
         return size == 0;
@@ -72,6 +74,8 @@ public:
     void Clear() {
         size = 0;
     }
+    /* Swaps the contents of this vector with another */
+    void Swap(Vector& other);
     
     // =========================
     // Element access functions
