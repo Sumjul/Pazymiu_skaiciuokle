@@ -9,12 +9,20 @@
 // =============
 /** Copy constructor */
 Vector::Vector(const Vector &other)
-    : size(other.size), capacity(other.capacity + 5), data(new int[capacity])
+    : size(other.size), capacity(other.capacity), data(new int[capacity])
 {
     for (int i = 0; i < other.Size(); ++i)
     {
         data[i] = other.data[i];
     }
+}
+/* Move constructor */
+Vector::Vector(Vector &&other)
+    : size(other.size), capacity(other.capacity), data(other.data)
+{
+    other.size = 0;
+    other.capacity = 0;
+    other.data = nullptr;
 }
 /** Parameterized constructor */
 Vector::Vector(int elements, int value)
@@ -51,16 +59,13 @@ void Vector::Push_front(int value)
     }
     else
     {
-        capacity *= 2;
-        int *newData = new int[capacity];
-        newData[0] = value;
-        for (int i = 0; i < size; ++i)
+        Reserve(capacity * 2);
+        for (int i = size; i > 0; --i)
         {
-            newData[i + 1] = data[i];
+            data[i] = data[i - 1];
         }
+        data[0] = value;
         ++size;
-        delete[] data;
-        data = newData;
     }
 }
 /* Removes the first element from the vector */
@@ -90,16 +95,9 @@ void Vector::Push_back(int value)
     }
     else
     {
-        capacity *= 2;
-        int *newData = new int[capacity];
-        for (int i = 0; i < size; ++i)
-        {
-            newData[i] = data[i];
-        }
-        newData[size] = value;
+        Reserve(capacity * 2);
+        data[size] = value;
         ++size;
-        delete[] data;
-        data = newData;
     }
 }
 /* Removes the last element from the vector */
@@ -124,20 +122,9 @@ void Vector::Resize(int newSize)
     }
     if (newSize > capacity)
     {
-        capacity = newSize + 5;
-        int *newData = new int[capacity];
-        for (int i = 0; i < size; ++i)
-        {
-            newData[i] = data[i];
-        }
-        for (int i = size; i < newSize; ++i)
-        {
-            newData[i] = 0;
-        }
-        delete[] data;
-        data = newData;
+        Reserve(newSize + 5);
     }
-    else if (newSize > size)
+    if (newSize > size)
     {
         for (int i = size; i < newSize; ++i)
         {
@@ -169,16 +156,9 @@ void Vector::Shrink_to_fit()
         data = nullptr;
         capacity = 0;
     }
-    else
+    else if (capacity > size)
     {
-        int *newData = new int[size];
-        for (int i = 0; i < size; ++i)
-        {
-            newData[i] = data[i];
-        }
-        delete[] data;
-        data = newData;
-        capacity = size;
+        Reserve(size);
     }
 }
 /* Swaps the contents of this vector with another */
@@ -219,14 +199,7 @@ void Vector::Insert(int index, int value)
     }
     else
     {
-        capacity *= 2;
-        int *newData = new int[capacity];
-        for (int i = 0; i < size; ++i)
-        {
-            newData[i] = data[i];
-        }
-        delete[] data;
-        data = newData;
+        Reserve(capacity * 2);
         Insert(index, value);
     }
 }
@@ -247,20 +220,38 @@ void Vector::Erase(int index)
 // ===========
 // Operators
 // ===========
-/* Assigment operator */
+/* Copy assignment operator */
 Vector &Vector::operator=(const Vector &other)
 {
-    if (other.size > size)
+    if (this != &other)
+    {
+        if (other.size > size)
+        {
+            delete[] data;
+            capacity = other.size + 5;
+            data = new int[capacity];
+        }
+        for (int i = 0; i < other.Size(); ++i)
+        {
+            data[i] = other.data[i];
+        }
+        size = other.size;
+    }
+    return *this;
+}
+/* Move assignment operator */
+Vector &Vector::operator=(Vector &&other)
+{
+    if (this != &other)
     {
         delete[] data;
-        capacity = other.size + 5;
-        data = new int[capacity];
+        size = other.size;
+        capacity = other.capacity;
+        data = other.data;
+        other.size = 0;
+        other.capacity = 0;
+        other.data = nullptr;
     }
-    for (int i = 0; i < other.Size(); ++i)
-    {
-        data[i] = other.data[i];
-    }
-    size = other.size;
     return *this;
 }
 /* Compares this vector with another for equality */

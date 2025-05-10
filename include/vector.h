@@ -16,6 +16,8 @@ public:
     Vector() : size(0), capacity(5), data(new int[capacity]) {};
     /** Copy constructor */
     Vector(const Vector& other);
+    /** Move constructor */
+    Vector(Vector&& other);
     /** Parameterized constructor */
     Vector(int elements, int value = 0);
     /** Initializer list constructor */
@@ -56,6 +58,10 @@ public:
     int Size() const {
         return size;
     }
+    /* Returns the maximum size of the vector */
+    int MaxSize() const {
+        return capacity;
+    }
     /* Resizes the vector to the specified size */
     void Resize(int newSize);
     /* Returns the capacity of the vector */
@@ -94,8 +100,10 @@ public:
     // ===========
     // Operators
     // ===========
-    /* Assignment operator */
+    /* Copy assignment operator */
     Vector& operator=(const Vector& other);
+    /* Move assignment operator */
+    Vector& operator=(Vector&& other);
     /* Compares this vector with another for equality */
     bool operator==(const Vector& other) const;
     /* Compares this vector with another for inequality */
@@ -104,13 +112,13 @@ public:
     }
     /* Compares this vector with another for less than */
     bool operator<(const Vector& other) const;
-    /* Compares this vector with another for greater than */
-    bool operator>(const Vector& other) const {
-        return other < *this;
-    }
     /* Compares this vector with another for less than or equal to */
     bool operator<=(const Vector& other) const {
         return !(other > *this);
+    }
+    /* Compares this vector with another for greater than */
+    bool operator>(const Vector& other) const {
+        return other < *this;
     }
     /* Compares this vector with another for greater than or equal to */
     bool operator>=(const Vector& other) const {
