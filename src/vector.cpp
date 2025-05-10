@@ -4,10 +4,7 @@
 #include "../include/templates.h"
 #include "../include/vector.h"
 
-Vector::Vector()
-    : size(0), capacity(5), data(new int[capacity]) {}
-
-
+/** Copy constructor */
 Vector::Vector(const Vector& other)
     : size(other.size), capacity(other.capacity + 5), data(new int[capacity])
 {
@@ -16,7 +13,7 @@ Vector::Vector(const Vector& other)
         data[i] = other.data[i];
     }
 }
-
+/** Parameterized constructor */
 Vector::Vector(int elements, int value)
     : size(elements), capacity(elements + 5), data(new int[capacity])
 {
@@ -25,7 +22,7 @@ Vector::Vector(int elements, int value)
         data[i] = value;
     }
 }
-
+/* Initializer list constructor */
 Vector::Vector(const std::initializer_list<int>& list)
     : size(0), capacity(list.size() + 5), data(new int[capacity])
 {
@@ -35,12 +32,7 @@ Vector::Vector(const std::initializer_list<int>& list)
     }
 }
 
-Vector::~Vector()
-{
-    delete[] data;
-}
-
-
+/* Adds an element to the end of the vector */
 void Vector::Push_back(int value)
 {
     if (size < capacity)
@@ -63,7 +55,7 @@ void Vector::Push_back(int value)
     }
     
 }
-
+/* Removes the last element from the vector */
 void Vector::Pop_back()
 {
     if (size == 0)
@@ -73,40 +65,16 @@ void Vector::Pop_back()
     --size;
 }
 
-
-bool Vector::Empty() const
+/* Accesses an element by index with bounds checking */
+int& Vector::At(int index)
 {
-    return size == 0;
-}
-
-int Vector::Size() const
-{
-    return size;
-}
-
-int Vector::Capacity() const
-{
-    return capacity;
-}
-
-bool Vector::operator==(const Vector& other) const
-{
-    if (Size() != other.Size())
-        return false;
-    for (int i = 0; i < Size(); ++i)
+    if (index < 0 || index >= size)
     {
-        if (data[i] != other.data[i])
-            return false;
+        throw std::out_of_range("Indeksas uz ribu. Negalima pasiekti elemento.");
     }
-    return true;
+    return data[index];
 }
-
-bool Vector::operator!=(const Vector& other) const
-{
-    return !(*this == other);
-}
-
-
+/* Inserts an element at the specified index */
 void Vector::Insert(int index, int value)
 {
     if (index < 0 || index > size)
@@ -135,7 +103,7 @@ void Vector::Insert(int index, int value)
         Insert(index, value);
     }
 }
-
+/* Removes an element at the specified index */
 void Vector::Erase(int index)
 {
     if (index < 0 || index >= size)
@@ -149,12 +117,37 @@ void Vector::Erase(int index)
     --size;
 }
 
-void Vector::Clear()
+/* Compares this vector with another for equality */
+bool Vector::operator==(const Vector& other) const
 {
-    size = 0;
+    if (Size() != other.Size())
+        return false;
+    for (int i = 0; i < Size(); ++i)
+    {
+        if (data[i] != other.data[i])
+            return false;
+    }
+    return true;
 }
 
+/* Assigment operator */
+Vector& Vector::operator=(const Vector& other)
+{
+    if (other.size > size)
+    {
+        delete[] data;
+        capacity = other.size + 5;
+        data = new int[capacity];
+    }
+    for (int i = 0; i < other.Size(); ++i)
+    {
+        data[i] = other.data[i];
+    }
+    size = other.size;
+    return *this;
+}
 
+/* Overloads the stream output operator for printing */
 ostream& operator<<(ostream& out, const Vector& other)
 {
     for (int i = 0; i < other.size; ++i)
@@ -169,43 +162,3 @@ ostream& operator<<(ostream& out, const Vector& other)
     out << endl;
     return out;
 }
-
-
-
-
-    Vector& Vector::operator=(const Vector& other)
-    {
-        if (other.size > size)
-        {
-            delete[] data;
-            capacity = other.size + 5;
-            data = new int[capacity];
-        }
-        for (int i = 0; i < other.Size(); ++i)
-        {
-            data[i] = other.data[i];
-        }
-        size = other.size;
-        return *this;
-    }
-    int& Vector::operator[](int index)
-    {
-        return data[index];
-    }
-    int& Vector::At(int index)
-    {
-        if (index < 0 || index >= size)
-        {
-            throw std::out_of_range("Indeksas uz ribu. Negalima pasiekti elemento.");
-        }
-        return data[index];
-    }
-    int& Vector::Front()
-    {
-        return data[0];
-    }
-    int& Vector::Back()
-    {
-        return data[size - 1];
-    }
-
