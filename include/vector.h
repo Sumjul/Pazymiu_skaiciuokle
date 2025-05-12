@@ -5,9 +5,9 @@ template <typename T>
 class Vector
 {
 private:
-    int size;           // Current number of elements in the vector
-    int capacity;       // Current capacity of the vector
-    T *data;            // Pointer to to dynamically allocated data
+    int size_;           // Current number of elements in the vector
+    int capacity_;       // Current capacity of the vector
+    T *data_;            // Pointer to to dynamically allocated data
 
 public:
     // =============
@@ -27,82 +27,92 @@ public:
     // Constructors and Destructor
     // ============================
     /** Default constructor */
-    Vector() : size(0), capacity(5), data(new T[capacity]) {};
+    Vector() : size_(0), capacity_(5), data_(new T[capacity_]) {};
     /** Copy constructor */
-    Vector(const Vector &other) : size(other.size), capacity(other.capacity), data(new T[capacity])
+    Vector(const Vector &other) : size_(other.size), capacity_(other.capacity), data_(new T[capacity])
     {
         for (int i = 0; i < other.Size(); ++i)
         {
-            data[i] = other.data[i];
+            data_[i] = other.data[i];
         }
     }
     /** Move constructor */
-    Vector(Vector &&other) : size(other.size), capacity(other.capacity), data(other.data)
+    Vector(Vector &&other) : size_(other.size), capacity_(other.capacity), data_(other.data)
     {
         other.size = 0;
         other.capacity = 0;
         other.data = nullptr;
     }
     /** Parameterized constructor */
-    Vector(int elements, T value = T()) : size(elements), capacity(elements + 5), data(new T[capacity])
+    Vector(int elements, T value = T()) : size_(elements), capacity_(elements + 5), data_(new T[capacity])
     {
         for (int i = 0; i < size; ++i)
         {
-            data[i] = value;
+            data_[i] = value;
         }
     }
     /** Initializer list constructor */
-    Vector(const std::initializer_list<T> &list) : size(0), capacity(list.size() + 5), data(new T[capacity])
+    Vector(const std::initializer_list<T> &list) : size_(0), capacity_(list.size() + 5), data_(new T[capacity_])
     {
         for (const T &i : list)
         {
-            Push_back(i);
+            push_back(i);
         }
     }
     /** Destructor */
     ~Vector()
     {
-        delete[] data;
+        delete[] data_;
     }
 
     // ========================
     // First element functions
     // ========================
     /* Returns reference to the first element */
-    const T &Front() const
+    const T &front() const
     {
-        if (Empty())
+        if (empty())
         {
             throw std::out_of_range("Vectorius yra tuscias, negalima pasiekti elemento.");
         }
-        return data[0];
+        return data_[0];
+    }
+    /* Returns iterator to the first element */
+    T* begin()
+    {
+        return data_;
+    }
+    /* Returns const iterator to the first element */
+    const T* begin() const
+    {
+        return data_;
     }
     /* Adds an element to the beginning of the vector */
-    void Push_front(const T &value)
+    void push_front(const T &value)
     {
-        if (size < capacity)
+        if (size_ < capacity)
         {
             for (int i = size; i > 0; --i)
             {
-                data[i] = data[i - 1];
+                data_[i] = data_[i - 1];
             }
-            data[0] = value;
+            data_[0] = value;
             ++size;
         }
         else
         {
             int newCapacity = (capacity == 0) ? 5 : capacity * 2;
-            Reserve(newCapacity);
+            reserve(newCapacity);
             for (int i = size; i > 0; --i)
             {
-                data[i] = data[i - 1];
+                data_[i] = data_[i - 1];
             }
-            data[0] = value;
+            data_[0] = value;
             ++size;
         }
     }
     /* Removes the first element from the vector */
-    void Pop_front()
+    void pop_front()
     {
         if (size == 0)
         {
@@ -110,7 +120,7 @@ public:
         }
         for (int i = 0; i < size - 1; ++i)
         {
-            data[i] = data[i + 1];
+            data_[i] = data_[i + 1];
         }
         --size;
     }
@@ -119,32 +129,57 @@ public:
     // Last element functions
     // =======================
     /* Returns reference to the last element */
-    const T &Back() const
+    const T &back() const
     {
-        if (Empty())
+        if (empty())
         {
             throw std::out_of_range("Vectorius yra tuscias, negalima pasiekti elemento.");
         }
-        return data[size - 1];
+        return data_[size - 1];
+    }
+    /* Returns iterator to the last element */
+    T* end()
+    {
+        return data_ + size_;
+    }
+    /* Returns const iterator to the last element */
+    const T* end() const
+    {
+        return data_ + size_;
     }
     /* Adds an element to the end of the vector */
-    void Push_back(const T& value)
+    void push_back(const T& value)
     {
-        if (size < capacity)
+        if (size_ < capacity_)
         {
-            data[size] = value;
-            ++size;
+            data_[size_] = value;
+            ++size_;
         }
         else
         {
-            int newCapacity = (capacity == 0) ? 5 : capacity * 2;
-            Reserve(newCapacity);
-            data[size] = value;
-            ++size;
+            int newCapacity = (capacity_ == 0) ? 5 : capacity_ * 2;
+            reserve(newCapacity);
+            data_[size_] = value;
+            ++size_;
+        }
+    }
+    void push_back(T&& value)
+    {
+        if (size_ < capacity_)
+        {
+            data_[size_] = move(value);
+            ++size_;
+        }
+        else
+        {
+            int newCapacity = (capacity_ == 0) ? 5 : capacity_ * 2;
+            reserve(newCapacity);
+            data_[size_] = move(value);
+            ++size_;
         }
     }
     /* Removes the last element from the vector */
-    void Pop_back()
+    void pop_back()
     {
         if (size == 0)
         {
@@ -157,12 +192,12 @@ public:
     // Other functions
     // ================
     /* Returns the size of the vector */
-    int Size() const noexcept
+    int size() const noexcept
     {
-        return size;
+        return size_;
     }
     /* Resizes the vector to the specified size */
-    void Resize(int newSize)
+    void resize(int newSize)
     {
         if (newSize < 0)
         {
@@ -170,89 +205,89 @@ public:
         }
         if (newSize > capacity)
         {
-            Reserve(newSize + 5);
+            reserve(newSize + 5);
         }
         if (newSize > size)
         {
             for (int i = size; i < newSize; ++i)
             {
-                data[i] = T();
+                data_[i] = T();
             }
         }
         size = newSize;
     }
     /* Returns the capacity of the vector */
-    int Capacity() const noexcept
+    int capacity() const noexcept
     {
-        return capacity;
+        return capacity_;
     }
     /* Reserves space for the specified number of elements */
-    void Reserve(int newCapacity)
+    void reserve(int newCapacity)
     {
-        if (newCapacity <= capacity)
+        if (newCapacity <= capacity_)
             return;
         T *newData = new T[newCapacity];
-        for (int i = 0; i < size; ++i)
+        for (int i = 0; i < size_; ++i)
         {
-            newData[i] = data[i];
+            newData[i] = data_[i];
         }
-        delete[] data;
-        data = newData;
-        capacity = newCapacity;
+        delete[] data_;
+        data_ = newData;
+        capacity_ = newCapacity;
     }
     /* Shrinks the capacity of the vector to fit its size */
-    void Shrink_to_fit()
+    void shrink_to_fit()
     {
         if (size == capacity)
             return;
         if (size == 0)
         {
-            delete[] data;
-            data = nullptr;
+            delete[] data_;
+            data_ = nullptr;
             capacity = 0;
         }
         else if (capacity > size)
         {
-            Reserve(size);
+            reserve(size);
         }
     }
     /* Checks if the vector is empty */
-    bool Empty() const noexcept
+    bool empty() const noexcept
     {
         return size == 0;
     }
     /* Clears the vector */
-    void Clear()
+    void clear()
     {
         size = 0;
     }
     /* Swaps the contents of this vector with another */
-    void Swap(Vector &other)
+    void swap(Vector &other)
     {
         std::swap(size, other.size);
         std::swap(capacity, other.capacity);
-        std::swap(data, other.data);
+        std::swap(data_, other.data);
     }
 
     // =========================
     // Element access functions
     // =========================
     /* Accesses an element by index without bounds checking */
-    const T &operator[](int index) const
+    T &operator[](int index)
     {
-        return data[index];
+        return data_[index];
     }
     /* Accesses an element by index with bounds checking */
-    const T &At(int index) const
+    T &at(int index)
     {
-        if (index < 0 || index >= size)
+        if (index < 0 || index >= size_)
         {
             throw std::out_of_range("Indeksas uz ribu. Negalima pasiekti elemento.");
         }
-        return data[index];
+        return data_[index];
     }
     /* Inserts an element at the specified index */
-    void Insert(int index, const T &value)
+    void insert(int index, const T &value)
     {
         if (index < 0 || index > size)
         {
@@ -262,30 +297,30 @@ public:
         {
             for (int i = size - 1; i >= index; --i)
             {
-                data[i + 1] = data[i];
+                data_[i + 1] = data_[i];
             }
-            data[index] = value;
+            data_[index] = value;
             ++size;
         }
         else
         {
             int newCapacity = (capacity == 0) ? 5 : capacity * 2;
-            Reserve(newCapacity);
-            Insert(index, value);
+            reserve(newCapacity);
+            insert(index, value);
         }
     }
     /* Removes an element at the specified index */
-    void Erase(int index)
+    void erase(int index)
     {
-        if (index < 0 || index >= size)
+        if (index < 0 || index >= size_)
         {
             throw std::out_of_range("Indeksas uz ribu. Negalima istrinti elemento.");
         }
-        for (int i = index; i < size - 1; ++i)
+        for (int i = index; i < size_ - 1; ++i)
         {
-            data[i] = data[i + 1];
+            data_[i] = data_[i + 1];
         }
-        --size;
+        --size_;
     }
 
     // ===========
@@ -298,13 +333,13 @@ public:
         {
             if (other.size > size)
             {
-                delete[] data;
+                delete[] data_;
                 capacity = other.size + 5;
-                data = new T[capacity];
+                data_ = new T[capacity];
             }
             for (int i = 0; i < other.Size(); ++i)
             {
-                data[i] = other.data[i];
+                data_[i] = other.data[i];
             }
             size = other.size;
         }
@@ -315,10 +350,10 @@ public:
     {
         if (this != &other)
         {
-            delete[] data;
+            delete[] data_;
             size = other.size;
             capacity = other.capacity;
-            data = other.data;
+            data_ = other.data;
             other.size = 0;
             other.capacity = 0;
             other.data = nullptr;
@@ -328,11 +363,11 @@ public:
     /* Compares this vector with another for equality */
     bool operator==(const Vector &other) const
     {
-        if (Size() != other.Size())
+        if (size() != other.size())
             return false;
-        for (int i = 0; i < Size(); ++i)
+        for (int i = 0; i < size(); ++i)
         {
-            if (data[i] != other.data[i])
+            if (data_[i] != other.data[i])
                 return false;
         }
         return true;
@@ -348,12 +383,12 @@ public:
         int minSize = std::min(size, other.size);
         for (int i = 0; i < minSize; ++i)
         {
-            if (data[i] < other.data[i])
+            if (data_[i] < other.data[i])
                 return true;
-            else if (data[i] > other.data[i])
+            else if (data_[i] > other.data[i])
                 return false;
         }
-        return size < other.size;
+        return size_ < other.size;
     }
     /* Compares this vector with another for less than or equal to */
     bool operator<=(const Vector &other) const
