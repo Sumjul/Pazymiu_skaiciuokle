@@ -1,12 +1,12 @@
 #pragma once
 
-/* A custom dynamic array class for integers, similar to std::vector<int> */
+// ** Class that implements a dynamic array (vector) */
 template <typename T>
 class Vector
 {
 private:
-    int size;     // Current number of elements in the vector
-    int capacity; // Current capacity of the vector
+    int size;           // Current number of elements in the vector
+    int capacity;       // Current capacity of the vector
     T *data;            // Pointer to to dynamically allocated data
 
 public:
@@ -14,7 +14,6 @@ public:
     // Member types
     // =============
     using value_type = T;                       // Type of the elements in the vector
-    using allocator_type = void;                // Allocator type for the vector
     using size_type = std::size_t;              // Size type for the vector
     using difference_type = std::ptrdiff_t;     // Difference type for the vector
     using reference = value_type &;             // Reference type for the vector
@@ -28,9 +27,9 @@ public:
     // Constructors and Destructor
     // ============================
     /** Default constructor */
-    Vector() : size(0), capacity(5), data(new int[capacity]) {};
+    Vector() : size(0), capacity(5), data(new T[capacity]) {};
     /** Copy constructor */
-    Vector(const Vector &other)
+    Vector(const Vector &other) : size(other.size), capacity(other.capacity), data(new T[capacity])
     {
         for (int i = 0; i < other.Size(); ++i)
         {
@@ -45,7 +44,7 @@ public:
         other.data = nullptr;
     }
     /** Parameterized constructor */
-    Vector(int elements, int value = 0) : size(elements), capacity(elements + 5), data(new int[capacity])
+    Vector(int elements, T value = T()) : size(elements), capacity(elements + 5), data(new T[capacity])
     {
         for (int i = 0; i < size; ++i)
         {
@@ -53,9 +52,9 @@ public:
         }
     }
     /** Initializer list constructor */
-    Vector(const std::initializer_list<int> &list) : size(0), capacity(list.size() + 5), data(new int[capacity])
+    Vector(const std::initializer_list<T> &list) : size(0), capacity(list.size() + 5), data(new T[capacity])
     {
-        for (int i : list)
+        for (const T &i : list)
         {
             Push_back(i);
         }
@@ -70,7 +69,7 @@ public:
     // First element functions
     // ========================
     /* Returns reference to the first element */
-    const int &Front() const
+    const T &Front() const
     {
         if (Empty())
         {
@@ -79,7 +78,7 @@ public:
         return data[0];
     }
     /* Adds an element to the beginning of the vector */
-    void Push_front(int value)
+    void Push_front(const T &value)
     {
         if (size < capacity)
         {
@@ -120,7 +119,7 @@ public:
     // Last element functions
     // =======================
     /* Returns reference to the last element */
-    const int &Back() const
+    const T &Back() const
     {
         if (Empty())
         {
@@ -129,7 +128,7 @@ public:
         return data[size - 1];
     }
     /* Adds an element to the end of the vector */
-    void Push_back(int value)
+    void Push_back(const T& value)
     {
         if (size < capacity)
         {
@@ -177,7 +176,7 @@ public:
         {
             for (int i = size; i < newSize; ++i)
             {
-                data[i] = 0;
+                data[i] = T();
             }
         }
         size = newSize;
@@ -192,7 +191,7 @@ public:
     {
         if (newCapacity <= capacity)
             return;
-        int *newData = new int[newCapacity];
+        T *newData = new T[newCapacity];
         for (int i = 0; i < size; ++i)
         {
             newData[i] = data[i];
@@ -239,12 +238,12 @@ public:
     // Element access functions
     // =========================
     /* Accesses an element by index without bounds checking */
-    const int &operator[](int index) const
+    const T &operator[](int index) const
     {
         return data[index];
     }
     /* Accesses an element by index with bounds checking */
-    const int &At(int index) const
+    const T &At(int index) const
     {
         if (index < 0 || index >= size)
         {
@@ -253,7 +252,7 @@ public:
         return data[index];
     }
     /* Inserts an element at the specified index */
-    void Insert(int index, int value)
+    void Insert(int index, const T &value)
     {
         if (index < 0 || index > size)
         {
@@ -301,7 +300,7 @@ public:
             {
                 delete[] data;
                 capacity = other.size + 5;
-                data = new int[capacity];
+                data = new T[capacity];
             }
             for (int i = 0; i < other.Size(); ++i)
             {
