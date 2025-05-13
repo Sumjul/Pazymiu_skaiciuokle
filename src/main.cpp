@@ -12,27 +12,171 @@ void print_container(const Container &c)
 	cout << endl;
 }
 
+template<typename T>
+bool compare_vectors(const Vector<T>& custom, const std::vector<T>& standard, const string& test_name = "") {
+	if (custom.size() != standard.size()) {
+		std::cout << "[FAIL] " << test_name << " — size mismatch: "
+		          << custom.size() << " != " << standard.size() << '\n';
+		return false;
+	}
+	for (size_t i = 0; i < custom.size(); ++i) {
+		if (custom[i] != standard[i]) {
+			std::cout << "[FAIL] " << test_name << " — mismatch at index " << i
+			          << ": " << custom[i] << " != " << standard[i] << '\n';
+			return false;
+		}
+	}
+	std::cout << "[PASS] " << test_name << '\n';
+	return true;
+}
+
 int main()
 {
+	cout << "--------------------------------------" << endl;
+	cout << "Constructors" << endl;
+	cout << "-------------------------------------" << endl;
+	// Default constructor
+	Vector<string> empty_vec;
+	std::vector<string> std_empty_vec;
+	cout << "Vector: ";
+	print_container(empty_vec);
+	compare_vectors(empty_vec, std_empty_vec, "Default constructor");
+	// Initializer list constructor
+    Vector<string> words1{"the", "frogurt", "is", "also", "cursed"};
+	std::vector<string> std_words1{"the", "frogurt", "is", "also", "cursed"};
+	cout << "Vector: ";
+	print_container(words1);
+	compare_vectors(words1, std_words1, "Initializer list constructor");
+    // Copy constructor
+    Vector<string> copy_source(words1);
+	std::vector<string> std_copy_source(std_words1);
+	Vector<string> copied(copy_source);
+	std::vector<string> std_copied(std_copy_source);
+	cout << "Copied vector: ";
+	print_container(copied);
+	compare_vectors(copied, std_copied, "Copy constructor");
+	cout << "Copy source: ";
+	print_container(copy_source);
+	compare_vectors(copy_source, std_copy_source, "Copy constructor source");
+	// Move constructor
+	Vector<string> move_source{"move", "this"};
+	std::vector<string> std_move_source{"move", "this"};
+	Vector<string> moved(move(move_source));
+	std::vector<string> std_moved(move(std_move_source));
+	cout << "Moved vector: ";
+	print_container(moved);
+	compare_vectors(moved, std_moved, "Move constructor");
+	std::vector<string> std_empty;
+	cout << "Moved-from vector: ";
+	print_container(move_source);
+	compare_vectors(move_source, std_empty, "Move constructor source");
+    // Parametrized constructor
+    Vector<string> words3(5, "Mo");
+	std::vector<string> std_words3(5, "Mo");
+	cout << "Vector: ";
+	print_container(words3);
+	compare_vectors(words3, std_words3, "Fill constructor");
+
+	cout << "--------------------------------------" << endl;
+	cout << "front() and back()" << endl;
+	cout << "-------------------------------------" << endl;
+	Vector<string> letters1{"a", "b", "c", "d"};
+	std::vector<string> std_letters1{"a", "b", "c", "d"};
+    letters1.front() == "a" ? cout << "front() test [PASS]"<< endl : cout << "front() test [FAIL]" << endl;
+	Vector<string> empty;
+	try {
+		empty.front();
+		cout << "Accessed front() on empty vector - [FAIL]" << endl;
+	} catch (const std::out_of_range& e) {
+		if (std::string(e.what()) == "Vectorius yra tuscias, negalima pasiekti elemento.")
+			cout << "Correct exception message - [PASS]" << endl;
+		else
+			cout << "Wrong exception message: " << e.what() << " - [FAIL]" << endl;
+	}
+	Vector<string> letters2{"a", "b", "c", "d"};
+	std::vector<string> std_letters2{"a", "b", "c", "d"};
+	letters2.back() == "d" ? cout << "back() test [PASS]" << endl : cout << "back() test [FAIL]" << endl;
+	Vector<string> empty2;
+	try {
+		empty2.back();
+		cout << "Accessed back() on empty vector - [FAIL]" << endl;
+	} catch (const std::out_of_range& e) {
+		if (std::string(e.what()) == "Vectorius yra tuscias, negalima pasiekti elemento.")
+			cout << "Correct exception message on back() - [PASS]" << endl;
+		else
+			cout << "Wrong exception message on back(): " << e.what() << " - [FAIL]" << endl;
+	}
+	
+	cout << "--------------------------------------" << endl;
+	cout << "push_back() and push_front()" << endl;
+	cout << "-------------------------------------" << endl;
+	Vector<string> letters;
+	std::vector<string> std_letters;
+	letters.push_back("abc");
+	std_letters.push_back("abc");
+	cout << "Vector letters holds: ";
+	print_container(letters);
+	compare_vectors(letters, std_letters, "push_back() test");
+	letters.push_front("ghi");
+	std::vector<string> std_letters_push {"ghi", "abc"};
+	cout << "Vector letters holds: ";
+	print_container(letters);
+	compare_vectors(letters, std_letters_push, "push_front() test");
+
+	cout << "--------------------------------------" << endl;
+	cout << "pop_back() and pop_front()" << endl;
+	cout << "-------------------------------------" << endl;
+	Vector<string> pop_back_test{"one", "two", "three"};
+	std::vector<string> std_pop_back{"one", "two", "three"};
+	pop_back_test.pop_back();
+	std_pop_back.pop_back();
+	cout << "After pop_back(): ";
+	print_container(pop_back_test);
+	compare_vectors(pop_back_test, std_pop_back, "pop_back() test");
+	Vector<string> empty_pop_back;
+	try {
+		empty_pop_back.pop_back();
+		cout << "Accessed pop_back() on empty vector - [FAIL]" << endl;
+	} catch (const std::out_of_range& e) {
+		if (std::string(e.what()) == "Vectorius yra tuscias, negalima istrinti elemento.")
+			cout << "Correct exception message on pop_back() - [PASS]" << endl;
+		else
+			cout << "Wrong exception message on pop_back(): " << e.what() << " - [FAIL]" << endl;
+	}
+	Vector<string> pop_front_test{"one", "two", "three"};
+	std::vector<string> std_pop_front{"one", "two", "three"};
+	pop_front_test.pop_front();
+	std_pop_front.erase(std_pop_front.begin());
+	cout << "After pop_front(): ";
+	print_container(pop_front_test);
+	compare_vectors(pop_front_test, std_pop_front, "pop_front() test");
+	Vector<string> empty_pop_front;
+	try {
+		empty_pop_front.pop_front();
+		cout << "Accessed pop_front() on empty vector - [FAIL]" << endl;
+	} catch (const std::out_of_range& e) {
+		if (std::string(e.what()) == "Vectorius yra tuscias, negalima istrinti elemento.")
+			cout << "Correct exception message on pop_front() - [PASS]" << endl;
+		else
+			cout << "Wrong exception message on pop_front(): " << e.what() << " - [FAIL]" << endl;
+	}
+
+	cout << "--------------------------------------" << endl;
+	cout << "clear() and empty()" << endl;
+	cout << "-------------------------------------" << endl;
+	std::vector<int> clearVec{1, 2, 3};
+    cout << "Before clear size: " << clearVec.size() << endl;
+	clearVec.clear();
+	cout << "After clear size: " << clearVec.size() << endl;
+	cout << "After clear: ";
+	clearVec.empty() ? cout << "clear() and empty() tests [PASS]" << endl : cout << "clear() and empty() tests [FAIL]" << endl;
+
 	cout << "--------------------------------------" << endl;
 	cout << "size()" << endl;
 	cout << "-------------------------------------" << endl;
 	Vector<int> nums = {1, 2, 3, 4};
-	std::vector<int> std_nums = {1, 2, 3, 4};
-	std::cout << "Vector: ";
-	print_container(nums);
-	std::cout << "std::vector: ";
-	print_container(std_nums);
-	bool passed_size = (nums.size() == std_nums.size());
-	for (size_t i = 0; i < nums.size() && i < std_nums.size(); ++i)
-	{
-		if (nums[i] != std_nums[i])
-		{
-			passed_size = false;
-			break;
-		}
-	}
-	cout << (passed_size ? "[PASS] size() test passed\n" : "[FAIL] size() test failed\n");
+	cout << "Vector: " << nums.size() << endl;
+	nums.size() == 4 ? cout << "size() test [PASS]" << endl : cout << "size() test [FAIL]" << endl;
 
 	cout << "--------------------------------------" << endl;
 	cout << "at()" << endl;
@@ -72,17 +216,7 @@ int main()
 	// Final state check
 	cout << "Final data: ";
 	print_container(data);
-	// Compare with std::vector
-	bool passed_at = (data.size() == std_data.size());
-	for (size_t i = 0; i < data.size(); ++i)
-	{
-		if (data.at(i) != std_data.at(i))
-		{
-			passed_at = false;
-			break;
-		}
-	}
-	cout << (passed_at ? "[PASS] at() test passed\n" : "[FAIL] at() test failed\n");
+	compare_vectors(data, std_data, "at() test");
 
 	cout << "--------------------------------------" << endl;
 	cout << "operator []" << endl;
@@ -96,15 +230,7 @@ int main()
 	print_container(numbers);
 	// Compare with std::vector
 	bool passed_brackets = (numbers.size() == std_numbers.size());
-	for (size_t i = 0; i < numbers.size(); ++i)
-	{
-		if (numbers[i] != std_numbers[i])
-		{
-			passed_brackets = false;
-			break;
-		}
-	}
-	cout << (passed_brackets ? "[PASS] operator[] test passed\n" : "[FAIL] operator[] test failed\n");
+	compare_vectors(numbers, std_numbers, "operator [] test");
 
 	cout << "--------------------------------------" << endl;
 	cout << "erase()" << endl;
@@ -152,40 +278,7 @@ int main()
 	}
 	cout << "After erase all odd numbers: ";
 	print_container(c);
-	// Final correctness check
-	bool passed_erase = (c.size() == std_c.size());
-	for (size_t i = 0; i < c.size(); ++i)
-	{
-		if (c[i] != std_c[i])
-		{
-			passed_erase = false;
-			break;
-		}
-	}
-	cout << (passed_erase ? "[PASS] erase() test passed\n" : "[FAIL] erase() test failed\n");
-
-	cout << "--------------------------------------" << endl;
-	cout << "push_back()" << endl;
-	cout << "-------------------------------------" << endl;
-	Vector<std::string> letters;
-	vector<string> std_letters;
-	letters.push_back("abc");
-	std_letters.push_back("abc");
-	string s{"def"};
-	string std_s{"def"};
-	letters.push_back(move(s));
-	std_letters.push_back(move(std_s));
-	cout << "Vector letters holds: ";
-	print_container(letters);
-	cout << "\nMoved-from string s holds: " << std::quoted(s) << endl;
-	cout << "Moved-from std_s holds: " << std::quoted(std_s) << endl;
-	bool passed_pushback = (letters.size() == std_letters.size());
-	for (size_t i = 0; i < letters.size() && passed_pushback; ++i)
-	{
-		if (letters[i] != std_letters[i])
-			passed_pushback = false;
-	}
-	cout << (passed_pushback ? "[PASS] push_back test passed\n" : "[FAIL] push_back test failed\n");
+	compare_vectors(c, std_c, "erase() test");
 
 	cout << endl
 		 << "----------------------------------------------------------------------------";

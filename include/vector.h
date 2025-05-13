@@ -29,24 +29,24 @@ public:
     /** Default constructor */
     Vector() : size_(0), capacity_(5), data_(new T[capacity_]) {};
     /** Copy constructor */
-    Vector(const Vector &other) : size_(other.size), capacity_(other.capacity), data_(new T[capacity])
+    Vector(const Vector &other) : size_(other.size()), capacity_(other.capacity()), data_(new T[capacity_])
     {
-        for (int i = 0; i < other.Size(); ++i)
+        for (int i = 0; i < other.size(); ++i)
         {
-            data_[i] = other.data[i];
+            data_[i] = other.data_[i];
         }
     }
     /** Move constructor */
-    Vector(Vector &&other) : size_(other.size), capacity_(other.capacity), data_(other.data)
+    Vector(Vector &&other) : size_(other.size()), capacity_(other.capacity()), data_(other.data_)
     {
-        other.size = 0;
-        other.capacity = 0;
-        other.data = nullptr;
+        other.size_ = 0;
+        other.capacity_ = 0;
+        other.data_ = nullptr;
     }
     /** Parameterized constructor */
-    Vector(int elements, T value = T()) : size_(elements), capacity_(elements + 5), data_(new T[capacity])
+    Vector(int elements, T value = T()) : size_(elements), capacity_(elements + 5), data_(new T[capacity_])
     {
-        for (int i = 0; i < size; ++i)
+        for (int i = 0; i < size_; ++i)
         {
             data_[i] = value;
         }
@@ -90,39 +90,39 @@ public:
     /* Adds an element to the beginning of the vector */
     void push_front(const T &value)
     {
-        if (size_ < capacity)
+        if (size_ < capacity_)
         {
-            for (int i = size; i > 0; --i)
+            for (int i = size_; i > 0; --i)
             {
                 data_[i] = data_[i - 1];
             }
             data_[0] = value;
-            ++size;
+            ++size_;
         }
         else
         {
-            int newCapacity = (capacity == 0) ? 5 : capacity * 2;
+            int newCapacity = (capacity_ == 0) ? 5 : capacity_ * 2;
             reserve(newCapacity);
-            for (int i = size; i > 0; --i)
+            for (int i = size_; i > 0; --i)
             {
                 data_[i] = data_[i - 1];
             }
             data_[0] = value;
-            ++size;
+            ++size_;
         }
     }
     /* Removes the first element from the vector */
     void pop_front()
     {
-        if (size == 0)
+        if (size_ == 0)
         {
             throw std::out_of_range("Vectorius yra tuscias, negalima istrinti elemento.");
         }
-        for (int i = 0; i < size - 1; ++i)
+        for (int i = 0; i < size_ - 1; ++i)
         {
             data_[i] = data_[i + 1];
         }
-        --size;
+        --size_;
     }
 
     // =======================
@@ -135,7 +135,7 @@ public:
         {
             throw std::out_of_range("Vectorius yra tuscias, negalima pasiekti elemento.");
         }
-        return data_[size - 1];
+        return data_[size_ - 1];
     }
     /* Returns iterator to the last element */
     T* end()
@@ -181,11 +181,11 @@ public:
     /* Removes the last element from the vector */
     void pop_back()
     {
-        if (size == 0)
+        if (size_ == 0)
         {
             throw std::out_of_range("Vectorius yra tuscias, negalima istrinti elemento.");
         }
-        --size;
+        --size_;
     }
 
     // ================
@@ -254,12 +254,12 @@ public:
     /* Checks if the vector is empty */
     bool empty() const noexcept
     {
-        return size == 0;
+        return size_ == 0;
     }
     /* Clears the vector */
     void clear()
     {
-        size = 0;
+        size_ = 0;
     }
     /* Swaps the contents of this vector with another */
     void swap(Vector &other)
@@ -273,7 +273,11 @@ public:
     // Element access functions
     // =========================
     /* Accesses an element by index without bounds checking */
-    T &operator[](int index)
+    T &operator[] (int index)
+    {
+        return data_[index];
+    }
+    const T &operator[] (int index) const
     {
         return data_[index];
     }
@@ -289,7 +293,7 @@ public:
     /* Inserts an element at the specified index */
     void insert(int index, const T &value)
     {
-        if (index < 0 || index > size)
+        if (index < 0 || index > size_)
         {
             throw std::out_of_range("Indeksas uz ribu. Negalima iterpti elemento.");
         }
@@ -412,14 +416,14 @@ public:
     /* Overloads the stream output operator for printing */
     friend ostream &operator<<(ostream &out, const Vector &other)
     {
-        for (int i = 0; i < other.size; ++i)
+        for (int i = 0; i < other.size_; ++i)
         {
-            out << other.data[i] << " ";
+            out << other.data_[i] << " ";
         }
         out << " || ";
-        for (int i = other.size; i < other.capacity; ++i)
+        for (int i = other.size(); i < other.capacity_; ++i)
         {
-            out << other.data[i] << " ";
+            out << other.data_[i] << " ";
         }
         out << endl;
         return out;
