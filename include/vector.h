@@ -374,7 +374,7 @@ public:
     {
         if (size() != other.size())
             return false;
-        for (int i = 0; i < size(); ++i)
+        for (size_t i = 0; i < size(); ++i)
         {
             if (data_[i] != other.data_[i])
                 return false;
