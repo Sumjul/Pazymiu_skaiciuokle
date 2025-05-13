@@ -203,18 +203,18 @@ public:
         {
             throw std::invalid_argument("Neteisingas dydis. Dydis negali buti neigiamas.");
         }
-        if (newSize > capacity)
+        if (newSize > capacity_)
         {
             reserve(newSize + 5);
         }
-        if (newSize > size)
+        if (newSize > size_)
         {
-            for (int i = size; i < newSize; ++i)
+            for (int i = size_; i < newSize; ++i)
             {
                 data_[i] = T();
             }
         }
-        size = newSize;
+        size_ = newSize;
     }
     /* Returns the capacity of the vector */
     int capacity() const noexcept
@@ -238,17 +238,17 @@ public:
     /* Shrinks the capacity of the vector to fit its size */
     void shrink_to_fit()
     {
-        if (size == capacity)
+        if (size_ == capacity_)
             return;
-        if (size == 0)
+        if (size_ == 0)
         {
             delete[] data_;
             data_ = nullptr;
-            capacity = 0;
+            capacity_ = 0;
         }
-        else if (capacity > size)
+        else if (capacity_ > size_)
         {
-            reserve(size);
+            reserve(size_);
         }
     }
     /* Checks if the vector is empty */
@@ -272,6 +272,11 @@ public:
     // =========================
     // Element access functions
     // =========================
+    /* Accesses data */
+    T *data() const
+    {
+        return data_;
+    }
     /* Accesses an element by index without bounds checking */
     T &operator[] (int index)
     {
@@ -297,18 +302,18 @@ public:
         {
             throw std::out_of_range("Indeksas uz ribu. Negalima iterpti elemento.");
         }
-        if (size != capacity)
+        if (size_ != capacity_)
         {
-            for (int i = size - 1; i >= index; --i)
+            for (int i = size_ - 1; i >= index; --i)
             {
                 data_[i + 1] = data_[i];
             }
             data_[index] = value;
-            ++size;
+            ++size_;
         }
         else
         {
-            int newCapacity = (capacity == 0) ? 5 : capacity * 2;
+            int newCapacity = (capacity_ == 0) ? 5 : capacity_ * 2;
             reserve(newCapacity);
             insert(index, value);
         }
@@ -335,17 +340,17 @@ public:
     {
         if (this != &other)
         {
-            if (other.size > size)
+            if (other.size_ > size_)
             {
                 delete[] data_;
-                capacity = other.size + 5;
-                data_ = new T[capacity];
+                capacity_ = other.size_ + 5;
+                data_ = new T[capacity_];
             }
-            for (int i = 0; i < other.Size(); ++i)
+            for (int i = 0; i < other.size(); ++i)
             {
-                data_[i] = other.data[i];
+                data_[i] = other.data_[i];
             }
-            size = other.size;
+            size_ = other.size_;
         }
         return *this;
     }
@@ -355,12 +360,12 @@ public:
         if (this != &other)
         {
             delete[] data_;
-            size = other.size;
-            capacity = other.capacity;
-            data_ = other.data;
-            other.size = 0;
-            other.capacity = 0;
-            other.data = nullptr;
+            size_ = other.size_;
+            capacity_ = other.capacity_;
+            data_ = other.data_;
+            other.size_ = 0;
+            other.capacity_ = 0;
+            other.data_ = nullptr;
         }
         return *this;
     }
@@ -371,7 +376,7 @@ public:
             return false;
         for (int i = 0; i < size(); ++i)
         {
-            if (data_[i] != other.data[i])
+            if (data_[i] != other.data_[i])
                 return false;
         }
         return true;
@@ -384,15 +389,15 @@ public:
     /* Compares this vector with another for less than */
     bool operator<(const Vector &other) const
     {
-        int minSize = std::min(size, other.size);
+        int minSize = std::min(size_, other.size_);
         for (int i = 0; i < minSize; ++i)
         {
-            if (data_[i] < other.data[i])
+            if (data_[i] < other.data_[i])
                 return true;
-            else if (data_[i] > other.data[i])
+            else if (data_[i] > other.data_[i])
                 return false;
         }
-        return size_ < other.size;
+        return size_ < other.size_;
     }
     /* Compares this vector with another for less than or equal to */
     bool operator<=(const Vector &other) const
