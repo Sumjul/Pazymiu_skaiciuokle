@@ -1,6 +1,8 @@
 *.exe
 *.txt
 !CMakeLists.txt
+!st10000.txt
+!st100000.txt
 .qodo
 *.qodo
 .vscode
