@@ -5,8 +5,8 @@ template <typename T>
 class Vector
 {
 private:
-    int size_;           // Current number of elements in the vector
-    int capacity_;       // Current capacity of the vector
+    size_t size_;           // Current number of elements in the vector
+    size_t capacity_;       // Current capacity of the vector
     T *data_;            // Pointer to to dynamically allocated data
 
 public:
@@ -39,9 +39,9 @@ public:
     /** Move constructor */
     Vector(Vector &&other) : size_(other.size()), capacity_(other.capacity()), data_(other.data_)
     {
+        other.data_ = nullptr;
         other.size_ = 0;
         other.capacity_ = 0;
-        other.data_ = nullptr;
     }
     /** Parameterized constructor */
     Vector(int elements, T value = T()) : size_(elements), capacity_(elements + 5), data_(new T[capacity_])
@@ -150,33 +150,23 @@ public:
     /* Adds an element to the end of the vector */
     void push_back(const T& value)
     {
-        if (size_ < capacity_)
+        if (size_ == capacity_)
         {
-            data_[size_] = value;
-            ++size_;
+            reserve(capacity_ * 2);
         }
-        else
-        {
-            int newCapacity = (capacity_ == 0) ? 5 : capacity_ * 2;
-            reserve(newCapacity);
-            data_[size_] = value;
-            ++size_;
-        }
+        //cout << "[Vector] copy push_back called, size = " << size_ << ", capacity = " << capacity_ << std::endl;
+        new(&data_[size_]) T(value);
+        ++size_;
     }
     void push_back(T&& value)
     {
-        if (size_ < capacity_)
+        if (size_ == capacity_)
         {
-            data_[size_] = move(value);
-            ++size_;
+            reserve(capacity_ * 2);
         }
-        else
-        {
-            int newCapacity = (capacity_ == 0) ? 5 : capacity_ * 2;
-            reserve(newCapacity);
-            data_[size_] = move(value);
-            ++size_;
-        }
+        //cout << "[Vector] move push_back called, size = " << size_ << ", capacity = " << capacity_ << std::endl;
+        new(&data_[size_]) T(std::move(value));
+        ++size_;
     }
     /* Removes the last element from the vector */
     void pop_back()
@@ -229,7 +219,7 @@ public:
         T *newData = new T[newCapacity];
         for (int i = 0; i < size_; ++i)
         {
-            newData[i] = data_[i];
+            newData[i] = move(data_[i]);
         }
         delete[] data_;
         data_ = newData;
@@ -355,17 +345,17 @@ public:
         return *this;
     }
     /* Move assignment operator */
-    Vector &operator=(Vector &&other)
+    Vector &operator=(Vector &&other) noexcept
     {
         if (this != &other)
         {
             delete[] data_;
+            data_ = other.data_;
             size_ = other.size_;
             capacity_ = other.capacity_;
-            data_ = other.data_;
+            other.data_ = nullptr;
             other.size_ = 0;
             other.capacity_ = 0;
-            other.data_ = nullptr;
         }
         return *this;
     }

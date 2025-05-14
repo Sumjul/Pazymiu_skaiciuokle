@@ -147,7 +147,7 @@ void Student::readLine(const string &line)
 	vector<int> markInput;
 	int mark;
 	while (lineStream >> mark)
-		markInput.emplace_back(mark);
+		markInput.push_back(mark);
 	if (!markInput.empty())
 	{
 		exam_ = markInput.back();
