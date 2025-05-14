@@ -154,7 +154,6 @@ public:
         {
             reserve(capacity_ * 2);
         }
-        //cout << "[Vector] copy push_back called, size = " << size_ << ", capacity = " << capacity_ << std::endl;
         new(&data_[size_]) T(value);
         ++size_;
     }
@@ -164,7 +163,6 @@ public:
         {
             reserve(capacity_ * 2);
         }
-        //cout << "[Vector] move push_back called, size = " << size_ << ", capacity = " << capacity_ << std::endl;
         new(&data_[size_]) T(std::move(value));
         ++size_;
     }

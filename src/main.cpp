@@ -26,7 +26,6 @@ int main()
 		break;
 	case 6:
 		ReadFromFile(group, action);
-		//std::cout << "Group has " << group.size() << " students before separation.\n";
 		SeparateStudents(group, failed);
 		OutputSeparated(group, failed);
 		break;

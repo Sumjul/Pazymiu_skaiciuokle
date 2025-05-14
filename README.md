@@ -77,3 +77,58 @@ Jeigu reikia paleisti testus:
 ### Catch2 testavimas
 
 - `catch2/` – Catch2 testavimo sistema.
+
+---
+---
+---
+
+## Vector ir std::vector klasių spartos palyginimas
+
+Lentelėje pateikiami vidutiniai užpildymo laikai (sekundėmis), naudojant `push_back()` funkciją, su skirtingais `int` elementų kiekiais, taip pat nurodytas atminties realokacijų skaičius, kai vektorius pasiekia maksimalų dydį (100 000 000 elementų).
+
+| Elementų skaičius | `std::vector` laikas (s) | `Vector` laikas (s) |
+|-------------------|--------------------------|---------------------|
+| 10 000            | 0,002                    | 0,001               |
+| 100 000           | 0,004                    | 0,005               |
+| 1 000 000         | 0,010                    | 0,020               |
+| 10 000 000        | 0,021                    | 0,017               |
+| 100 000 000       | 0,170                    | 0,230               |
+| Realloc skaičius  | 25                       | 22                  |
+
+### Išvada
+
+Nors `Vector` klasė kai kuriais atvejais demonstruoja panašų ar net geresnį greitį nei `std::vector`, bendras našumas vis dėlto rodo, kad `std::vector` yra stabilesnis ir geriau pritaikytas didelio kiekio duomenų tvarkymui. Tai yra natūralu, atsižvelgiant į tai, kad `std::vector` yra plačiai optimizuotas ir testuotas sprendimas standartinėje C++ bibliotekoje.
+
+<details>
+<summary>Naudotas testavimo kodas (spausti čia kad peržiūrėti)</summary>
+
+```cpp
+unsigned int sz = 10000000;
+Timer stdVecTime;
+int rellacations = 0;
+size_t prevCapacity = 0;
+std::vector<int> v1;
+for (int i = 1; i <= sz; ++i) {
+v1.push_back(i);
+if (v1.capacity() != prevCapacity) {
+++rellacations;
+prevCapacity = v1.capacity();
+}
+}
+cout << "std::vector v1 uzpildymo laikas: " << stdVecTime.elapsed() << " sekundziu." << endl;
+cout << "std::vector v1 relokaciju skaicius: " << rellacations << endl;
+Timer myVecTime;
+rellacations = 0;
+prevCapacity = 0;
+Vector<int> v2;
+for (int i = 1; i <= sz; ++i) {
+v2.push_back(i);
+if (v2.capacity() != prevCapacity) {
+++rellacations;
+prevCapacity = v2.capacity();
+}
+}
+cout << "Vector v2 uzpildymo laikas: " << myVecTime.elapsed() << " sekundziu." << endl;
+cout << "Vector v2 relokaciju skaicius: " << rellacations << endl;
+system("pause");
+</details> ```

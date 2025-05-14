@@ -25,17 +25,14 @@ void ReadFromFile(Container &group, int action)
 				while (getline(input, line))
 				{
 					Student temp;
-					//cout << "Reading line: " << line << endl;
 					temp.readLine(line);
 					temp.calculateAverage();
 					temp.calculateMedian();
-					group.push_back(temp);
+					group.push_back(move(temp));
 				}
 				input.close();
 				cout << " * Duomenu skaitymas uztruko: " << inputTime.elapsed() << " sekundziu. " << endl;
 				globalTime += inputTime.elapsed();
-				//std::cout << "Iš failo nuskaityta studentų: " << group.size() << std::endl;
-
 			}
 		}
 		catch (...)
@@ -170,7 +167,6 @@ void SeparateStudents(Container &group, Container &failed)
     Container passed;
     for (const auto &student : group)
     {
-		//std::cout << "Student: " << student.getName() << " average: " << student.getAverage() << "\n";
         if (student.getAverage() < 5)
             failed.push_back(student);
         else
@@ -181,6 +177,7 @@ void SeparateStudents(Container &group, Container &failed)
 		group.push_back(std::move(s));
 
 	cout << " * Studentu skirstymas i 2 kategorijas uztruko: " << separationTime.elapsed() << " sekundziu. " << endl;
+	globalTime += separationTime.elapsed();
 }
 
 /** Function that outputs the sorted students to two files. */

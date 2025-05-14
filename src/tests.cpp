@@ -269,13 +269,11 @@ TEST_CASE("insert() and erase()", "[Vector]") {
         for (size_t i = 0; i < ins_vec.size(); ++i) {
             REQUIRE(ins_vec[i] == ins_std_vec[i]);
         }
-        bool pass_invalid_insert = false;
         try {
             ins_vec.insert(100, 999);
             FAIL("Insert at invalid position did not throw exception");
-        } catch (...) {
-            pass_invalid_insert = true;
-            REQUIRE(pass_invalid_insert == true);
+        } catch (const std::out_of_range& e) {
+            REQUIRE(std::string(e.what()) == "Indeksas uz ribu. Negalima iterpti elemento.");
         }
     }
     SECTION("erase() tests") {
@@ -345,7 +343,6 @@ TEST_CASE("at() test", "[Vector]") {
             data.at(data.size() + moon_phase()) = 13;
         } catch (const std::out_of_range& ex) {
             caught_vector_exception = true;
-            std::cout << "Caught exception from Vector: " << ex.what() << '\n';
         }
         REQUIRE(caught_vector_exception);
         bool caught_std_vector_exception = false;
@@ -353,7 +350,6 @@ TEST_CASE("at() test", "[Vector]") {
             std_data.at(std_data.size() + moon_phase()) = 13;
         } catch (const std::out_of_range& ex) {
             caught_std_vector_exception = true;
-            std::cout << "Caught exception from std::vector: " << ex.what() << '\n';
         }
         REQUIRE(caught_std_vector_exception);
     }
