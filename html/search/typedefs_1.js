@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hrclock_0',['hrClock',['../class_timer.html#a5e72191005a6b2238ed91c3839374093',1,'Timer']]]
+  ['difference_5ftype_0',['difference_type',['../class_vector.html#a46db24fc8c2e8b3913fa4ff43546d344',1,'Vector']]],
+  ['durationdouble_1',['durationDouble',['../class_timer.html#a0774383e69e89a22ea605e6841d1eaca',1,'Timer']]]
 ];

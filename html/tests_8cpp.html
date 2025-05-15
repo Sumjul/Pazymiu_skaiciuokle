@@ -113,6 +113,7 @@ $(function(){initNavTree('tests_8cpp.html',''); initResizable(true); });
 <code>#include &quot;<a class="el" href="headers_8h_source.html">../include/headers.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="student_8h_source.html">../include/student.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="templates_8h_source.html">../include/templates.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="vector_8h_source.html">../include/vector.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Įtraukimo priklausomybių diagrama tests.cpp:</div>
 <div class="dyncontent">
@@ -126,6 +127,28 @@ Apibrėžimai</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Funkcijos</h2></td></tr>
+<tr class="memitem:a167ad85c8f165e77c9d9b1447fad527e" id="r_a167ad85c8f165e77c9d9b1447fad527e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a167ad85c8f165e77c9d9b1447fad527e">TEST_CASE</a> (&quot;Constructors&quot;, &quot;[Vector]&quot;)</td></tr>
+<tr class="separator:a167ad85c8f165e77c9d9b1447fad527e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72897bbf5aaeadd82437d7b9d040333e" id="r_a72897bbf5aaeadd82437d7b9d040333e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72897bbf5aaeadd82437d7b9d040333e">TEST_CASE</a> (&quot;front() and back()&quot;, &quot;[<a class="el" href="class_vector.html">Vector</a>]&quot;)</td></tr>
+<tr class="separator:a72897bbf5aaeadd82437d7b9d040333e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8addd321bce843b5eb86855e70961584" id="r_a8addd321bce843b5eb86855e70961584"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8addd321bce843b5eb86855e70961584">TEST_CASE</a> (&quot;push_back() and push_front(), pop_back() and pop_front()&quot;, &quot;[<a class="el" href="class_vector.html">Vector</a>]&quot;)</td></tr>
+<tr class="separator:a8addd321bce843b5eb86855e70961584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb67be02dc83099c0e90e394332294a7" id="r_aeb67be02dc83099c0e90e394332294a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb67be02dc83099c0e90e394332294a7">TEST_CASE</a> (&quot;clear() and empty(), size()&quot;, &quot;[<a class="el" href="class_vector.html">Vector</a>]&quot;)</td></tr>
+<tr class="separator:aeb67be02dc83099c0e90e394332294a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4740244a95a56e7f47dddc0a7a29721" id="r_ae4740244a95a56e7f47dddc0a7a29721"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4740244a95a56e7f47dddc0a7a29721">TEST_CASE</a> (&quot;reserve() and capacity()&quot;, &quot;[<a class="el" href="class_vector.html">Vector</a>]&quot;)</td></tr>
+<tr class="separator:ae4740244a95a56e7f47dddc0a7a29721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb4a446b68c178283e6682068dde27e" id="r_a5cb4a446b68c178283e6682068dde27e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cb4a446b68c178283e6682068dde27e">TEST_CASE</a> (&quot;resize() and shrink_to_fit()&quot;, &quot;[<a class="el" href="class_vector.html">Vector</a>]&quot;)</td></tr>
+<tr class="separator:a5cb4a446b68c178283e6682068dde27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b9065a0207fbb9c27b8049cf9ec7e3" id="r_a13b9065a0207fbb9c27b8049cf9ec7e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13b9065a0207fbb9c27b8049cf9ec7e3">TEST_CASE</a> (&quot;operator []&quot;, &quot;[<a class="el" href="class_vector.html">Vector</a>]&quot;)</td></tr>
+<tr class="separator:a13b9065a0207fbb9c27b8049cf9ec7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ca30d4c6311592cdf1a5eea0c85820" id="r_a68ca30d4c6311592cdf1a5eea0c85820"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68ca30d4c6311592cdf1a5eea0c85820">TEST_CASE</a> (&quot;insert() and erase()&quot;, &quot;[<a class="el" href="class_vector.html">Vector</a>]&quot;)</td></tr>
+<tr class="separator:a68ca30d4c6311592cdf1a5eea0c85820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3217b653d7dd7269403a15acca02e7" id="r_abc3217b653d7dd7269403a15acca02e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc3217b653d7dd7269403a15acca02e7">TEST_CASE</a> (&quot;at() test&quot;, &quot;[Vector]&quot;)</td></tr>
+<tr class="separator:abc3217b653d7dd7269403a15acca02e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229cbf041af382c8adac39fb6a9c2e4c" id="r_a229cbf041af382c8adac39fb6a9c2e4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229cbf041af382c8adac39fb6a9c2e4c">TEST_CASE</a> (&quot;Copy and move assignment operator&quot;, &quot;[Vector]&quot;)</td></tr>
+<tr class="separator:a229cbf041af382c8adac39fb6a9c2e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c94f041585963036dc733525b10e76" id="r_a61c94f041585963036dc733525b10e76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61c94f041585963036dc733525b10e76">TEST_CASE</a> (&quot;Comparison operators&quot;, &quot;[Vector]&quot;)</td></tr>
+<tr class="separator:a61c94f041585963036dc733525b10e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae19d027314202b1411411229815dbfe8" id="r_ae19d027314202b1411411229815dbfe8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae19d027314202b1411411229815dbfe8">TEST_CASE</a> (&quot;Student klases Rule of five testai&quot;)</td></tr>
 <tr class="separator:ae19d027314202b1411411229815dbfe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9a42ee34b537d174270082d878cbc79" id="r_ad9a42ee34b537d174270082d878cbc79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9a42ee34b537d174270082d878cbc79">TEST_CASE</a> (&quot;Student konstruktorius su parametrais&quot;)</td></tr>
@@ -152,7 +175,7 @@ Funkcijos</h2></td></tr>
 </div>
 <h2 class="groupheader">Funkcijos Dokumentacija</h2>
 <a id="a43c9a952ecbed908200ce65dfb2a5e91" name="a43c9a952ecbed908200ce65dfb2a5e91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43c9a952ecbed908200ce65dfb2a5e91">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c9a952ecbed908200ce65dfb2a5e91">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/15]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,8 +196,294 @@ Funkcijos kvietimo grafas:</div>
 
 </div>
 </div>
+<a id="abc3217b653d7dd7269403a15acca02e7" name="abc3217b653d7dd7269403a15acca02e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3217b653d7dd7269403a15acca02e7">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;at() test&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_abc3217b653d7dd7269403a15acca02e7_cgraph.png" border="0" usemap="#atests_8cpp_abc3217b653d7dd7269403a15acca02e7_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aeb67be02dc83099c0e90e394332294a7" name="aeb67be02dc83099c0e90e394332294a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb67be02dc83099c0e90e394332294a7">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;</td>          <td class="paramname"><span class="paramname"><em>clear</em></span>) and empty(, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size()&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_aeb67be02dc83099c0e90e394332294a7_cgraph.png" border="0" usemap="#atests_8cpp_aeb67be02dc83099c0e90e394332294a7_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a61c94f041585963036dc733525b10e76" name="a61c94f041585963036dc733525b10e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c94f041585963036dc733525b10e76">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Comparison operators&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a167ad85c8f165e77c9d9b1447fad527e" name="a167ad85c8f165e77c9d9b1447fad527e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a167ad85c8f165e77c9d9b1447fad527e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Constructors&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_a167ad85c8f165e77c9d9b1447fad527e_cgraph.png" border="0" usemap="#atests_8cpp_a167ad85c8f165e77c9d9b1447fad527e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a229cbf041af382c8adac39fb6a9c2e4c" name="a229cbf041af382c8adac39fb6a9c2e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229cbf041af382c8adac39fb6a9c2e4c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Copy and move assignment operator&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_a229cbf041af382c8adac39fb6a9c2e4c_cgraph.png" border="0" usemap="#atests_8cpp_a229cbf041af382c8adac39fb6a9c2e4c_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a72897bbf5aaeadd82437d7b9d040333e" name="a72897bbf5aaeadd82437d7b9d040333e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72897bbf5aaeadd82437d7b9d040333e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;front() and back()&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_a72897bbf5aaeadd82437d7b9d040333e_cgraph.png" border="0" usemap="#atests_8cpp_a72897bbf5aaeadd82437d7b9d040333e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a68ca30d4c6311592cdf1a5eea0c85820" name="a68ca30d4c6311592cdf1a5eea0c85820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ca30d4c6311592cdf1a5eea0c85820">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;insert() and erase()&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_a68ca30d4c6311592cdf1a5eea0c85820_cgraph.png" border="0" usemap="#atests_8cpp_a68ca30d4c6311592cdf1a5eea0c85820_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a13b9065a0207fbb9c27b8049cf9ec7e3" name="a13b9065a0207fbb9c27b8049cf9ec7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b9065a0207fbb9c27b8049cf9ec7e3">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;operator &quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8addd321bce843b5eb86855e70961584" name="a8addd321bce843b5eb86855e70961584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8addd321bce843b5eb86855e70961584">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;</td>          <td class="paramname"><span class="paramname"><em>push_back</em></span>) and push_front(, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pop_back() and pop_front()&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_a8addd321bce843b5eb86855e70961584_cgraph.png" border="0" usemap="#atests_8cpp_a8addd321bce843b5eb86855e70961584_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae4740244a95a56e7f47dddc0a7a29721" name="ae4740244a95a56e7f47dddc0a7a29721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4740244a95a56e7f47dddc0a7a29721">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[11/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;reserve() and capacity()&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_ae4740244a95a56e7f47dddc0a7a29721_cgraph.png" border="0" usemap="#atests_8cpp_ae4740244a95a56e7f47dddc0a7a29721_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5cb4a446b68c178283e6682068dde27e" name="a5cb4a446b68c178283e6682068dde27e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb4a446b68c178283e6682068dde27e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[12/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;resize() and shrink_to_fit()&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>[Vector]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Funkcijos kvietimo grafas:</div>
+<div class="dyncontent">
+<div class="center"><img src="tests_8cpp_a5cb4a446b68c178283e6682068dde27e_cgraph.png" border="0" usemap="#atests_8cpp_a5cb4a446b68c178283e6682068dde27e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="ab3851adc4a7cf076b807baaf3e832f9a" name="ab3851adc4a7cf076b807baaf3e832f9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3851adc4a7cf076b807baaf3e832f9a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3851adc4a7cf076b807baaf3e832f9a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[13/15]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +505,7 @@ Funkcijos kvietimo grafas:</div>
 </div>
 </div>
 <a id="ae19d027314202b1411411229815dbfe8" name="ae19d027314202b1411411229815dbfe8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae19d027314202b1411411229815dbfe8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19d027314202b1411411229815dbfe8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[14/15]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +527,7 @@ Funkcijos kvietimo grafas:</div>
 </div>
 </div>
 <a id="ad9a42ee34b537d174270082d878cbc79" name="ad9a42ee34b537d174270082d878cbc79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9a42ee34b537d174270082d878cbc79">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9a42ee34b537d174270082d878cbc79">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[15/15]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

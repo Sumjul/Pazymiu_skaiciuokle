@@ -1,10 +1,49 @@
-\chapter{Programos naudojimosi instrukcija}
-\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Programos naudojimosi instrukcija@{Programos naudojimosi instrukcija}}
+\chapter{\texorpdfstring{$>$}{>} Programos diegimo instrukcija \texorpdfstring{$<$}{<}}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{$>$ Programos diegimo instrukcija $<$@{$>$ Programos diegimo instrukcija $<$}}
 \label{md__r_e_a_d_m_e_autotoc_md0}%
 \Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
 
 
-Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su {\ttfamily include/} ir {\ttfamily src/} katalogais.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{✅ Reikalavimai}{✅ Reikalavimai}}\label{md__r_e_a_d_m_e_autotoc_md1}
+{\bfseries{Ši programa pateikiama kaip diegiamasis failas {\ttfamily setup.\+exe}, kurį galite paleisti ir sekti paprastais žingsniais, kad sėkmingai įdiegtumėte ją savo kompiuteryje.}}\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{✅ Diegimo žingsniai}{✅ Diegimo žingsniai}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item Atsisiųskite ir {\bfseries{paleiskite failą {\ttfamily setup.\+exe}}} (du kartus spustelėkite).
+\item Vykdykite ekrane rodomas instrukcijas, kol diegimas bus baigtas.
+\item Po sėkmingo diegimo\+:
+\begin{DoxyItemize}
+\item {\bfseries{Darbalaukyje}} (Desktop) atsiras programos {\bfseries{sutrumpinimas}} (shortcut),
+\item Taip pat programą rasite per {\bfseries{Pradžios meniu}} (Start Menu),
+\item Programa bus įdiegta į katalogą\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{C:\(\backslash\)Program\ Files\(\backslash\)Vilniaus\ Universitetas\(\backslash\)Julius\ Vilkanec\(\backslash\)PazymiuSkaiciuokle.exe}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{▶️ Programos paleidimas}{▶️ Programos paleidimas}}\label{md__r_e_a_d_m_e_autotoc_md3}
+Programą galite paleisti dviem būdais\+:
+
+
+\begin{DoxyItemize}
+\item Spustelėkite {\bfseries{sutrumpinimą (shortcut)}} darbalaukyje arba per {\bfseries{Pradžios meniu}} (Start Menu).
+\item Arba atverkite programos katalogą rankiniu būdu\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{C:\(\backslash\)Program\ Files\(\backslash\)Vilniaus\ Universitetas\(\backslash\)Julius\ Vilkanec\(\backslash\)PazymiuSkaiciuokle.exe}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{ℹ️ Tolimesni žingsniai}{ℹ️ Tolimesni žingsniai}}\label{md__r_e_a_d_m_e_autotoc_md4}
+Kai programa bus atidaryta, vadovaukitės jos pateikiamomis instrukcijomis ekrane. Viskas paruošta darbui!
+
+Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su {\ttfamily include/} ir {\ttfamily src/} katalogais.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{\texorpdfstring{$>$}{>} {\bfseries{Programos paleidimas naudojant Cmake\+Lists}} \texorpdfstring{$<$}{<}}{\texorpdfstring{$>$}{>} {\bfseries{Programos paleidimas naudojant Cmake\+Lists}} \texorpdfstring{$<$}{<}}}\label{md__r_e_a_d_m_e_autotoc_md5}
+{\bfseries{Tai yra \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}alternatyvus būdas}} paleisti programos exe failą.\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{✅ Reikalavimai}{✅ Reikalavimai}}\label{md__r_e_a_d_m_e_autotoc_md6}
 Įsitikinkite, kad turite įdiegtus šiuos įrankius savo sistemoje\+:
 
 
@@ -18,8 +57,8 @@
 
 
 \DoxyHorRuler{0}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{🔧 Projekto paruošimas ir paleidimas}{🔧 Projekto paruošimas ir paleidimas}}\label{md__r_e_a_d_m_e_autotoc_md3}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{1. Projekto failų paruošimas}{1. Projekto failų paruošimas}}\label{md__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{🔧 Projekto paruošimas ir paleidimas}{🔧 Projekto paruošimas ir paleidimas}}\label{md__r_e_a_d_m_e_autotoc_md8}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{1. Projekto failų paruošimas}{1. Projekto failų paruošimas}}\label{md__r_e_a_d_m_e_autotoc_md9}
 Jeigu dar neturite projekto aplanke, galite jį atsisiųsti arba nusiklonuoti iš saugyklos\+:
 
 
@@ -28,7 +67,7 @@ Jeigu dar neturite projekto aplanke, galite jį atsisiųsti arba nusiklonuoti i�
 \DoxyCodeLine{cd\ <projekto\_katalogas>}
 
 \end{DoxyCode}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{2. Paleidimas naudojant run.\+bat (Windows)}{2. Paleidimas naudojant run.\+bat (Windows)}}\label{md__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{2. Paleidimas naudojant run.\+bat (Windows)}{2. Paleidimas naudojant run.\+bat (Windows)}}\label{md__r_e_a_d_m_e_autotoc_md10}
 Norėdami automatiškai sukompiliuoti ir paleisti programą, tiesiog dukart spustelėkite failą\+:
 
 
@@ -48,7 +87,7 @@ Norėdami automatiškai sukompiliuoti ir paleisti programą, tiesiog dukart spus
 \end{DoxyItemize}
 
 \DoxyHorRuler{0}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{Alternatyvus rankinis paleidimas (jei reikia)}{Alternatyvus rankinis paleidimas (jei reikia)}}\label{md__r_e_a_d_m_e_autotoc_md7}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsection{\texorpdfstring{Alternatyvus rankinis paleidimas (jei reikia)}{Alternatyvus rankinis paleidimas (jei reikia)}}\label{md__r_e_a_d_m_e_autotoc_md12}
 Jei norite viską daryti per komandų eilutę\+:
 
 
@@ -58,7 +97,7 @@ Jei norite viską daryti per komandų eilutę\+:
 \DoxyCodeLine{build\(\backslash\)Pazymiu\_Skaiciuokle.exe}
 
 \end{DoxyCode}
-\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{🧪 Testavimas}{🧪 Testavimas}}\label{md__r_e_a_d_m_e_autotoc_md8}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysection{\texorpdfstring{🧪 Testavimas}{🧪 Testavimas}}\label{md__r_e_a_d_m_e_autotoc_md13}
 Catch2 testų failas ({\ttfamily \doxylink{tests_8cpp}{tests.\+cpp}}) yra projekte, tačiau testai {\bfseries{nėra}} įtraukiami į automatinį kompiliavimą.
 
 Jeigu reikia paleisti testus\+:
@@ -67,7 +106,7 @@ Jeigu reikia paleisti testus\+:
 \begin{DoxyEnumerate}
 \item Atidarykite projektą Visual Studio Code aplinkoje.
 \item Suraskite ir paleiskite {\ttfamily \doxylink{tests_8cpp}{tests.\+cpp}} failą rankiniu būdu su integruotu Catch2 palaikymu.
-\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{📁 Projekto struktūra}{📁 Projekto struktūra}}\label{md__r_e_a_d_m_e_autotoc_md9}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{\texorpdfstring{📁 Projekto struktūra}{📁 Projekto struktūra}}\label{md__r_e_a_d_m_e_autotoc_md14}
 
 \begin{DoxyItemize}
 \item {\ttfamily include/} – antraštiniai failai (.h), kuriuose aprašomos klasės ir funkcijų prototipai.
@@ -75,15 +114,217 @@ Jeigu reikia paleisti testus\+:
 \item {\ttfamily CMake\+Lists.\+txt} – CMake konfigūracijos failas, skirtas kompiliavimui.
 \item {\ttfamily run.\+bat} – skriptas Windows sistemai, kuris automatizuoja kompiliavimą ir paleidimą.
 \item {\ttfamily \doxylink{_r_e_a_d_m_e_8md}{README.\+md}} – ši naudojimosi instrukcija.
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Dokumentacija}{Dokumentacija}}\label{md__r_e_a_d_m_e_autotoc_md10}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysubsection{\texorpdfstring{Dokumentacija}{Dokumentacija}}\label{md__r_e_a_d_m_e_autotoc_md15}
 
 \begin{DoxyItemize}
 \item {\ttfamily Dokumentacija.\+pdf} – projekto dokumentacija.
 \item {\ttfamily Doxyfile} – Doxygen konfigūracijos failas, skirtas automatiškai generuoti projekto dokumentaciją.
 \item {\ttfamily html/} – Doxygen generuota HTML dokumentacija.
 \item {\ttfamily latex/} – Doxygen generuota La\+TeX dokumentacija.
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{\texorpdfstring{Catch2 testavimas}{Catch2 testavimas}}\label{md__r_e_a_d_m_e_autotoc_md11}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysubsection{\texorpdfstring{Catch2 testavimas}{Catch2 testavimas}}\label{md__r_e_a_d_m_e_autotoc_md16}
 
 \begin{DoxyItemize}
-\item {\ttfamily catch2/} – Catch2 testavimo sistema. 
+\item {\ttfamily catch2/} – Catch2 testavimo sistema.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysubsection{\texorpdfstring{Diegimo failai}{Diegimo failai}}\label{md__r_e_a_d_m_e_autotoc_md17}
+
+\begin{DoxyItemize}
+\item {\ttfamily setup.\+exe} – paleidžiamasis diegimo failas, kuris pradeda programos įdiegimo procesą (Windows).
+\item {\ttfamily setup.\+msi} – pagrindinis diegimo paketas, kuriame yra visa reikalinga informacija ir failai, skirti programos įdiegimui.
 \end{DoxyItemize}
+
+\DoxyHorRuler{0}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysection{\texorpdfstring{---}{---}}\label{md__r_e_a_d_m_e_autotoc_md19}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysection{\texorpdfstring{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$>$}{>}Testavimo rezultatai (v3.\+0)\texorpdfstring{$<$}{<}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$>$}{>}Testavimo rezultatai (v3.\+0)\texorpdfstring{$<$}{<}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}}\label{md__r_e_a_d_m_e_autotoc_md20}
+{\bfseries{Testavimo sąlygos\+:}}
+
+
+\begin{DoxyItemize}
+\item CPU\+: i7-\/12700H; 2.\+70 GHz
+\item RAM\+: SODIMM; 16,0 GB
+\item SSD\+: Micron\+\_\+2450; 954 GB
+\item Optimizavimas\+: {\ttfamily -\/O3}
+\item {\bfseries{Testavimo metodas\+:}} Kiekvienas testas buvo atliekamas kelis kartus (ne mažiau nei tris) ir pateikiami laikų vidurkiai, gauti iš kelių bandymų. Laikai matuojami nuo programos pradžios iki pabaigos, apimant visus ir {\ttfamily std\+::vector} ir {\ttfamily \doxylink{class_vector}{Vector}} veiksmus (skaitymas, skirstymas į grupes, rūšiavimas ir t. t.).
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysection{\texorpdfstring{1. {\ttfamily std\+::vector} ir {\ttfamily Vector} klasių spartos palyginimas su skirtingais studentų įrašų kiekiais}{1. {\ttfamily std\+::vector} ir {\ttfamily Vector} klasių spartos palyginimas su skirtingais studentų įrašų kiekiais}}\label{md__r_e_a_d_m_e_autotoc_md21}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{\texorpdfstring{1.\+1. Naudojant {\ttfamily std\+::vector}}{1.\+1. Naudojant {\ttfamily std\+::vector}}}\label{md__r_e_a_d_m_e_autotoc_md22}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Įrašų kiekis   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Laikas (s)    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Įrašų kiekis   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Laikas (s)    }\\\cline{1-3}
+\endhead
+st100000.\+txt   &100 000   &0.\+805    \\\cline{1-3}
+st1000000.\+txt   &1 000 000   &5.\+809    \\\cline{1-3}
+st10000000.\+txt   &10 000 000   &80.\+505   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysubsection{\texorpdfstring{1.\+2. Naudojant {\ttfamily Vector}}{1.\+2. Naudojant {\ttfamily Vector}}}\label{md__r_e_a_d_m_e_autotoc_md23}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Įrašų kiekis   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Laikas (s)    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Įrašų kiekis   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Laikas (s)    }\\\cline{1-3}
+\endhead
+st100000.\+txt   &100 000   &0.\+725    \\\cline{1-3}
+st1000000.\+txt   &1 000 000   &5.\+850    \\\cline{1-3}
+st10000000.\+txt   &10 000 000   &82.\+105   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsection{\texorpdfstring{1.\+3. Išvada}{1.\+3. Išvada}}\label{md__r_e_a_d_m_e_autotoc_md24}
+Testavimo rezultatai parodė, kad {\ttfamily std\+::vector} ir {\ttfamily \doxylink{class_vector}{Vector}} klasės pasižymi labai panašiu veikimo greičiu. Nors {\ttfamily std\+::vector} šiek tiek lenkia apdorojant labai didelius duomenų kiekius, {\ttfamily \doxylink{class_vector}{Vector}} klasė taip pat demonstruoja stabilų ir pakankamai greitą veikimą.\hypertarget{md__r_e_a_d_m_e_autotoc_md25}{}\doxysection{\texorpdfstring{2. {\ttfamily std\+::vector} ir {\ttfamily Vector} klasių spartos palyginimas naudojant {\ttfamily push\+\_\+back()} funkciją}{2. {\ttfamily std\+::vector} ir {\ttfamily Vector} klasių spartos palyginimas naudojant {\ttfamily push\+\_\+back()} funkciją}}\label{md__r_e_a_d_m_e_autotoc_md25}
+Lentelėje pateikiami rezultatai testų naudojant {\ttfamily push\+\_\+back()} funkciją, su skirtingais {\ttfamily int} elementų kiekiais, taip pat nurodytas atminties realokacijų skaičius, kai vektorius pasiekia maksimalų dydį (100 000 000 elementų).
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Elementų skaičius   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily std\+::vector} laikas (s)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily \doxylink{class_vector}{Vector}} laikas (s)    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Elementų skaičius   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily std\+::vector} laikas (s)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\ttfamily \doxylink{class_vector}{Vector}} laikas (s)    }\\\cline{1-3}
+\endhead
+10 000   &0,002   &0,001    \\\cline{1-3}
+100 000   &0,004   &0,005    \\\cline{1-3}
+1 000 000   &0,010   &0,020    \\\cline{1-3}
+10 000 000   &0,021   &0,017    \\\cline{1-3}
+100 000 000   &0,170   &0,230    \\\cline{1-3}
+Realloc skaičius   &25   &22   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md26}{}\doxysubsection{\texorpdfstring{2.\+1. Išvada}{2.\+1. Išvada}}\label{md__r_e_a_d_m_e_autotoc_md26}
+Nors {\ttfamily \doxylink{class_vector}{Vector}} klasė kai kuriais atvejais demonstruoja panašų ar net geresnį greitį nei {\ttfamily std\+::vector}, bendras našumas vis dėlto rodo, kad {\ttfamily std\+::vector} yra stabilesnis ir geriau pritaikytas didelio kiekio duomenų tvarkymui. Tai yra natūralu, atsižvelgiant į tai, kad {\ttfamily std\+::vector} yra plačiai optimizuotas ir testuotas sprendimas standartinėje C++ bibliotekoje.
+
+
+
+{\bfseries{2.2. Naudotas testavimo kodas (spausti čia kad peržiūrėti)}}\begin{adjustwidth}{1em}{0em}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ sz\ =\ 10000000;}
+\DoxyCodeLine{\mbox{\hyperlink{class_timer}{Timer}}\ stdVecTime;}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ rellacations\ =\ 0;}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t}\ prevCapacity\ =\ 0;}
+\DoxyCodeLine{std::vector<int>\ v1;}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ sz;\ ++i)\ \{}
+\DoxyCodeLine{v1.push\_back(i);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (v1.capacity()\ !=\ prevCapacity)\ \{}
+\DoxyCodeLine{++rellacations;}
+\DoxyCodeLine{prevCapacity\ =\ v1.capacity();}
+\DoxyCodeLine{\}\ \}}
+\DoxyCodeLine{cout\ <<\ \textcolor{stringliteral}{"{}std::vector\ v1\ uzpildymo\ laikas:\ "{}}\ <<\ stdVecTime.\mbox{\hyperlink{class_timer_a6a89a613c2af9b0d1e5f7e4ba9e46c54}{elapsed}}()\ <<\ \textcolor{stringliteral}{"{}\ sekundziu."{}}\ <<\ endl;}
+\DoxyCodeLine{cout\ <<\ \textcolor{stringliteral}{"{}std::vector\ v1\ relokaciju\ skaicius:\ "{}}\ <<\ rellacations\ <<\ endl;}
+\DoxyCodeLine{\mbox{\hyperlink{class_timer}{Timer}}\ myVecTime;}
+\DoxyCodeLine{rellacations\ =\ 0;}
+\DoxyCodeLine{prevCapacity\ =\ 0;}
+\DoxyCodeLine{\mbox{\hyperlink{class_vector}{Vector<int>}}\ v2;}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ sz;\ ++i)\ \{}
+\DoxyCodeLine{v2.\mbox{\hyperlink{class_vector_a4415960a83615855ec32f8169f641786}{push\_back}}(i);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (v2.\mbox{\hyperlink{class_vector_ac308b197a3cece867e4d7c73c90d0fe6}{capacity}}()\ !=\ prevCapacity)\ \{}
+\DoxyCodeLine{++rellacations;}
+\DoxyCodeLine{prevCapacity\ =\ v2.\mbox{\hyperlink{class_vector_ac308b197a3cece867e4d7c73c90d0fe6}{capacity}}();}
+\DoxyCodeLine{\}\ \}}
+\DoxyCodeLine{cout\ <<\ \textcolor{stringliteral}{"{}Vector\ v2\ uzpildymo\ laikas:\ "{}}\ <<\ myVecTime.\mbox{\hyperlink{class_timer_a6a89a613c2af9b0d1e5f7e4ba9e46c54}{elapsed}}()\ <<\ \textcolor{stringliteral}{"{}\ sekundziu."{}}\ <<\ endl;}
+\DoxyCodeLine{cout\ <<\ \textcolor{stringliteral}{"{}Vector\ v2\ relokaciju\ skaicius:\ "{}}\ <<\ rellacations\ <<\ endl;}
+\DoxyCodeLine{system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{</details>\ }
+
+\end{DoxyCode}
+
+
+\end{adjustwidth}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md27}{}\doxysection{\texorpdfstring{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$>$}{>}Vector klasės funkcijų aprašymas (v3.\+0)\texorpdfstring{$<$}{<}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$>$}{>}Vector klasės funkcijų aprašymas (v3.\+0)\texorpdfstring{$<$}{<}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}}\label{md__r_e_a_d_m_e_autotoc_md27}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md28}{}\doxysection{\texorpdfstring{1.\+1. Funkcijos pavadinimas}{1.\+1. Funkcijos pavadinimas}}\label{md__r_e_a_d_m_e_autotoc_md28}
+{\ttfamily push\+\_\+back(const T\&)}\hypertarget{md__r_e_a_d_m_e_autotoc_md29}{}\doxysection{\texorpdfstring{1.\+2. Funkcijos paskirtis}{1.\+2. Funkcijos paskirtis}}\label{md__r_e_a_d_m_e_autotoc_md29}
+Ši funkcija prideda naują elementą į vektoriaus pabaigą.\hypertarget{md__r_e_a_d_m_e_autotoc_md30}{}\doxysection{\texorpdfstring{1.\+3. Veikimo principas}{1.\+3. Veikimo principas}}\label{md__r_e_a_d_m_e_autotoc_md30}
+Jeigu konteinerio talpa yra pakankama, naujas elementas pridedamas į data\mbox{[}size\mbox{]}, o size padidinamas vienetu. Jei talpa viršyta, iškviečiamas {\ttfamily reserve()}, talpa padidinama, sukuriamas naujas masyvas, esami elementai perkeliami, ir tada naujas elementas pridedamas.\hypertarget{md__r_e_a_d_m_e_autotoc_md31}{}\doxysection{\texorpdfstring{1.\+4. Testavimo pavyzdys}{1.\+4. Testavimo pavyzdys}}\label{md__r_e_a_d_m_e_autotoc_md31}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vector}{Vector<std::string>}}\ letters;}
+\DoxyCodeLine{std::vector<std::string>\ std\_letters;}
+\DoxyCodeLine{letters.\mbox{\hyperlink{class_vector_a4415960a83615855ec32f8169f641786}{push\_back}}(\textcolor{stringliteral}{"{}abc"{}});}
+\DoxyCodeLine{std\_letters.push\_back(\textcolor{stringliteral}{"{}abc"{}});}
+\DoxyCodeLine{REQUIRE(letters.\mbox{\hyperlink{class_vector_aaf58f4ef9719a4cecab4af45c2ec8ca4}{size}}()\ ==\ std\_letters.size());}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ letters.\mbox{\hyperlink{class_vector_aaf58f4ef9719a4cecab4af45c2ec8ca4}{size}}();\ ++i)\ \{}
+\DoxyCodeLine{REQUIRE(letters[i]\ ==\ std\_letters[i]);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md32}{}\doxysection{\texorpdfstring{2.\+1. Funkcijos pavadinimas}{2.\+1. Funkcijos pavadinimas}}\label{md__r_e_a_d_m_e_autotoc_md32}
+{\ttfamily pop\+\_\+back()}\hypertarget{md__r_e_a_d_m_e_autotoc_md33}{}\doxysection{\texorpdfstring{2.\+2. Funkcijos paskirtis}{2.\+2. Funkcijos paskirtis}}\label{md__r_e_a_d_m_e_autotoc_md33}
+Pašalina paskutinį elementą iš vektoriaus.\hypertarget{md__r_e_a_d_m_e_autotoc_md34}{}\doxysection{\texorpdfstring{2.\+3. Veikimo principas}{2.\+3. Veikimo principas}}\label{md__r_e_a_d_m_e_autotoc_md34}
+Funkcija sumažina {\ttfamily size\+\_\+} reikšmę vienetu, efektyviai pašalindama paskutinį elementą. Jei T yra klasė, jos destruktorius turėtų būti iškviestas.\hypertarget{md__r_e_a_d_m_e_autotoc_md35}{}\doxysection{\texorpdfstring{2.\+4. Testavimo pavyzdys}{2.\+4. Testavimo pavyzdys}}\label{md__r_e_a_d_m_e_autotoc_md35}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vector}{Vector<std::string>}}\ pop\_back\_test\{\textcolor{stringliteral}{"{}one"{}},\ \textcolor{stringliteral}{"{}two"{}},\ \textcolor{stringliteral}{"{}three"{}}\};}
+\DoxyCodeLine{std::vector<std::string>\ std\_pop\_back\{\textcolor{stringliteral}{"{}one"{}},\ \textcolor{stringliteral}{"{}two"{}},\ \textcolor{stringliteral}{"{}three"{}}\};}
+\DoxyCodeLine{pop\_back\_test.\mbox{\hyperlink{class_vector_adcba035109febbe55cba2a25f8483ba6}{pop\_back}}();}
+\DoxyCodeLine{std\_pop\_back.pop\_back();}
+\DoxyCodeLine{REQUIRE(pop\_back\_test.size()\ ==\ std\_pop\_back.size());}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ pop\_back\_test.size();\ ++i)\ \{}
+\DoxyCodeLine{REQUIRE(pop\_back\_test[i]\ ==\ std\_pop\_back[i]);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md36}{}\doxysection{\texorpdfstring{3.\+1. Funkcijos pavadinimas}{3.\+1. Funkcijos pavadinimas}}\label{md__r_e_a_d_m_e_autotoc_md36}
+{\ttfamily resize(int new\+Size)}\hypertarget{md__r_e_a_d_m_e_autotoc_md37}{}\doxysection{\texorpdfstring{3.\+2. Funkcijos paskirtis}{3.\+2. Funkcijos paskirtis}}\label{md__r_e_a_d_m_e_autotoc_md37}
+Keičia vektoriaus dydį į nurodytą {\ttfamily new\+Size}.\hypertarget{md__r_e_a_d_m_e_autotoc_md38}{}\doxysection{\texorpdfstring{3.\+3. Veikimo principas}{3.\+3. Veikimo principas}}\label{md__r_e_a_d_m_e_autotoc_md38}
+Jeigu {\ttfamily new\+Size} yra didesnis nei esamas dydis, vektorius praplečiamas ir nauji elementai inicijuojami T() reikšme. Jei {\ttfamily new\+Size} mažesnis – pertekliniai elementai pašalinami.\hypertarget{md__r_e_a_d_m_e_autotoc_md39}{}\doxysection{\texorpdfstring{3.\+4. Testavimo pavyzdys}{3.\+4. Testavimo pavyzdys}}\label{md__r_e_a_d_m_e_autotoc_md39}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vector}{Vector<int>}}\ v;}
+\DoxyCodeLine{REQUIRE(v.\mbox{\hyperlink{class_vector_aaf58f4ef9719a4cecab4af45c2ec8ca4}{size}}()\ ==\ 0);}
+\DoxyCodeLine{REQUIRE(v.\mbox{\hyperlink{class_vector_ac308b197a3cece867e4d7c73c90d0fe6}{capacity}}()\ >\ 0);}
+\DoxyCodeLine{v.\mbox{\hyperlink{class_vector_ac8888474bd70f892899ac561b2d14612}{resize}}(5);}
+\DoxyCodeLine{REQUIRE(v.\mbox{\hyperlink{class_vector_aaf58f4ef9719a4cecab4af45c2ec8ca4}{size}}()\ ==\ 5);}
+\DoxyCodeLine{REQUIRE(v[4]\ ==\ 0);}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md40}{}\doxysection{\texorpdfstring{4.\+1. Funkcijos pavadinimas}{4.\+1. Funkcijos pavadinimas}}\label{md__r_e_a_d_m_e_autotoc_md40}
+{\ttfamily operator\mbox{[}$\,$\mbox{]}(int index)}\hypertarget{md__r_e_a_d_m_e_autotoc_md41}{}\doxysection{\texorpdfstring{4.\+2. Funkcijos paskirtis}{4.\+2. Funkcijos paskirtis}}\label{md__r_e_a_d_m_e_autotoc_md41}
+Leidžia prieiti prie elemento pagal jo indeksą.\hypertarget{md__r_e_a_d_m_e_autotoc_md42}{}\doxysection{\texorpdfstring{4.\+3. Veikimo principas}{4.\+3. Veikimo principas}}\label{md__r_e_a_d_m_e_autotoc_md42}
+Tikrina, ar indeksas yra galiojantis (0 ≤ index \texorpdfstring{$<$}{<} size), kitu atveju meta išimtį. Grąžina nuorodą į atitinkamą {\ttfamily data\+\_\+} masyvo elementą.\hypertarget{md__r_e_a_d_m_e_autotoc_md43}{}\doxysection{\texorpdfstring{4.\+4. Testavimo pavyzdys}{4.\+4. Testavimo pavyzdys}}\label{md__r_e_a_d_m_e_autotoc_md43}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vector}{Vector<int>}}\ numbers\{2,\ 4,\ 6,\ 8\};}
+\DoxyCodeLine{std::vector<int>\ std\_numbers\{2,\ 4,\ 6,\ 8\};}
+\DoxyCodeLine{REQUIRE(numbers[1]\ ==\ 4);}
+\DoxyCodeLine{numbers[0]\ =\ 5;}
+\DoxyCodeLine{std\_numbers[0]\ =\ 5;}
+\DoxyCodeLine{REQUIRE(numbers[0]\ ==\ 5);}
+\DoxyCodeLine{REQUIRE(std\_numbers[0]\ ==\ 5);}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md44}{}\doxysection{\texorpdfstring{5.\+1. Funkcijos pavadinimas}{5.\+1. Funkcijos pavadinimas}}\label{md__r_e_a_d_m_e_autotoc_md44}
+{\ttfamily insert(int index, const T\& value)}\hypertarget{md__r_e_a_d_m_e_autotoc_md45}{}\doxysection{\texorpdfstring{5.\+2. Funkcijos paskirtis}{5.\+2. Funkcijos paskirtis}}\label{md__r_e_a_d_m_e_autotoc_md45}
+Įterpia elementą į pasirinktą poziciją.\hypertarget{md__r_e_a_d_m_e_autotoc_md46}{}\doxysection{\texorpdfstring{5.\+3. Veikimo principas}{5.\+3. Veikimo principas}}\label{md__r_e_a_d_m_e_autotoc_md46}
+Jeigu reikia – plečia talpą {\ttfamily reserve}, po to perkelia visus elementus į dešinę nuo {\ttfamily index}, įterpia naują reikšmę ir padidina {\ttfamily size\+\_\+}.\hypertarget{md__r_e_a_d_m_e_autotoc_md47}{}\doxysection{\texorpdfstring{5.\+4. Testavimo pavyzdys}{5.\+4. Testavimo pavyzdys}}\label{md__r_e_a_d_m_e_autotoc_md47}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_vector}{Vector<int>}}\ ins\_vec\{1,\ 3,\ 4\};}
+\DoxyCodeLine{std::vector<int>\ ins\_std\_vec\{1,\ 3,\ 4\};}
+\DoxyCodeLine{ins\_vec.\mbox{\hyperlink{class_vector_a4240e459e437ddc89f6b4c2bebfa6bcc}{insert}}(1,\ 2);}
+\DoxyCodeLine{ins\_std\_vec.insert(ins\_std\_vec.begin()\ +\ 1,\ 2);}
+\DoxyCodeLine{REQUIRE(ins\_vec.size()\ ==\ ins\_std\_vec.size());}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ ins\_vec.size();\ ++i)\ \{}
+\DoxyCodeLine{REQUIRE(ins\_vec[i]\ ==\ ins\_std\_vec[i]);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md48}{}\doxysection{\texorpdfstring{6.\+1. Funkcijos pavadinimas}{6.\+1. Funkcijos pavadinimas}}\label{md__r_e_a_d_m_e_autotoc_md48}
+{\ttfamily clear()}\hypertarget{md__r_e_a_d_m_e_autotoc_md49}{}\doxysection{\texorpdfstring{6.\+2. Funkcijos paskirtis}{6.\+2. Funkcijos paskirtis}}\label{md__r_e_a_d_m_e_autotoc_md49}
+Pašalina visus vektoriaus elementus.\hypertarget{md__r_e_a_d_m_e_autotoc_md50}{}\doxysection{\texorpdfstring{6.\+3. Veikimo principas}{6.\+3. Veikimo principas}}\label{md__r_e_a_d_m_e_autotoc_md50}
+Nustato {\ttfamily size\+\_\+ = 0}.\hypertarget{md__r_e_a_d_m_e_autotoc_md51}{}\doxysection{\texorpdfstring{6.\+4. Testavimo pavyzdys}{6.\+4. Testavimo pavyzdys}}\label{md__r_e_a_d_m_e_autotoc_md51}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<int>\ clearVec\{1,\ 2,\ 3\};}
+\DoxyCodeLine{REQUIRE(clearVec.size()\ ==\ 3);}
+\DoxyCodeLine{clearVec.clear();}
+\DoxyCodeLine{REQUIRE(clearVec.size()\ ==\ 0);}
+\DoxyCodeLine{REQUIRE(clearVec.empty()\ ==\ \textcolor{keyword}{true});}
+
+\end{DoxyCode}
+ 

@@ -100,7 +100,7 @@ Class that holds student data and inherits from \doxylink{class_human}{Human}
 {\footnotesize\ttfamily \label{class_student_ab0566b18e21b62f698cbf4a490c603f7} 
 Student\+::\+Student (\begin{DoxyParamCaption}\item[{const string \&}]{name}{ = {\ttfamily "{}Vardenis"{}}, }\item[{const string \&}]{surname}{ = {\ttfamily "{}Pavardenis"{}}, }\item[{int}]{exam}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Funkcijos kvietimo grafas\+:
+Constructors and destructor Funkcijos kvietimo grafas\+:
 % FIG 2
 Here is the caller graph for this function\+:
 % FIG 3
@@ -116,7 +116,9 @@ Student\+::\texorpdfstring{$\sim$}{\string~}\+Student (\begin{DoxyParamCaption}{
 {\footnotesize\ttfamily \label{class_student_a05b37ffb050ddb039db63a8764d790cb} 
 Student\+::\+Student (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other}{}\end{DoxyParamCaption})}
 
-Funkcijos kvietimo grafas\+:
+Copy constructor and move constructor
+
+Copy constructor Funkcijos kvietimo grafas\+:
 % FIG 4
 \Hypertarget{class_student_ad16f78f16c1eb0e3eee37809602c7701}\index{Student@{Student}!Student@{Student}}
 \index{Student@{Student}!Student@{Student}}
@@ -124,7 +126,7 @@ Funkcijos kvietimo grafas\+:
 {\footnotesize\ttfamily \label{class_student_ad16f78f16c1eb0e3eee37809602c7701} 
 Student\+::\+Student (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student}{Student}} \&\&}]{other}{}\end{DoxyParamCaption})}
 
-Funkcijos kvietimo grafas\+:
+Move constructor Funkcijos kvietimo grafas\+:
 % FIG 5
 
 
@@ -143,7 +145,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{class_student_a1dec1372297b03b74868ac35f29558df} 
 void Student\+::calculate\+Average (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
+Function that calculates the average marks of students Here is the caller graph for this function\+:
 % FIG 7
 \Hypertarget{class_student_a9a4ac80e7bec0ec0eacb6b2af8369641}\index{Student@{Student}!calculateMedian@{calculateMedian}}
 \index{calculateMedian@{calculateMedian}!Student@{Student}}
@@ -151,7 +153,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{class_student_a9a4ac80e7bec0ec0eacb6b2af8369641} 
 void Student\+::calculate\+Median (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
+Function that calculates the median marks of students Here is the caller graph for this function\+:
 % FIG 8
 \Hypertarget{class_student_a2b738bfaac4dce882b05dbb056ac327e}\index{Student@{Student}!getAverage@{getAverage}}
 \index{getAverage@{getAverage}!Student@{Student}}
@@ -175,7 +177,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{class_student_a93c24954e2f212ce7c78f54744d1e4f9} 
 const vector$<$ int $>$ \& Student\+::get\+Marks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-\Hypertarget{class_student_aabe9a8bc063b2c52064db1d71f640d66}\index{Student@{Student}!getMedian@{getMedian}}
+Getters and setters \Hypertarget{class_student_aabe9a8bc063b2c52064db1d71f640d66}\index{Student@{Student}!getMedian@{getMedian}}
 \index{getMedian@{getMedian}!Student@{Student}}
 \doxysubsubsection{\texorpdfstring{getMedian()}{getMedian()}}
 {\footnotesize\ttfamily \label{class_student_aabe9a8bc063b2c52064db1d71f640d66} 
@@ -189,7 +191,9 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{class_student_ad05dd6148523a2a8b38128b60297b52a} 
 \mbox{\hyperlink{class_student}{Student}} \& Student\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other}{}\end{DoxyParamCaption})}
 
-Funkcijos kvietimo grafas\+:
+Copy assignment operator and move assignment operator
+
+Copy assignment operator Funkcijos kvietimo grafas\+:
 % FIG 12
 \Hypertarget{class_student_a4e8f98630a250a691b385d1b640f863d}\index{Student@{Student}!operator=@{operator=}}
 \index{operator=@{operator=}!Student@{Student}}
@@ -197,7 +201,7 @@ Funkcijos kvietimo grafas\+:
 {\footnotesize\ttfamily \label{class_student_a4e8f98630a250a691b385d1b640f863d} 
 \mbox{\hyperlink{class_student}{Student}} \& Student\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student}{Student}} \&\&}]{other}{}\end{DoxyParamCaption})}
 
-Funkcijos kvietimo grafas\+:
+Move assignment operator Funkcijos kvietimo grafas\+:
 % FIG 13
 \Hypertarget{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f}\index{Student@{Student}!print@{print}}
 \index{print@{print}!Student@{Student}}
@@ -205,7 +209,9 @@ Funkcijos kvietimo grafas\+:
 {\footnotesize\ttfamily \label{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f} 
 void Student\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
+Functions
 
+Function that prints the student data to the console 
 
 Realizuoja \mbox{\hyperlink{class_human_ac3adff9d2f933933d46a697f5b824913}{Human}}.
 
@@ -215,6 +221,8 @@ Realizuoja \mbox{\hyperlink{class_human_ac3adff9d2f933933d46a697f5b824913}{Human
 {\footnotesize\ttfamily \label{class_student_a40bb708617958d6dbb6fe3f345bfc720} 
 void Student\+::read\+Line (\begin{DoxyParamCaption}\item[{const string \&}]{line}{}\end{DoxyParamCaption})}
 
+Function that reads a line from a file and assigns it to a student Here is the caller graph for this function\+:
+% FIG 14
 \Hypertarget{class_student_afe18f0ed8e50682130fb3ebc44f76524}\index{Student@{Student}!setExam@{setExam}}
 \index{setExam@{setExam}!Student@{Student}}
 \doxysubsubsection{\texorpdfstring{setExam()}{setExam()}}
@@ -222,7 +230,7 @@ void Student\+::read\+Line (\begin{DoxyParamCaption}\item[{const string \&}]{lin
 void Student\+::set\+Exam (\begin{DoxyParamCaption}\item[{int}]{new\+Exam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Here is the caller graph for this function\+:
-% FIG 14
+% FIG 15
 
 
 \doxysubsection{Draugiškų Ir Susijusių Funkcijų Dokumentacija}
@@ -232,13 +240,15 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{class_student_adcabc19a4ec95cb8309ea542ccd5710d} 
 ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{out}{, }\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{student}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-\Hypertarget{class_student_ab2e812a6216bf8bd18ed21f3155f4579}\index{Student@{Student}!operator$>$$>$@{operator$>$$>$}}
+Overloaded operators for input and output
+
+Overloaded output operator for \doxylink{class_student}{Student} class \Hypertarget{class_student_ab2e812a6216bf8bd18ed21f3155f4579}\index{Student@{Student}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!Student@{Student}}
 \doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
 {\footnotesize\ttfamily \label{class_student_ab2e812a6216bf8bd18ed21f3155f4579} 
 istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{in}{, }\item[{\mbox{\hyperlink{class_student}{Student}} \&}]{student}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-
+Overloaded input operator for \doxylink{class_student}{Student} class 
 
 \doxysubsection{Atributų Dokumentacija}
 \Hypertarget{class_student_a256a13e51fcbe3b215cf7bd99950c9f9}\index{Student@{Student}!average\_@{average\_}}

@@ -1,4 +1,30 @@
 var searchData=
 [
-  ['✅_20reikalavimai_0',['✅ Reikalavimai',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
+  ['paleidimas_0',['paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'▶️ Programos paleidimas'],['../md__r_e_a_d_m_e.html#autotoc_md8',1,'🔧 Projekto paruošimas ir paleidimas']]],
+  ['paleidimas_20jei_20reikia_1',['Alternatyvus rankinis paleidimas (jei reikia)',['../md__r_e_a_d_m_e.html#autotoc_md12',1,'']]],
+  ['paleidimas_20naudojant_20cmakelists_20strong_2',['&gt; &lt;strong&gt;Programos paleidimas naudojant CmakeLists&lt;/strong&gt; &lt;',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['paleidimas_20naudojant_20run_20bat_20windows_3',['2. Paleidimas naudojant run.bat (Windows)',['../md__r_e_a_d_m_e.html#autotoc_md10',1,'']]],
+  ['palyginimas_20naudojant_20tt_20push_5fback_20tt_20funkciją_4',['2. &lt;tt&gt;std::vector&lt;/tt&gt; ir &lt;tt&gt;Vector&lt;/tt&gt; klasių spartos palyginimas naudojant &lt;tt&gt;push_back()&lt;/tt&gt; funkciją',['../md__r_e_a_d_m_e.html#autotoc_md25',1,'']]],
+  ['palyginimas_20su_20skirtingais_20studentų_20įrašų_20kiekiais_5',['1. &lt;tt&gt;std::vector&lt;/tt&gt; ir &lt;tt&gt;Vector&lt;/tt&gt; klasių spartos palyginimas su skirtingais studentų įrašų kiekiais',['../md__r_e_a_d_m_e.html#autotoc_md21',1,'']]],
+  ['paruošimas_6',['1. Projekto failų paruošimas',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'']]],
+  ['paruošimas_20ir_20paleidimas_7',['🔧 Projekto paruošimas ir paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'']]],
+  ['paskirtis_8',['paskirtis',['../md__r_e_a_d_m_e.html#autotoc_md29',1,'1.2. Funkcijos paskirtis'],['../md__r_e_a_d_m_e.html#autotoc_md33',1,'2.2. Funkcijos paskirtis'],['../md__r_e_a_d_m_e.html#autotoc_md37',1,'3.2. Funkcijos paskirtis'],['../md__r_e_a_d_m_e.html#autotoc_md41',1,'4.2. Funkcijos paskirtis'],['../md__r_e_a_d_m_e.html#autotoc_md45',1,'5.2. Funkcijos paskirtis'],['../md__r_e_a_d_m_e.html#autotoc_md49',1,'6.2. Funkcijos paskirtis']]],
+  ['pavadinimas_9',['pavadinimas',['../md__r_e_a_d_m_e.html#autotoc_md28',1,'1.1. Funkcijos pavadinimas'],['../md__r_e_a_d_m_e.html#autotoc_md32',1,'2.1. Funkcijos pavadinimas'],['../md__r_e_a_d_m_e.html#autotoc_md36',1,'3.1. Funkcijos pavadinimas'],['../md__r_e_a_d_m_e.html#autotoc_md40',1,'4.1. Funkcijos pavadinimas'],['../md__r_e_a_d_m_e.html#autotoc_md44',1,'5.1. Funkcijos pavadinimas'],['../md__r_e_a_d_m_e.html#autotoc_md48',1,'6.1. Funkcijos pavadinimas']]],
+  ['pavyzdys_10',['pavyzdys',['../md__r_e_a_d_m_e.html#autotoc_md31',1,'1.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md35',1,'2.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md39',1,'3.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md43',1,'4.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md47',1,'5.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md51',1,'6.4. Testavimo pavyzdys']]],
+  ['pointer_11',['pointer',['../class_vector.html#ae28d14081d39ec08d697e47ceab9b571',1,'Vector']]],
+  ['pop_5fback_12',['pop_back',['../class_vector.html#adcba035109febbe55cba2a25f8483ba6',1,'Vector']]],
+  ['pop_5ffront_13',['pop_front',['../class_vector.html#a3d2efcc08fd1eb4a9199b79915fac8ac',1,'Vector']]],
+  ['principas_14',['principas',['../md__r_e_a_d_m_e.html#autotoc_md30',1,'1.3. Veikimo principas'],['../md__r_e_a_d_m_e.html#autotoc_md34',1,'2.3. Veikimo principas'],['../md__r_e_a_d_m_e.html#autotoc_md38',1,'3.3. Veikimo principas'],['../md__r_e_a_d_m_e.html#autotoc_md42',1,'4.3. Veikimo principas'],['../md__r_e_a_d_m_e.html#autotoc_md46',1,'5.3. Veikimo principas'],['../md__r_e_a_d_m_e.html#autotoc_md50',1,'6.3. Veikimo principas']]],
+  ['print_15',['print',['../class_human.html#ac3adff9d2f933933d46a697f5b824913',1,'Human::print()'],['../class_student.html#abdbb14cd83ef23c09f811bd1e30ddd4f',1,'Student::print()']]],
+  ['processexception_16',['ProcessException',['../headers_8h.html#a659705bbc72f1a795a961d7030a443ee',1,'ProcessException():&#160;functions.cpp'],['../functions_8cpp.html#a659705bbc72f1a795a961d7030a443ee',1,'ProcessException():&#160;functions.cpp']]],
+  ['programend_17',['ProgramEnd',['../headers_8h.html#a197a3d785a60dfd4ede032bc1c25f77d',1,'ProgramEnd():&#160;functions.cpp'],['../functions_8cpp.html#a197a3d785a60dfd4ede032bc1c25f77d',1,'ProgramEnd():&#160;functions.cpp']]],
+  ['programos_20diegimo_20instrukcija_18',['&gt; Programos diegimo instrukcija &lt;',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['programos_20paleidimas_19',['▶️ Programos paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
+  ['programos_20paleidimas_20naudojant_20cmakelists_20strong_20',['&gt; &lt;strong&gt;Programos paleidimas naudojant CmakeLists&lt;/strong&gt; &lt;',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['projekto_20failų_20paruošimas_21',['1. Projekto failų paruošimas',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'']]],
+  ['projekto_20paruošimas_20ir_20paleidimas_22',['🔧 Projekto paruošimas ir paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'']]],
+  ['projekto_20struktūra_23',['📁 Projekto struktūra',['../md__r_e_a_d_m_e.html#autotoc_md14',1,'']]],
+  ['push_5fback_24',['push_back',['../class_vector.html#a4415960a83615855ec32f8169f641786',1,'Vector::push_back(const T &amp;value)'],['../class_vector.html#a7e9c3a4530e85fd3490d932846307683',1,'Vector::push_back(T &amp;&amp;value)']]],
+  ['push_5fback_20tt_20funkciją_25',['2. &lt;tt&gt;std::vector&lt;/tt&gt; ir &lt;tt&gt;Vector&lt;/tt&gt; klasių spartos palyginimas naudojant &lt;tt&gt;push_back()&lt;/tt&gt; funkciją',['../md__r_e_a_d_m_e.html#autotoc_md25',1,'']]],
+  ['push_5ffront_26',['push_front',['../class_vector.html#ad0db6af110c92ecc90ff4d49d9a10ec9',1,'Vector']]]
 ];

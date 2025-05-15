@@ -8,7 +8,7 @@ protected:
     string surname_;
 
 public:
-    // Constructors and destructor
+    /** Constructors and destructor */
     Human(const string &name = "Vardenis", const string &surname = "Pavardenis")
         : name_(name), surname_(surname) {}
 
@@ -19,7 +19,7 @@ public:
         surname_.clear();
     }
 
-    // Getters and setters
+    /** Getters and setters */
     string getName() const { return name_; }
     string getSurname() const { return surname_; }
     void setName(const string &newName) { name_ = newName; }
@@ -37,7 +37,7 @@ private:
     double average_, median_;
 
 public:
-    // Constructors and destructor
+    /** Constructors and destructor */
     Student(const string &name = "Vardenis", const string &surname = "Pavardenis", int exam = 0)
         : Human(name, surname), exam_(exam), average_(0.0), median_(0.0) { marks_.reserve(20); }
 
@@ -47,19 +47,19 @@ public:
         marks_.clear();
     }
 
-    // Copy constructor and move constructor
+    /** Copy constructor and move constructor */
     Student(const Student &other);
     Student(Student &&other);
 
-    // Copy assignment operator and move assignment operator
+    /** Copy assignment operator and move assignment operator */
     Student &operator=(const Student &other);
     Student &operator=(Student &&other);
 
-    // Overloaded operators for input and output
+    /** Overloaded operators for input and output */
     friend ostream &operator<<(ostream &out, const Student &student);
     friend istream &operator>>(istream &in, Student &student);
 
-    // Getters and setters
+    /** Getters and setters */
     const vector<int> &getMarks() const { return marks_; }
     int getExam() const { return exam_; }
     double getAverage() const { return average_; }
@@ -68,7 +68,7 @@ public:
     void addMark(int mark) { marks_.push_back(move(mark)); }
     void setExam(int newExam) { exam_ = newExam; }
 
-    // Functions
+    /** Functions */
     void print() const;
     void calculateAverage();
     void calculateMedian();

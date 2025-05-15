@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['templates_2eh_0',['templates.h',['../templates_8h.html',1,'']]],
-  ['test_5fcase_1',['TEST_CASE',['../tests_8cpp.html#ae19d027314202b1411411229815dbfe8',1,'TEST_CASE(&quot;Student klases Rule of five testai&quot;):&#160;tests.cpp'],['../tests_8cpp.html#ad9a42ee34b537d174270082d878cbc79',1,'TEST_CASE(&quot;Student konstruktorius su parametrais&quot;):&#160;tests.cpp'],['../tests_8cpp.html#ab3851adc4a7cf076b807baaf3e832f9a',1,'TEST_CASE(&quot;Student ivesties/isvesties operatoriai&quot;):&#160;tests.cpp'],['../tests_8cpp.html#a43c9a952ecbed908200ce65dfb2a5e91',1,'TEST_CASE(&quot;Abstrakti klase Human naudojama su Student rodykle&quot;):&#160;tests.cpp']]],
-  ['testavimas_2',['🧪 Testavimas',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'']]],
-  ['testavimas_3',['Catch2 testavimas',['../md__r_e_a_d_m_e.html#autotoc_md11',1,'']]],
-  ['tests_2ecpp_4',['tests.cpp',['../tests_8cpp.html',1,'']]],
-  ['timer_5',['Timer',['../class_timer.html',1,'Timer'],['../class_timer.html#a5f16e8da27d2a5a5242dead46de05d97',1,'Timer::Timer()']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['marks_5f_2',['marks_',['../class_student.html#aa6c7acf6b5596a79b5908d31177b55a3',1,'Student']]],
+  ['maxstud_3',['maxStud',['../headers_8h.html#ac04144c4c77c9b058f0e4a3ba25c6b7f',1,'headers.h']]],
+  ['mdash_4',['&amp;mdash;',['../md__r_e_a_d_m_e.html#autotoc_md19',1,'']]],
+  ['median_5f_5',['median_',['../class_student.html#afafaeb711d9f38f6e876804e0132066c',1,'Student']]],
+  ['menu_6',['Menu',['../headers_8h.html#a6b0067666ba7d74453f3a3c2c61d84a6',1,'Menu():&#160;functions.cpp'],['../functions_8cpp.html#a6b0067666ba7d74453f3a3c2c61d84a6',1,'Menu():&#160;functions.cpp']]]
 ];

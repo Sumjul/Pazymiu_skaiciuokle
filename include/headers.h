@@ -15,10 +15,9 @@ using std::future_error;
 using std::ios_base;
 using std::istringstream;
 using std::stringstream;
-using std::string_view;
 using std::system_error;
 
-// Global variables.
+/** Global variables. */
 const int maxStud = 10000000;
 extern double globalTime;
 

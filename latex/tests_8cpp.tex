@@ -5,6 +5,7 @@
 {\ttfamily \#include "{}../include/headers.\+h"{}}\newline
 {\ttfamily \#include "{}../include/student.\+h"{}}\newline
 {\ttfamily \#include "{}../include/templates.\+h"{}}\newline
+{\ttfamily \#include "{}../include/vector.\+h"{}}\newline
 Įtraukimo priklausomybių diagrama tests.\+cpp\+:
 % FIG 0
 \doxysubsubsection*{Apibrėžimai}
@@ -14,6 +15,28 @@
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Funkcijos}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tests_8cpp_a167ad85c8f165e77c9d9b1447fad527e}{TEST\+\_\+\+CASE}} ("{}Constructors"{}, "{}\mbox{[}Vector\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_a72897bbf5aaeadd82437d7b9d040333e}{TEST\+\_\+\+CASE}} ("{}front() and back()"{}, "{}\mbox{[}\mbox{\hyperlink{class_vector}{Vector}}\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_a8addd321bce843b5eb86855e70961584}{TEST\+\_\+\+CASE}} ("{}push\+\_\+back() and push\+\_\+front(), pop\+\_\+back() and pop\+\_\+front()"{}, "{}\mbox{[}\mbox{\hyperlink{class_vector}{Vector}}\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_aeb67be02dc83099c0e90e394332294a7}{TEST\+\_\+\+CASE}} ("{}clear() and empty(), size()"{}, "{}\mbox{[}\mbox{\hyperlink{class_vector}{Vector}}\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_ae4740244a95a56e7f47dddc0a7a29721}{TEST\+\_\+\+CASE}} ("{}reserve() and capacity()"{}, "{}\mbox{[}\mbox{\hyperlink{class_vector}{Vector}}\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_a5cb4a446b68c178283e6682068dde27e}{TEST\+\_\+\+CASE}} ("{}resize() and shrink\+\_\+to\+\_\+fit()"{}, "{}\mbox{[}\mbox{\hyperlink{class_vector}{Vector}}\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_a13b9065a0207fbb9c27b8049cf9ec7e3}{TEST\+\_\+\+CASE}} ("{}operator \mbox{[}$\,$\mbox{]}"{}, "{}\mbox{[}\mbox{\hyperlink{class_vector}{Vector}}\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_a68ca30d4c6311592cdf1a5eea0c85820}{TEST\+\_\+\+CASE}} ("{}insert() and erase()"{}, "{}\mbox{[}\mbox{\hyperlink{class_vector}{Vector}}\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_abc3217b653d7dd7269403a15acca02e7}{TEST\+\_\+\+CASE}} ("{}at() test"{}, "{}\mbox{[}Vector\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_a229cbf041af382c8adac39fb6a9c2e4c}{TEST\+\_\+\+CASE}} ("{}Copy and move assignment operator"{}, "{}\mbox{[}Vector\mbox{]}"{})
+\item 
+\mbox{\hyperlink{tests_8cpp_a61c94f041585963036dc733525b10e76}{TEST\+\_\+\+CASE}} ("{}Comparison operators"{}, "{}\mbox{[}Vector\mbox{]}"{})
 \item 
 \mbox{\hyperlink{tests_8cpp_ae19d027314202b1411411229815dbfe8}{TEST\+\_\+\+CASE}} ("{}Student klases Rule of five testai"{})
 \item 
@@ -37,33 +60,117 @@
 \doxysubsection{Funkcijos Dokumentacija}
 \Hypertarget{tests_8cpp_a43c9a952ecbed908200ce65dfb2a5e91}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/15]}}
 {\footnotesize\ttfamily \label{tests_8cpp_a43c9a952ecbed908200ce65dfb2a5e91} 
 TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Abstrakti klase \mbox{\hyperlink{class_human}{Human}} naudojama su \mbox{\hyperlink{class_student}{Student}} rodykle"{}}]{}{}\end{DoxyParamCaption})}
 
 Funkcijos kvietimo grafas\+:
 % FIG 1
+\Hypertarget{tests_8cpp_abc3217b653d7dd7269403a15acca02e7}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_abc3217b653d7dd7269403a15acca02e7} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}at() test"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 2
+\Hypertarget{tests_8cpp_aeb67be02dc83099c0e90e394332294a7}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_aeb67be02dc83099c0e90e394332294a7} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}}]{clear}{) and empty(, }\item[{size()"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 3
+\Hypertarget{tests_8cpp_a61c94f041585963036dc733525b10e76}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a61c94f041585963036dc733525b10e76} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Comparison operators"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+\Hypertarget{tests_8cpp_a167ad85c8f165e77c9d9b1447fad527e}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a167ad85c8f165e77c9d9b1447fad527e} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Constructors"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 4
+\Hypertarget{tests_8cpp_a229cbf041af382c8adac39fb6a9c2e4c}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a229cbf041af382c8adac39fb6a9c2e4c} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Copy and move assignment operator"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 5
+\Hypertarget{tests_8cpp_a72897bbf5aaeadd82437d7b9d040333e}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a72897bbf5aaeadd82437d7b9d040333e} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}front() and back()"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 6
+\Hypertarget{tests_8cpp_a68ca30d4c6311592cdf1a5eea0c85820}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a68ca30d4c6311592cdf1a5eea0c85820} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}insert() and erase()"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 7
+\Hypertarget{tests_8cpp_a13b9065a0207fbb9c27b8049cf9ec7e3}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a13b9065a0207fbb9c27b8049cf9ec7e3} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}operator "{}}]{}{\mbox{[}$\,$\mbox{]}, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+\Hypertarget{tests_8cpp_a8addd321bce843b5eb86855e70961584}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a8addd321bce843b5eb86855e70961584} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}}]{push\+\_\+back}{) and push\+\_\+front(, }\item[{pop\+\_\+back() and pop\+\_\+front()"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 8
+\Hypertarget{tests_8cpp_ae4740244a95a56e7f47dddc0a7a29721}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_ae4740244a95a56e7f47dddc0a7a29721} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}reserve() and capacity()"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 9
+\Hypertarget{tests_8cpp_a5cb4a446b68c178283e6682068dde27e}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/15]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a5cb4a446b68c178283e6682068dde27e} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}resize() and shrink\+\_\+to\+\_\+fit()"{}}]{}{, }\item[{"{}"{}}]{}{\mbox{[}\+Vector\mbox{]}}\end{DoxyParamCaption})}
+
+Funkcijos kvietimo grafas\+:
+% FIG 10
 \Hypertarget{tests_8cpp_ab3851adc4a7cf076b807baaf3e832f9a}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/15]}}
 {\footnotesize\ttfamily \label{tests_8cpp_ab3851adc4a7cf076b807baaf3e832f9a} 
 TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Student ivesties/isvesties operatoriai"{}}]{}{}\end{DoxyParamCaption})}
 
 Funkcijos kvietimo grafas\+:
-% FIG 2
+% FIG 11
 \Hypertarget{tests_8cpp_ae19d027314202b1411411229815dbfe8}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/15]}}
 {\footnotesize\ttfamily \label{tests_8cpp_ae19d027314202b1411411229815dbfe8} 
 TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Student klases Rule of five testai"{}}]{}{}\end{DoxyParamCaption})}
 
 Funkcijos kvietimo grafas\+:
-% FIG 3
+% FIG 12
 \Hypertarget{tests_8cpp_ad9a42ee34b537d174270082d878cbc79}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
 \index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/15]}}
 {\footnotesize\ttfamily \label{tests_8cpp_ad9a42ee34b537d174270082d878cbc79} 
 TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Student konstruktorius su parametrais"{}}]{}{}\end{DoxyParamCaption})}
 
 Funkcijos kvietimo grafas\+:
-% FIG 4
+% FIG 13

@@ -1,4 +1,5 @@
 #pragma once
+#include "../include/vector.h"
 
 /** Function that reads data from a file. */
 template <typename Container>
@@ -23,10 +24,11 @@ void ReadFromFile(Container &group, int action)
 				getline(input, line);
 				while (getline(input, line))
 				{
-					group.emplace_back();
-					group.back().readLine(line);
-					group.back().calculateAverage();
-					group.back().calculateMedian();
+					Student temp;
+					temp.readLine(line);
+					temp.calculateAverage();
+					temp.calculateMedian();
+					group.push_back(move(temp));
 				}
 				input.close();
 				cout << " * Duomenu skaitymas uztruko: " << inputTime.elapsed() << " sekundziu. " << endl;
@@ -123,7 +125,7 @@ double Sort(Container &group, int &markAction)
 			return (markAction == 1) ? (a.getAverage() < b.getAverage()) : (a.getMedian() < b.getMedian());
 		return false;
 	};
-	if constexpr (std::is_same_v<Container, vector<Student>> || std::is_same_v<Container, deque<Student>>)
+	if constexpr (std::is_same_v<Container, std::vector<Student>> || std::is_same_v<Container, deque<Student>> || std::is_same_v<Container, Vector<Student>>)
 	{
 		sort(group.begin(), group.end(), compare);
 	}
@@ -162,12 +164,20 @@ template <typename Container>
 void SeparateStudents(Container &group, Container &failed)
 {
 	Timer separationTime;
-	auto it = std::partition(group.begin(), group.end(), [](const Student &final)
-							 { return final.getAverage() >= 5; });
-	failed.insert(failed.end(), std::make_move_iterator(it), std::make_move_iterator(group.end()));
-	group.erase(it, group.end());
-	globalTime += separationTime.elapsed();
+    Container passed;
+    for (const auto &student : group)
+    {
+        if (student.getAverage() < 5)
+            failed.push_back(student);
+        else
+            passed.push_back(student);
+    }
+	group.clear();
+	for (auto& s : passed)
+		group.push_back(std::move(s));
+
 	cout << " * Studentu skirstymas i 2 kategorijas uztruko: " << separationTime.elapsed() << " sekundziu. " << endl;
+	globalTime += separationTime.elapsed();
 }
 
 /** Function that outputs the sorted students to two files. */

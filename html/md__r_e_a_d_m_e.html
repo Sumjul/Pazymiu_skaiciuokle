@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pazymiu Skaiciuokle: Programos naudojimosi instrukcija</title>
+<title>Pazymiu Skaiciuokle: &gt; Programos diegimo instrukcija &lt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,12 +102,42 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Programos naudojimosi instrukcija</div></div>
+  <div class="headertitle"><div class="title">&gt; Programos diegimo instrukcija &lt;</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
-<p>Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su <code>include/</code> ir <code>src/</code> katalogais.</p>
+<p><b>Ši programa pateikiama kaip diegiamasis failas <code>setup.exe</code>, kurį galite paleisti ir sekti paprastais žingsniais, kad sėkmingai įdiegtumėte ją savo kompiuteryje.</b></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
+✅ Diegimo žingsniai</h1>
+<ol type="1">
+<li>Atsisiųskite ir <b>paleiskite failą <code>setup.exe</code></b> (du kartus spustelėkite).</li>
+<li>Vykdykite ekrane rodomas instrukcijas, kol diegimas bus baigtas.</li>
+<li>Po sėkmingo diegimo:<ul>
+<li><b>Darbalaukyje</b> (Desktop) atsiras programos <b>sutrumpinimas</b> (shortcut),</li>
+<li>Taip pat programą rasite per <b>Pradžios meniu</b> (Start Menu),</li>
+<li><p class="startli">Programa bus įdiegta į katalogą:</p>
+<div class="fragment"><div class="line">C:\Program Files\Vilniaus Universitetas\Julius Vilkanec\PazymiuSkaiciuokle.exe</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+</ol>
+<hr  />
+<h1><a class="anchor" id="autotoc_md3"></a>
+▶️ Programos paleidimas</h1>
+<p>Programą galite paleisti dviem būdais:</p>
+<ul>
+<li>Spustelėkite <b>sutrumpinimą (shortcut)</b> darbalaukyje arba per <b>Pradžios meniu</b> (Start Menu).</li>
+<li>Arba atverkite programos katalogą rankiniu būdu:</li>
+</ul>
+<div class="fragment"><div class="line">C:\Program Files\Vilniaus Universitetas\Julius Vilkanec\PazymiuSkaiciuokle.exe</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+ℹ️ Tolimesni žingsniai</h1>
+<p>Kai programa bus atidaryta, vadovaukitės jos pateikiamomis instrukcijomis ekrane. Viskas paruošta darbui!</p>
+<p>Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su <code>include/</code> ir <code>src/</code> katalogais.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+&gt; <b>Programos paleidimas naudojant CmakeLists</b> &lt;</h1>
+<p><b>Tai yra **alternatyvus būdas</b> paleisti programos exe failą.**</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
 ✅ Reikalavimai</h1>
 <p>Įsitikinkite, kad turite įdiegtus šiuos įrankius savo sistemoje:</p>
 <ul>
@@ -118,14 +148,14 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(true); });
 <p><b>Pastaba:</b> Git nebūtinas, jei jau turite projekto failus. </p>
 </blockquote>
 <hr  />
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 🔧 Projekto paruošimas ir paleidimas</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 1. Projekto failų paruošimas</h2>
 <p>Jeigu dar neturite projekto aplanke, galite jį atsisiųsti arba nusiklonuoti iš saugyklos:</p>
 <div class="fragment"><div class="line">git clone &lt;projekto_git_nuoroda&gt;</div>
 <div class="line">cd &lt;projekto_katalogas&gt;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
 2. Paleidimas naudojant run.bat (Windows)</h2>
 <p>Norėdami automatiškai sukompiliuoti ir paleisti programą, tiesiog dukart spustelėkite failą:</p>
 <div class="fragment"><div class="line">run.bat</div>
@@ -136,13 +166,13 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(true); });
 <li>paleidžia sukurtą <code>.exe</code> failą (<code>Pazymiu_Skaiciuokle.exe</code>).</li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Alternatyvus rankinis paleidimas (jei reikia)</h2>
 <p>Jei norite viską daryti per komandų eilutę:</p>
 <div class="fragment"><div class="line">cmake -B build -S .</div>
 <div class="line">cmake --build build</div>
 <div class="line">build\Pazymiu_Skaiciuokle.exe</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
 🧪 Testavimas</h1>
 <p>Catch2 testų failas (<code><a class="el" href="tests_8cpp.html">tests.cpp</a></code>) yra projekte, tačiau testai <b>nėra</b> įtraukiami į automatinį kompiliavimą.</p>
 <p>Jeigu reikia paleisti testus:</p>
@@ -150,7 +180,7 @@ Alternatyvus rankinis paleidimas (jei reikia)</h2>
 <li>Atidarykite projektą Visual Studio Code aplinkoje.</li>
 <li>Suraskite ir paleiskite <code><a class="el" href="tests_8cpp.html">tests.cpp</a></code> failą rankiniu būdu su integruotu Catch2 palaikymu.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 📁 Projekto struktūra</h1>
 <ul>
 <li><code>include/</code> – antraštiniai failai (.h), kuriuose aprašomos klasės ir funkcijų prototipai.</li>
@@ -159,7 +189,7 @@ Alternatyvus rankinis paleidimas (jei reikia)</h2>
 <li><code>run.bat</code> – skriptas Windows sistemai, kuris automatizuoja kompiliavimą ir paleidimą.</li>
 <li><code><a class="el" href="_r_e_a_d_m_e_8md.html">README.md</a></code> – ši naudojimosi instrukcija.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 Dokumentacija</h2>
 <ul>
 <li><code>Dokumentacija.pdf</code> – projekto dokumentacija.</li>
@@ -167,12 +197,233 @@ Dokumentacija</h2>
 <li><code>html/</code> – Doxygen generuota HTML dokumentacija.</li>
 <li><code>latex/</code> – Doxygen generuota LaTeX dokumentacija.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md16"></a>
 Catch2 testavimas</h2>
 <ul>
-<li><code>catch2/</code> – Catch2 testavimo sistema. </li>
+<li><code>catch2/</code> – Catch2 testavimo sistema.</li>
 </ul>
-</div></div><!-- contents -->
+<h2><a class="anchor" id="autotoc_md17"></a>
+Diegimo failai</h2>
+<ul>
+<li><code>setup.exe</code> – paleidžiamasis diegimo failas, kuris pradeda programos įdiegimo procesą (Windows).</li>
+<li><code>setup.msi</code> – pagrindinis diegimo paketas, kuriame yra visa reikalinga informacija ir failai, skirti programos įdiegimui.</li>
+</ul>
+<hr  />
+ <h1><a class="anchor" id="autotoc_md19"></a>
+&mdash;</h1>
+<h1><a class="anchor" id="autotoc_md20"></a>
+**&gt;Testavimo rezultatai (v3.0)&lt;**</h1>
+<p><b>Testavimo sąlygos:</b></p>
+<ul>
+<li>CPU: i7-12700H; 2.70 GHz</li>
+<li>RAM: SODIMM; 16,0 GB</li>
+<li>SSD: Micron_2450; 954 GB</li>
+<li>Optimizavimas: <code>-O3</code></li>
+<li><b>Testavimo metodas:</b> Kiekvienas testas buvo atliekamas kelis kartus (ne mažiau nei tris) ir pateikiami laikų vidurkiai, gauti iš kelių bandymų. Laikai matuojami nuo programos pradžios iki pabaigos, apimant visus ir <code>std::vector</code> ir <code><a class="el" href="class_vector.html">Vector</a></code> veiksmus (skaitymas, skirstymas į grupes, rūšiavimas ir t. t.).</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md21"></a>
+1. <code>std::vector</code> ir <code>Vector</code> klasių spartos palyginimas su skirtingais studentų įrašų kiekiais</h1>
+<h2><a class="anchor" id="autotoc_md22"></a>
+1.1. Naudojant <code>std::vector</code></h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Failas   </th><th class="markdownTableHeadNone">Įrašų kiekis   </th><th class="markdownTableHeadNone">Laikas (s)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">st100000.txt   </td><td class="markdownTableBodyNone">100 000   </td><td class="markdownTableBodyNone">0.805    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">st1000000.txt   </td><td class="markdownTableBodyNone">1 000 000   </td><td class="markdownTableBodyNone">5.809    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">st10000000.txt   </td><td class="markdownTableBodyNone">10 000 000   </td><td class="markdownTableBodyNone">80.505   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md23"></a>
+1.2. Naudojant <code>Vector</code></h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Failas   </th><th class="markdownTableHeadNone">Įrašų kiekis   </th><th class="markdownTableHeadNone">Laikas (s)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">st100000.txt   </td><td class="markdownTableBodyNone">100 000   </td><td class="markdownTableBodyNone">0.725    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">st1000000.txt   </td><td class="markdownTableBodyNone">1 000 000   </td><td class="markdownTableBodyNone">5.850    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">st10000000.txt   </td><td class="markdownTableBodyNone">10 000 000   </td><td class="markdownTableBodyNone">82.105   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md24"></a>
+1.3. Išvada</h2>
+<p>Testavimo rezultatai parodė, kad <code>std::vector</code> ir <code><a class="el" href="class_vector.html">Vector</a></code> klasės pasižymi labai panašiu veikimo greičiu. Nors <code>std::vector</code> šiek tiek lenkia apdorojant labai didelius duomenų kiekius, <code><a class="el" href="class_vector.html">Vector</a></code> klasė taip pat demonstruoja stabilų ir pakankamai greitą veikimą.</p>
+<h1><a class="anchor" id="autotoc_md25"></a>
+2. <code>std::vector</code> ir <code>Vector</code> klasių spartos palyginimas naudojant <code>push_back()</code> funkciją</h1>
+<p>Lentelėje pateikiami rezultatai testų naudojant <code>push_back()</code> funkciją, su skirtingais <code>int</code> elementų kiekiais, taip pat nurodytas atminties realokacijų skaičius, kai vektorius pasiekia maksimalų dydį (100 000 000 elementų).</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Elementų skaičius   </th><th class="markdownTableHeadNone"><code>std::vector</code> laikas (s)   </th><th class="markdownTableHeadNone"><code><a class="el" href="class_vector.html">Vector</a></code> laikas (s)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">10 000   </td><td class="markdownTableBodyNone">0,002   </td><td class="markdownTableBodyNone">0,001    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">100 000   </td><td class="markdownTableBodyNone">0,004   </td><td class="markdownTableBodyNone">0,005    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1 000 000   </td><td class="markdownTableBodyNone">0,010   </td><td class="markdownTableBodyNone">0,020    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">10 000 000   </td><td class="markdownTableBodyNone">0,021   </td><td class="markdownTableBodyNone">0,017    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">100 000 000   </td><td class="markdownTableBodyNone">0,170   </td><td class="markdownTableBodyNone">0,230    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Realloc skaičius   </td><td class="markdownTableBodyNone">25   </td><td class="markdownTableBodyNone">22   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md26"></a>
+2.1. Išvada</h2>
+<p>Nors <code><a class="el" href="class_vector.html">Vector</a></code> klasė kai kuriais atvejais demonstruoja panašų ar net geresnį greitį nei <code>std::vector</code>, bendras našumas vis dėlto rodo, kad <code>std::vector</code> yra stabilesnis ir geriau pritaikytas didelio kiekio duomenų tvarkymui. Tai yra natūralu, atsižvelgiant į tai, kad <code>std::vector</code> yra plačiai optimizuotas ir testuotas sprendimas standartinėje C++ bibliotekoje.</p>
+<details >
+<summary >
+2.2. Naudotas testavimo kodas (spausti čia kad peržiūrėti)</summary>
+<div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sz = 10000000;</div>
+<div class="line"><a class="code hl_class" href="class_timer.html">Timer</a> stdVecTime;</div>
+<div class="line"><span class="keywordtype">int</span> rellacations = 0;</div>
+<div class="line"><span class="keywordtype">size_t</span> prevCapacity = 0;</div>
+<div class="line">std::vector&lt;int&gt; v1;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= sz; ++i) {</div>
+<div class="line">v1.push_back(i);</div>
+<div class="line"><span class="keywordflow">if</span> (v1.capacity() != prevCapacity) {</div>
+<div class="line">++rellacations;</div>
+<div class="line">prevCapacity = v1.capacity();</div>
+<div class="line">} }</div>
+<div class="line">cout &lt;&lt; <span class="stringliteral">&quot;std::vector v1 uzpildymo laikas: &quot;</span> &lt;&lt; stdVecTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>() &lt;&lt; <span class="stringliteral">&quot; sekundziu.&quot;</span> &lt;&lt; endl;</div>
+<div class="line">cout &lt;&lt; <span class="stringliteral">&quot;std::vector v1 relokaciju skaicius: &quot;</span> &lt;&lt; rellacations &lt;&lt; endl;</div>
+<div class="line"><a class="code hl_class" href="class_timer.html">Timer</a> myVecTime;</div>
+<div class="line">rellacations = 0;</div>
+<div class="line">prevCapacity = 0;</div>
+<div class="line"><a class="code hl_class" href="class_vector.html">Vector&lt;int&gt;</a> v2;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= sz; ++i) {</div>
+<div class="line">v2.<a class="code hl_function" href="class_vector.html#a4415960a83615855ec32f8169f641786">push_back</a>(i);</div>
+<div class="line"><span class="keywordflow">if</span> (v2.<a class="code hl_function" href="class_vector.html#ac308b197a3cece867e4d7c73c90d0fe6">capacity</a>() != prevCapacity) {</div>
+<div class="line">++rellacations;</div>
+<div class="line">prevCapacity = v2.<a class="code hl_function" href="class_vector.html#ac308b197a3cece867e4d7c73c90d0fe6">capacity</a>();</div>
+<div class="line">} }</div>
+<div class="line">cout &lt;&lt; <span class="stringliteral">&quot;Vector v2 uzpildymo laikas: &quot;</span> &lt;&lt; myVecTime.<a class="code hl_function" href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">elapsed</a>() &lt;&lt; <span class="stringliteral">&quot; sekundziu.&quot;</span> &lt;&lt; endl;</div>
+<div class="line">cout &lt;&lt; <span class="stringliteral">&quot;Vector v2 relokaciju skaicius: &quot;</span> &lt;&lt; rellacations &lt;&lt; endl;</div>
+<div class="line">system(<span class="stringliteral">&quot;pause&quot;</span>);</div>
+<div class="line">&lt;/details&gt; </div>
+<div class="ttc" id="aclass_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdef"><b>Definition</b> headers.h:26</div></div>
+<div class="ttc" id="aclass_timer_html_a6a89a613c2af9b0d1e5f7e4ba9e46c54"><div class="ttname"><a href="class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54">Timer::elapsed</a></div><div class="ttdeci">double elapsed() const</div><div class="ttdef"><b>Definition</b> headers.h:38</div></div>
+<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdef"><b>Definition</b> vector.h:6</div></div>
+<div class="ttc" id="aclass_vector_html_a4415960a83615855ec32f8169f641786"><div class="ttname"><a href="class_vector.html#a4415960a83615855ec32f8169f641786">Vector::push_back</a></div><div class="ttdeci">void push_back(const T &amp;value)</div><div class="ttdef"><b>Definition</b> vector.h:151</div></div>
+<div class="ttc" id="aclass_vector_html_ac308b197a3cece867e4d7c73c90d0fe6"><div class="ttname"><a href="class_vector.html#ac308b197a3cece867e4d7c73c90d0fe6">Vector::capacity</a></div><div class="ttdeci">int capacity() const noexcept</div><div class="ttdef"><b>Definition</b> vector.h:208</div></div>
+</div><!-- fragment --><p></p>
+</details>
+<h1><a class="anchor" id="autotoc_md27"></a>
+**&gt;Vector klasės funkcijų aprašymas (v3.0)&lt;**</h1>
+<h1><a class="anchor" id="autotoc_md28"></a>
+1.1. Funkcijos pavadinimas</h1>
+<p><code>push_back(const T&amp;)</code></p>
+<h1><a class="anchor" id="autotoc_md29"></a>
+1.2. Funkcijos paskirtis</h1>
+<p>Ši funkcija prideda naują elementą į vektoriaus pabaigą.</p>
+<h1><a class="anchor" id="autotoc_md30"></a>
+1.3. Veikimo principas</h1>
+<p>Jeigu konteinerio talpa yra pakankama, naujas elementas pridedamas į data[size], o size padidinamas vienetu. Jei talpa viršyta, iškviečiamas <code>reserve()</code>, talpa padidinama, sukuriamas naujas masyvas, esami elementai perkeliami, ir tada naujas elementas pridedamas.</p>
+<h1><a class="anchor" id="autotoc_md31"></a>
+1.4. Testavimo pavyzdys</h1>
+<div class="fragment"><div class="line"><a class="code hl_class" href="class_vector.html">Vector&lt;std::string&gt;</a> letters;</div>
+<div class="line">std::vector&lt;std::string&gt; std_letters;</div>
+<div class="line">letters.<a class="code hl_function" href="class_vector.html#a4415960a83615855ec32f8169f641786">push_back</a>(<span class="stringliteral">&quot;abc&quot;</span>);</div>
+<div class="line">std_letters.push_back(<span class="stringliteral">&quot;abc&quot;</span>);</div>
+<div class="line">REQUIRE(letters.<a class="code hl_function" href="class_vector.html#aaf58f4ef9719a4cecab4af45c2ec8ca4">size</a>() == std_letters.size());</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; letters.<a class="code hl_function" href="class_vector.html#aaf58f4ef9719a4cecab4af45c2ec8ca4">size</a>(); ++i) {</div>
+<div class="line">REQUIRE(letters[i] == std_letters[i]);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_vector_html_aaf58f4ef9719a4cecab4af45c2ec8ca4"><div class="ttname"><a href="class_vector.html#aaf58f4ef9719a4cecab4af45c2ec8ca4">Vector::size</a></div><div class="ttdeci">int size() const noexcept</div><div class="ttdef"><b>Definition</b> vector.h:183</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md32"></a>
+2.1. Funkcijos pavadinimas</h1>
+<p><code>pop_back()</code></p>
+<h1><a class="anchor" id="autotoc_md33"></a>
+2.2. Funkcijos paskirtis</h1>
+<p>Pašalina paskutinį elementą iš vektoriaus.</p>
+<h1><a class="anchor" id="autotoc_md34"></a>
+2.3. Veikimo principas</h1>
+<p>Funkcija sumažina <code>size_</code> reikšmę vienetu, efektyviai pašalindama paskutinį elementą. Jei T yra klasė, jos destruktorius turėtų būti iškviestas.</p>
+<h1><a class="anchor" id="autotoc_md35"></a>
+2.4. Testavimo pavyzdys</h1>
+<div class="fragment"><div class="line"><a class="code hl_class" href="class_vector.html">Vector&lt;std::string&gt;</a> pop_back_test{<span class="stringliteral">&quot;one&quot;</span>, <span class="stringliteral">&quot;two&quot;</span>, <span class="stringliteral">&quot;three&quot;</span>};</div>
+<div class="line">std::vector&lt;std::string&gt; std_pop_back{<span class="stringliteral">&quot;one&quot;</span>, <span class="stringliteral">&quot;two&quot;</span>, <span class="stringliteral">&quot;three&quot;</span>};</div>
+<div class="line">pop_back_test.<a class="code hl_function" href="class_vector.html#adcba035109febbe55cba2a25f8483ba6">pop_back</a>();</div>
+<div class="line">std_pop_back.pop_back();</div>
+<div class="line">REQUIRE(pop_back_test.size() == std_pop_back.size());</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; pop_back_test.size(); ++i) {</div>
+<div class="line">REQUIRE(pop_back_test[i] == std_pop_back[i]);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_vector_html_adcba035109febbe55cba2a25f8483ba6"><div class="ttname"><a href="class_vector.html#adcba035109febbe55cba2a25f8483ba6">Vector::pop_back</a></div><div class="ttdeci">void pop_back()</div><div class="ttdef"><b>Definition</b> vector.h:170</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md36"></a>
+3.1. Funkcijos pavadinimas</h1>
+<p><code>resize(int newSize)</code></p>
+<h1><a class="anchor" id="autotoc_md37"></a>
+3.2. Funkcijos paskirtis</h1>
+<p>Keičia vektoriaus dydį į nurodytą <code>newSize</code>.</p>
+<h1><a class="anchor" id="autotoc_md38"></a>
+3.3. Veikimo principas</h1>
+<p>Jeigu <code>newSize</code> yra didesnis nei esamas dydis, vektorius praplečiamas ir nauji elementai inicijuojami T() reikšme. Jei <code>newSize</code> mažesnis – pertekliniai elementai pašalinami.</p>
+<h1><a class="anchor" id="autotoc_md39"></a>
+3.4. Testavimo pavyzdys</h1>
+<div class="fragment"><div class="line"><a class="code hl_class" href="class_vector.html">Vector&lt;int&gt;</a> v;</div>
+<div class="line">REQUIRE(v.<a class="code hl_function" href="class_vector.html#aaf58f4ef9719a4cecab4af45c2ec8ca4">size</a>() == 0);</div>
+<div class="line">REQUIRE(v.<a class="code hl_function" href="class_vector.html#ac308b197a3cece867e4d7c73c90d0fe6">capacity</a>() &gt; 0);</div>
+<div class="line">v.<a class="code hl_function" href="class_vector.html#ac8888474bd70f892899ac561b2d14612">resize</a>(5);</div>
+<div class="line">REQUIRE(v.<a class="code hl_function" href="class_vector.html#aaf58f4ef9719a4cecab4af45c2ec8ca4">size</a>() == 5);</div>
+<div class="line">REQUIRE(v[4] == 0);</div>
+<div class="ttc" id="aclass_vector_html_ac8888474bd70f892899ac561b2d14612"><div class="ttname"><a href="class_vector.html#ac8888474bd70f892899ac561b2d14612">Vector::resize</a></div><div class="ttdeci">void resize(int newSize)</div><div class="ttdef"><b>Definition</b> vector.h:188</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md40"></a>
+4.1. Funkcijos pavadinimas</h1>
+<p><code>operator[](int index)</code></p>
+<h1><a class="anchor" id="autotoc_md41"></a>
+4.2. Funkcijos paskirtis</h1>
+<p>Leidžia prieiti prie elemento pagal jo indeksą.</p>
+<h1><a class="anchor" id="autotoc_md42"></a>
+4.3. Veikimo principas</h1>
+<p>Tikrina, ar indeksas yra galiojantis (0 ≤ index &lt; size), kitu atveju meta išimtį. Grąžina nuorodą į atitinkamą <code>data_</code> masyvo elementą.</p>
+<h1><a class="anchor" id="autotoc_md43"></a>
+4.4. Testavimo pavyzdys</h1>
+<div class="fragment"><div class="line"><a class="code hl_class" href="class_vector.html">Vector&lt;int&gt;</a> numbers{2, 4, 6, 8};</div>
+<div class="line">std::vector&lt;int&gt; std_numbers{2, 4, 6, 8};</div>
+<div class="line">REQUIRE(numbers[1] == 4);</div>
+<div class="line">numbers[0] = 5;</div>
+<div class="line">std_numbers[0] = 5;</div>
+<div class="line">REQUIRE(numbers[0] == 5);</div>
+<div class="line">REQUIRE(std_numbers[0] == 5);</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md44"></a>
+5.1. Funkcijos pavadinimas</h1>
+<p><code>insert(int index, const T&amp; value)</code></p>
+<h1><a class="anchor" id="autotoc_md45"></a>
+5.2. Funkcijos paskirtis</h1>
+<p>Įterpia elementą į pasirinktą poziciją.</p>
+<h1><a class="anchor" id="autotoc_md46"></a>
+5.3. Veikimo principas</h1>
+<p>Jeigu reikia – plečia talpą <code>reserve</code>, po to perkelia visus elementus į dešinę nuo <code>index</code>, įterpia naują reikšmę ir padidina <code>size_</code>.</p>
+<h1><a class="anchor" id="autotoc_md47"></a>
+5.4. Testavimo pavyzdys</h1>
+<div class="fragment"><div class="line"><a class="code hl_class" href="class_vector.html">Vector&lt;int&gt;</a> ins_vec{1, 3, 4};</div>
+<div class="line">std::vector&lt;int&gt; ins_std_vec{1, 3, 4};</div>
+<div class="line">ins_vec.<a class="code hl_function" href="class_vector.html#a4240e459e437ddc89f6b4c2bebfa6bcc">insert</a>(1, 2);</div>
+<div class="line">ins_std_vec.insert(ins_std_vec.begin() + 1, 2);</div>
+<div class="line">REQUIRE(ins_vec.size() == ins_std_vec.size());</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ins_vec.size(); ++i) {</div>
+<div class="line">REQUIRE(ins_vec[i] == ins_std_vec[i]);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_vector_html_a4240e459e437ddc89f6b4c2bebfa6bcc"><div class="ttname"><a href="class_vector.html#a4240e459e437ddc89f6b4c2bebfa6bcc">Vector::insert</a></div><div class="ttdeci">void insert(int index, const T &amp;value)</div><div class="ttdef"><b>Definition</b> vector.h:287</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md48"></a>
+6.1. Funkcijos pavadinimas</h1>
+<p><code>clear()</code></p>
+<h1><a class="anchor" id="autotoc_md49"></a>
+6.2. Funkcijos paskirtis</h1>
+<p>Pašalina visus vektoriaus elementus.</p>
+<h1><a class="anchor" id="autotoc_md50"></a>
+6.3. Veikimo principas</h1>
+<p>Nustato <code>size_ = 0</code>.</p>
+<h1><a class="anchor" id="autotoc_md51"></a>
+6.4. Testavimo pavyzdys</h1>
+<div class="fragment"><div class="line">std::vector&lt;int&gt; clearVec{1, 2, 3};</div>
+<div class="line">REQUIRE(clearVec.size() == 3);</div>
+<div class="line">clearVec.clear();</div>
+<div class="line">REQUIRE(clearVec.size() == 0);</div>
+<div class="line">REQUIRE(clearVec.empty() == <span class="keyword">true</span>);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

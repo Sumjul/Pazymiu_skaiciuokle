@@ -1,12 +1,14 @@
 #include "../include/global.h"
 #include "../include/headers.h"
 #include "../include/student.h"
+#include "../include/vector.h"
 #include "../include/templates.h"
 
 int main()
 {
 	// Uncomment the container you want to use
-	vector<Student> group, failed; group.reserve(maxStud); failed.reserve(maxStud);
+	Vector<Student> group, failed; group.reserve(maxStud); failed.reserve(maxStud);
+	//std::vector<Student> group, failed; group.reserve(maxStud); failed.reserve(maxStud);
 	//deque<Student> group, failed;
 	//list<Student> group, failed;
 

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['calculateaverage_0',['calculateAverage',['../class_student.html#a1dec1372297b03b74868ac35f29558df',1,'Student']]],
-  ['calculatemedian_1',['calculateMedian',['../class_student.html#a9a4ac80e7bec0ec0eacb6b2af8369641',1,'Student']]],
-  ['catch2_20testavimas_2',['Catch2 testavimas',['../md__r_e_a_d_m_e.html#autotoc_md11',1,'']]],
-  ['catch_5fconfig_5fmain_3',['CATCH_CONFIG_MAIN',['../tests_8cpp.html#a656eb5868e824d59f489f910db438420',1,'tests.cpp']]]
+  ['4_201_20funkcijos_20pavadinimas_0',['4.1. Funkcijos pavadinimas',['../md__r_e_a_d_m_e.html#autotoc_md40',1,'']]],
+  ['4_202_20funkcijos_20paskirtis_1',['4.2. Funkcijos paskirtis',['../md__r_e_a_d_m_e.html#autotoc_md41',1,'']]],
+  ['4_203_20veikimo_20principas_2',['4.3. Veikimo principas',['../md__r_e_a_d_m_e.html#autotoc_md42',1,'']]],
+  ['4_204_20testavimo_20pavyzdys_3',['4.4. Testavimo pavyzdys',['../md__r_e_a_d_m_e.html#autotoc_md43',1,'']]],
+  ['4_20testavimo_20pavyzdys_4',['4 Testavimo pavyzdys',['../md__r_e_a_d_m_e.html#autotoc_md31',1,'1.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md35',1,'2.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md39',1,'3.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md43',1,'4.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md47',1,'5.4. Testavimo pavyzdys'],['../md__r_e_a_d_m_e.html#autotoc_md51',1,'6.4. Testavimo pavyzdys']]]
 ];

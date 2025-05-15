@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['elapsed_0',['elapsed',['../class_timer.html#a6a89a613c2af9b0d1e5f7e4ba9e46c54',1,'Timer']]],
-  ['exam_5f_1',['exam_',['../class_student.html#a80d3533857a99f0cbd0b2db851ac697f',1,'Student']]]
+  ['6_201_20funkcijos_20pavadinimas_0',['6.1. Funkcijos pavadinimas',['../md__r_e_a_d_m_e.html#autotoc_md48',1,'']]],
+  ['6_202_20funkcijos_20paskirtis_1',['6.2. Funkcijos paskirtis',['../md__r_e_a_d_m_e.html#autotoc_md49',1,'']]],
+  ['6_203_20veikimo_20principas_2',['6.3. Veikimo principas',['../md__r_e_a_d_m_e.html#autotoc_md50',1,'']]],
+  ['6_204_20testavimo_20pavyzdys_3',['6.4. Testavimo pavyzdys',['../md__r_e_a_d_m_e.html#autotoc_md51',1,'']]]
 ];

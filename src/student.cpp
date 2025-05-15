@@ -2,13 +2,14 @@
 #include "../include/headers.h"
 #include "../include/student.h"
 #include "../include/templates.h"
+#include "../include/vector.h"
 
-// Copy constructor
+/** Copy constructor */
 Student::Student(const Student &other)
 	: Human(other), marks_(other.marks_), exam_(other.exam_),
 	  average_(other.average_), median_(other.median_) {}
 
-// Move constructor
+/** Move constructor */
 Student::Student(Student &&other)
 	: Human(move(other)), marks_(move(other.marks_)), exam_(move(other.exam_)), average_(move(other.average_)), median_(move(other.median_))
 {
@@ -20,7 +21,7 @@ Student::Student(Student &&other)
 	other.median_ = 0;
 }
 
-// Copy assignment operator
+/** Copy assignment operator */
 Student &Student::operator=(const Student &other)
 {
 	if (this == &other)
@@ -34,7 +35,7 @@ Student &Student::operator=(const Student &other)
 	return *this;
 }
 
-// Move assignment operator
+/** Move assignment operator */
 Student &Student::operator=(Student &&other)
 {
 	if (this == &other)
@@ -51,14 +52,14 @@ Student &Student::operator=(Student &&other)
 	return *this;
 }
 
-// Overloaded output operator for Student class
+/** Overloaded output operator for Student class */
 ostream &operator<<(ostream &out, const Student &student)
 {
 	out << left << setw(20) << student.getSurname() << setw(20) << student.getName() << setw(20) << fixed << setprecision(2) << student.getAverage() << setw(20) << fixed << setprecision(2) << student.getMedian() << endl;
 	return out;
 }
 
-// Overloaded input operator for Student class
+/** Overloaded input operator for Student class */
 istream &operator>>(istream &in, Student &student)
 {
 	cout << "Iveskite studento varda: " << endl;
@@ -100,7 +101,7 @@ istream &operator>>(istream &in, Student &student)
 	return in;
 }
 
-// Function that prints the student data to the console.
+/** Function that prints the student data to the console */
 void Student::print() const
 {
 	cout << "Vardas: " << name_ << ", " << "Pavarde: " << surname_ << ", " << "Galutinis (Vid.): " << average_ << ", " << "Galutinis (Med.): " << median_ << ", " << "Egzaminas: " << exam_ << ", " << "Pazymiai: ";
@@ -109,7 +110,7 @@ void Student::print() const
 	cout << endl;
 }
 
-// Function that calculates the average marks of students.
+/** Function that calculates the average marks of students */
 void Student::calculateAverage()
 {
 	if (marks_.empty())
@@ -123,7 +124,7 @@ void Student::calculateAverage()
 	}
 }
 
-// Function that calculates the median marks of students.
+/** Function that calculates the median marks of students */
 void Student::calculateMedian()
 {
 	if (marks_.empty())
@@ -138,7 +139,7 @@ void Student::calculateMedian()
 	}
 }
 
-// Function that reads a line from a file and assigns it to a student.
+/** Function that reads a line from a file and assigns it to a student */
 void Student::readLine(const string &line)
 {
 	istringstream lineStream(line);
@@ -146,7 +147,7 @@ void Student::readLine(const string &line)
 	vector<int> markInput;
 	int mark;
 	while (lineStream >> mark)
-		markInput.emplace_back(mark);
+		markInput.push_back(mark);
 	if (!markInput.empty())
 	{
 		exam_ = markInput.back();

@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['name_5f_0',['name_',['../class_human.html#aae88b7b47fcb48ae282483b89b753927',1,'Human']]],
-  ['names_1',['names',['../headers_8h.html#ae5ef839a3c7e5e57135ff02f06f70a5a',1,'headers.h']]],
-  ['naudojant_20run_20bat_20windows_2',['2. Paleidimas naudojant run.bat (Windows)',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
-  ['naudojimosi_20instrukcija_3',['Programos naudojimosi instrukcija',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['numbercheck_4',['NumberCheck',['../headers_8h.html#a575300a49e319243c7d0ebf158dad3ef',1,'NumberCheck(int min, int max):&#160;functions.cpp'],['../functions_8cpp.html#a575300a49e319243c7d0ebf158dad3ef',1,'NumberCheck(int min, int max):&#160;functions.cpp']]]
+  ['generatefile_0',['GenerateFile',['../templates_8h.html#a77e429e8df265a6b240e9c8e00fa4871',1,'templates.h']]],
+  ['getaverage_1',['getAverage',['../class_student.html#a2b738bfaac4dce882b05dbb056ac327e',1,'Student']]],
+  ['getexam_2',['getExam',['../class_student.html#a9f22f9beb6dfec1d0f2062636180768a',1,'Student']]],
+  ['getmarks_3',['getMarks',['../class_student.html#a93c24954e2f212ce7c78f54744d1e4f9',1,'Student']]],
+  ['getmedian_4',['getMedian',['../class_student.html#aabe9a8bc063b2c52064db1d71f640d66',1,'Student']]],
+  ['getname_5',['getName',['../class_human.html#a69a27e7bc681ed227041ea40e894e401',1,'Human']]],
+  ['getsurname_6',['getSurname',['../class_human.html#aaebff100983c200379f837c9aff67672',1,'Human']]],
+  ['global_2eh_7',['global.h',['../global_8h.html',1,'']]],
+  ['globaltime_8',['globalTime',['../headers_8h.html#a1f1ee98f0c212517e324923358844c70',1,'globalTime:&#160;functions.cpp'],['../functions_8cpp.html#a1f1ee98f0c212517e324923358844c70',1,'globalTime:&#160;functions.cpp']]]
 ];
