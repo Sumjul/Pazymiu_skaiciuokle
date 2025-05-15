@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['name_5f_0',['name_',['../class_human.html#aae88b7b47fcb48ae282483b89b753927',1,'Human']]],
-  ['names_1',['names',['../headers_8h.html#ae5ef839a3c7e5e57135ff02f06f70a5a',1,'headers.h']]]
+  ['globaltime_0',['globalTime',['../headers_8h.html#a1f1ee98f0c212517e324923358844c70',1,'globalTime:&#160;functions.cpp'],['../functions_8cpp.html#a1f1ee98f0c212517e324923358844c70',1,'globalTime:&#160;functions.cpp']]]
 ];

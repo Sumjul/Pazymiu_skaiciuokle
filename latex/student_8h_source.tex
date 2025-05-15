@@ -11,7 +11,6 @@
 \DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_human_aa6632ccd30ebfa087e0d875b2d50340c}{surname\_}};}
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Constructors\ and\ destructor}}
 \DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_human_a2bf21e43ee56b5cd1b9db236a8006de1}{Human}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&name\ =\ \textcolor{stringliteral}{"{}Vardenis"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&surname\ =\ \textcolor{stringliteral}{"{}Pavardenis"{}})}
 \DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_human_aae88b7b47fcb48ae282483b89b753927}{name\_}}(name),\ \mbox{\hyperlink{class_human_aa6632ccd30ebfa087e0d875b2d50340c}{surname\_}}(surname)\ \{\}}
 \DoxyCodeLine{00014\ }
@@ -22,7 +21,6 @@
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_human_aa6632ccd30ebfa087e0d875b2d50340c}{surname\_}}.clear();}
 \DoxyCodeLine{00020\ \ \ \ \ \}}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Getters\ and\ setters}}
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_human_a69a27e7bc681ed227041ea40e894e401}{getName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_human_aae88b7b47fcb48ae282483b89b753927}{name\_}};\ \}}
 \DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_human_aaebff100983c200379f837c9aff67672}{getSurname}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_human_aa6632ccd30ebfa087e0d875b2d50340c}{surname\_}};\ \}}
 \DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_human_ab8f1ed2da6a6dd79f113a48e6dd31eee}{setName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&newName)\ \{\ \mbox{\hyperlink{class_human_aae88b7b47fcb48ae282483b89b753927}{name\_}}\ =\ newName;\ \}}
@@ -39,7 +37,6 @@
 \DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_student_a256a13e51fcbe3b215cf7bd99950c9f9}{average\_}},\ \mbox{\hyperlink{class_student_afafaeb711d9f38f6e876804e0132066c}{median\_}};}
 \DoxyCodeLine{00038\ }
 \DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Constructors\ and\ destructor}}
 \DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_student_ab0566b18e21b62f698cbf4a490c603f7}{Student}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&name\ =\ \textcolor{stringliteral}{"{}Vardenis"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&surname\ =\ \textcolor{stringliteral}{"{}Pavardenis"{}},\ \textcolor{keywordtype}{int}\ exam\ =\ 0)}
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_human_a2bf21e43ee56b5cd1b9db236a8006de1}{Human}}(name,\ surname),\ \mbox{\hyperlink{class_student_a80d3533857a99f0cbd0b2db851ac697f}{exam\_}}(exam),\ \mbox{\hyperlink{class_student_a256a13e51fcbe3b215cf7bd99950c9f9}{average\_}}(0.0),\ \mbox{\hyperlink{class_student_afafaeb711d9f38f6e876804e0132066c}{median\_}}(0.0)\ \{\ \mbox{\hyperlink{class_student_aa6c7acf6b5596a79b5908d31177b55a3}{marks\_}}.reserve(20);\ \}}
 \DoxyCodeLine{00043\ }
@@ -49,19 +46,15 @@
 \DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_student_aa6c7acf6b5596a79b5908d31177b55a3}{marks\_}}.clear();}
 \DoxyCodeLine{00048\ \ \ \ \ \}}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Copy\ constructor\ and\ move\ constructor}}
 \DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_student_ab0566b18e21b62f698cbf4a490c603f7}{Student}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_student}{Student}}\ \&other);}
 \DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_student_ab0566b18e21b62f698cbf4a490c603f7}{Student}}(\mbox{\hyperlink{class_student}{Student}}\ \&\&other);}
 \DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Copy\ assignment\ operator\ and\ move\ assignment\ operator}}
 \DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_student}{Student}}\ \&\mbox{\hyperlink{class_student_ad05dd6148523a2a8b38128b60297b52a}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_student}{Student}}\ \&other);}
 \DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_student}{Student}}\ \&\mbox{\hyperlink{class_student_ad05dd6148523a2a8b38128b60297b52a}{operator=}}(\mbox{\hyperlink{class_student}{Student}}\ \&\&other);}
 \DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Overloaded\ operators\ for\ input\ and\ output}}
 \DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{friend}\ ostream\ \&\mbox{\hyperlink{class_student_adcabc19a4ec95cb8309ea542ccd5710d}{operator<<}}(ostream\ \&out,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_student}{Student}}\ \&student);}
 \DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{friend}\ istream\ \&\mbox{\hyperlink{class_student_ab2e812a6216bf8bd18ed21f3155f4579}{operator>>}}(istream\ \&in,\ \mbox{\hyperlink{class_student}{Student}}\ \&student);}
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Getters\ and\ setters}}
 \DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{const}\ vector<int>\ \&\mbox{\hyperlink{class_student_a93c24954e2f212ce7c78f54744d1e4f9}{getMarks}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_student_aa6c7acf6b5596a79b5908d31177b55a3}{marks\_}};\ \}}
 \DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_student_a9f22f9beb6dfec1d0f2062636180768a}{getExam}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_student_a80d3533857a99f0cbd0b2db851ac697f}{exam\_}};\ \}}
 \DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_student_a2b738bfaac4dce882b05dbb056ac327e}{getAverage}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_student_a256a13e51fcbe3b215cf7bd99950c9f9}{average\_}};\ \}}
@@ -70,7 +63,6 @@
 \DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_aac4c1b512bd0cc6810324279f2a26d23}{addMark}}(\textcolor{keywordtype}{int}\ mark)\ \{\ \mbox{\hyperlink{class_student_aa6c7acf6b5596a79b5908d31177b55a3}{marks\_}}.push\_back(move(mark));\ \}}
 \DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_afe18f0ed8e50682130fb3ebc44f76524}{setExam}}(\textcolor{keywordtype}{int}\ newExam)\ \{\ \mbox{\hyperlink{class_student_a80d3533857a99f0cbd0b2db851ac697f}{exam\_}}\ =\ newExam;\ \}}
 \DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ Functions}}
 \DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_abdbb14cd83ef23c09f811bd1e30ddd4f}{print}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_a1dec1372297b03b74868ac35f29558df}{calculateAverage}}();}
 \DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_a9a4ac80e7bec0ec0eacb6b2af8369641}{calculateMedian}}();}

@@ -1,7 +1,10 @@
 \doxysection{include/templates.h Failo Nuoroda}
 \hypertarget{templates_8h}{}\label{templates_8h}\index{include/templates.h@{include/templates.h}}
-Šis grafas rodo, kuris failas tiesiogiai ar netiesiogiai įtraukia šį failą\+:
+{\ttfamily \#include "{}../include/vector.\+h"{}}\newline
+Įtraukimo priklausomybių diagrama templates.\+h\+:
 % FIG 0
+Šis grafas rodo, kuris failas tiesiogiai ar netiesiogiai įtraukia šį failą\+:
+% FIG 1
 \doxysubsubsection*{Funkcijos}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,9 +33,9 @@ template$<$typename Container$>$ \\
 void Action (\begin{DoxyParamCaption}\item[{Container \&}]{group}{, }\item[{int}]{action}{}\end{DoxyParamCaption})}
 
 Function that asks the user to input data manually or generates it randomly. Funkcijos kvietimo grafas\+:
-% FIG 1
-Here is the caller graph for this function\+:
 % FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
 \Hypertarget{templates_8h_a77e429e8df265a6b240e9c8e00fa4871}\index{templates.h@{templates.h}!GenerateFile@{GenerateFile}}
 \index{GenerateFile@{GenerateFile}!templates.h@{templates.h}}
 \doxysubsubsection{\texorpdfstring{GenerateFile()}{GenerateFile()}}
@@ -41,9 +44,9 @@ template$<$typename Container$>$ \\
 void Generate\+File (\begin{DoxyParamCaption}\item[{Container \&}]{group}{}\end{DoxyParamCaption})}
 
 Function that generates data and writes it to a file. Funkcijos kvietimo grafas\+:
-% FIG 3
-Here is the caller graph for this function\+:
 % FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
 \Hypertarget{templates_8h_a5439dc6cdfd60c4e8e3b30f78cf1a7e6}\index{templates.h@{templates.h}!Output@{Output}}
 \index{Output@{Output}!templates.h@{templates.h}}
 \doxysubsubsection{\texorpdfstring{Output()}{Output()}}
@@ -52,9 +55,9 @@ template$<$typename Container$>$ \\
 void Output (\begin{DoxyParamCaption}\item[{Container \&}]{group}{, }\item[{ostream \&}]{out}{, }\item[{int}]{mark\+Action}{}\end{DoxyParamCaption})}
 
 Function that outputs the results to the console or a file. Funkcijos kvietimo grafas\+:
-% FIG 5
-Here is the caller graph for this function\+:
 % FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
 \Hypertarget{templates_8h_a2a6430f49837fd05ca0cb03d6a0d894f}\index{templates.h@{templates.h}!OutputSeparated@{OutputSeparated}}
 \index{OutputSeparated@{OutputSeparated}!templates.h@{templates.h}}
 \doxysubsubsection{\texorpdfstring{OutputSeparated()}{OutputSeparated()}}
@@ -63,9 +66,9 @@ template$<$typename Container$>$ \\
 void Output\+Separated (\begin{DoxyParamCaption}\item[{Container \&}]{group}{, }\item[{Container \&}]{failed}{}\end{DoxyParamCaption})}
 
 Function that outputs the sorted students to two files. Funkcijos kvietimo grafas\+:
-% FIG 7
-Here is the caller graph for this function\+:
 % FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
 \Hypertarget{templates_8h_afc87868e0f2fe66d3ca3796d0040fa0c}\index{templates.h@{templates.h}!ReadFromFile@{ReadFromFile}}
 \index{ReadFromFile@{ReadFromFile}!templates.h@{templates.h}}
 \doxysubsubsection{\texorpdfstring{ReadFromFile()}{ReadFromFile()}}
@@ -74,9 +77,9 @@ template$<$typename Container$>$ \\
 void Read\+From\+File (\begin{DoxyParamCaption}\item[{Container \&}]{group}{, }\item[{int}]{action}{}\end{DoxyParamCaption})}
 
 Function that reads data from a file. Funkcijos kvietimo grafas\+:
-% FIG 9
-Here is the caller graph for this function\+:
 % FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
 \Hypertarget{templates_8h_a2c289c50f3fc18d1e33264c1e88156c0}\index{templates.h@{templates.h}!SeparateStudents@{SeparateStudents}}
 \index{SeparateStudents@{SeparateStudents}!templates.h@{templates.h}}
 \doxysubsubsection{\texorpdfstring{SeparateStudents()}{SeparateStudents()}}
@@ -85,9 +88,9 @@ template$<$typename Container$>$ \\
 void Separate\+Students (\begin{DoxyParamCaption}\item[{Container \&}]{group}{, }\item[{Container \&}]{failed}{}\end{DoxyParamCaption})}
 
 Function that sorts students into two groups -\/ those who passed and those who failed. Funkcijos kvietimo grafas\+:
-% FIG 11
-Here is the caller graph for this function\+:
 % FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
 \Hypertarget{templates_8h_a0a4042e993dc0128a11c4dd1eed4a391}\index{templates.h@{templates.h}!Sort@{Sort}}
 \index{Sort@{Sort}!templates.h@{templates.h}}
 \doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
@@ -96,6 +99,6 @@ template$<$typename Container$>$ \\
 double Sort (\begin{DoxyParamCaption}\item[{Container \&}]{group}{, }\item[{int \&}]{mark\+Action}{}\end{DoxyParamCaption})}
 
 Function that sorts the students by name, surname or final mark. Funkcijos kvietimo grafas\+:
-% FIG 13
-Here is the caller graph for this function\+:
 % FIG 14
+Here is the caller graph for this function\+:
+% FIG 15

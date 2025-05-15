@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['start_0',['start',['../class_timer.html#ad3c6240154d9bcccb88b701849919822',1,'Timer']]],
-  ['surname_5f_1',['surname_',['../class_human.html#aa6632ccd30ebfa087e0d875b2d50340c',1,'Human']]],
-  ['surnames_2',['surnames',['../headers_8h.html#adb92fb1851e693d79a86b3fe0aa14244',1,'headers.h']]]
+  ['marks_5f_0',['marks_',['../class_student.html#aa6c7acf6b5596a79b5908d31177b55a3',1,'Student']]],
+  ['maxstud_1',['maxStud',['../headers_8h.html#ac04144c4c77c9b058f0e4a3ba25c6b7f',1,'headers.h']]],
+  ['median_5f_2',['median_',['../class_student.html#afafaeb711d9f38f6e876804e0132066c',1,'Student']]]
 ];

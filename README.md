@@ -14,7 +14,7 @@
    - Programa bus įdiegta į katalogą:
 
       ```path
-      C:\Program Files\Vilniaus Universitetas\Julius       Vilkanec\PazymiuSkaiciuokle.exe
+      C:\Program Files\Vilniaus Universitetas\Julius Vilkanec\PazymiuSkaiciuokle.exe
       ```
 
 ---

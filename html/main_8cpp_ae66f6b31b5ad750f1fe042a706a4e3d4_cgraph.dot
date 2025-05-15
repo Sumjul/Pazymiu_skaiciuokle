@@ -59,12 +59,18 @@ digraph "main"
   Node21 [id="Node000021",label="ProgramEnd",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$functions_8cpp.html#a197a3d785a60dfd4ede032bc1c25f77d",tooltip=" "];
   Node1 -> Node22 [id="edge32_Node000001_Node000022",color="steelblue1",style="solid",tooltip=" "];
   Node22 [id="Node000022",label="ReadFromFile",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#afc87868e0f2fe66d3ca3796d0040fa0c",tooltip=" "];
-  Node22 -> Node12 [id="edge33_Node000022_Node000012",color="steelblue1",style="solid",tooltip=" "];
-  Node22 -> Node14 [id="edge34_Node000022_Node000014",color="steelblue1",style="solid",tooltip=" "];
-  Node22 -> Node7 [id="edge35_Node000022_Node000007",color="steelblue1",style="solid",tooltip=" "];
-  Node22 -> Node16 [id="edge36_Node000022_Node000016",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node23 [id="edge37_Node000001_Node000023",color="steelblue1",style="solid",tooltip=" "];
-  Node23 [id="Node000023",label="SeparateStudents",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#a2c289c50f3fc18d1e33264c1e88156c0",tooltip=" "];
-  Node23 -> Node12 [id="edge38_Node000023_Node000012",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node16 [id="edge39_Node000001_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node4 [id="edge33_Node000022_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node5 [id="edge34_Node000022_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node12 [id="edge35_Node000022_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node14 [id="edge36_Node000022_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node7 [id="edge37_Node000022_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node22 -> Node23 [id="edge38_Node000022_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node23 [id="Node000023",label="Student::readLine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_student.html#a40bb708617958d6dbb6fe3f345bfc720",tooltip=" "];
+  Node22 -> Node16 [id="edge39_Node000022_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node24 [id="edge40_Node000001_Node000024",color="steelblue1",style="solid",tooltip=" "];
+  Node24 [id="Node000024",label="Vector::reserve",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_vector.html#a6c85141a95e16b0a5a0ba4b0e508087f",tooltip=" "];
+  Node1 -> Node25 [id="edge41_Node000001_Node000025",color="steelblue1",style="solid",tooltip=" "];
+  Node25 [id="Node000025",label="SeparateStudents",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html#a2c289c50f3fc18d1e33264c1e88156c0",tooltip=" "];
+  Node25 -> Node12 [id="edge42_Node000025_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node16 [id="edge43_Node000001_Node000016",color="steelblue1",style="solid",tooltip=" "];
 }

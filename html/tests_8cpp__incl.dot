@@ -53,4 +53,7 @@ digraph "src/tests.cpp"
   Node24 [id="Node000024",label="../include/student.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$student_8h.html",tooltip=" "];
   Node1 -> Node25 [id="edge24_Node000001_Node000025",color="steelblue1",style="solid",tooltip=" "];
   Node25 [id="Node000025",label="../include/templates.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$templates_8h.html",tooltip=" "];
+  Node25 -> Node26 [id="edge25_Node000025_Node000026",color="steelblue1",style="solid",tooltip=" "];
+  Node26 [id="Node000026",label="../include/vector.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$vector_8h.html",tooltip=" "];
+  Node1 -> Node26 [id="edge26_Node000001_Node000026",color="steelblue1",style="solid",tooltip=" "];
 }

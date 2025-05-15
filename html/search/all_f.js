@@ -1,15 +1,10 @@
 var searchData=
 [
-  ['paleidimas_0',['🔧 Projekto paruošimas ir paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
-  ['paleidimas_20jei_20reikia_1',['Alternatyvus rankinis paleidimas (jei reikia)',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]],
-  ['paleidimas_20naudojant_20run_20bat_20windows_2',['2. Paleidimas naudojant run.bat (Windows)',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
-  ['paruošimas_3',['1. Projekto failų paruošimas',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
-  ['paruošimas_20ir_20paleidimas_4',['🔧 Projekto paruošimas ir paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
-  ['print_5',['print',['../class_human.html#ac3adff9d2f933933d46a697f5b824913',1,'Human::print()'],['../class_student.html#abdbb14cd83ef23c09f811bd1e30ddd4f',1,'Student::print()']]],
-  ['processexception_6',['ProcessException',['../headers_8h.html#a659705bbc72f1a795a961d7030a443ee',1,'ProcessException():&#160;functions.cpp'],['../functions_8cpp.html#a659705bbc72f1a795a961d7030a443ee',1,'ProcessException():&#160;functions.cpp']]],
-  ['programend_7',['ProgramEnd',['../headers_8h.html#a197a3d785a60dfd4ede032bc1c25f77d',1,'ProgramEnd():&#160;functions.cpp'],['../functions_8cpp.html#a197a3d785a60dfd4ede032bc1c25f77d',1,'ProgramEnd():&#160;functions.cpp']]],
-  ['programos_20naudojimosi_20instrukcija_8',['Programos naudojimosi instrukcija',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['projekto_20failų_20paruošimas_9',['1. Projekto failų paruošimas',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
-  ['projekto_20paruošimas_20ir_20paleidimas_10',['🔧 Projekto paruošimas ir paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
-  ['projekto_20struktūra_11',['📁 Projekto struktūra',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'']]]
+  ['išvada_0',['Išvada',['../md__r_e_a_d_m_e.html#autotoc_md24',1,'1.3. Išvada'],['../md__r_e_a_d_m_e.html#autotoc_md26',1,'2.1. Išvada']]],
+  ['insert_1',['insert',['../class_vector.html#a4240e459e437ddc89f6b4c2bebfa6bcc',1,'Vector']]],
+  ['instrukcija_2',['&gt; Programos diegimo instrukcija &lt;',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['ir_20paleidimas_3',['🔧 Projekto paruošimas ir paleidimas',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'']]],
+  ['ir_20tt_20vector_20tt_20klasių_20spartos_20palyginimas_20naudojant_20tt_20push_5fback_20tt_20funkciją_4',['2. &lt;tt&gt;std::vector&lt;/tt&gt; ir &lt;tt&gt;Vector&lt;/tt&gt; klasių spartos palyginimas naudojant &lt;tt&gt;push_back()&lt;/tt&gt; funkciją',['../md__r_e_a_d_m_e.html#autotoc_md25',1,'']]],
+  ['ir_20tt_20vector_20tt_20klasių_20spartos_20palyginimas_20su_20skirtingais_20studentų_20įrašų_20kiekiais_5',['1. &lt;tt&gt;std::vector&lt;/tt&gt; ir &lt;tt&gt;Vector&lt;/tt&gt; klasių spartos palyginimas su skirtingais studentų įrašų kiekiais',['../md__r_e_a_d_m_e.html#autotoc_md21',1,'']]],
+  ['iterator_6',['iterator',['../class_vector.html#ae799ef0cafb593f479d0f29252bcf260',1,'Vector']]]
 ];

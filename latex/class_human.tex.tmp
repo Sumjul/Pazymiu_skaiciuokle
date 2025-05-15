@@ -44,7 +44,7 @@ Base class for human data
 {\footnotesize\ttfamily \label{class_human_a2bf21e43ee56b5cd1b9db236a8006de1} 
 Human\+::\+Human (\begin{DoxyParamCaption}\item[{const string \&}]{name}{ = {\ttfamily "{}Vardenis"{}}, }\item[{const string \&}]{surname}{ = {\ttfamily "{}Pavardenis"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the caller graph for this function\+:
+Constructors and destructor Here is the caller graph for this function\+:
 % FIG 1
 \Hypertarget{class_human_a9224ffb7aa2ecb9456d7ed156b616013}\index{Human@{Human}!````~Human@{\texorpdfstring{$\sim$}{\string~}Human}}
 \index{````~Human@{\texorpdfstring{$\sim$}{\string~}Human}!Human@{Human}}
@@ -61,7 +61,7 @@ virtual Human\+::\texorpdfstring{$\sim$}{\string~}\+Human (\begin{DoxyParamCapti
 {\footnotesize\ttfamily \label{class_human_a69a27e7bc681ed227041ea40e894e401} 
 string Human\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the caller graph for this function\+:
+Getters and setters Here is the caller graph for this function\+:
 % FIG 2
 \Hypertarget{class_human_aaebff100983c200379f837c9aff67672}\index{Human@{Human}!getSurname@{getSurname}}
 \index{getSurname@{getSurname}!Human@{Human}}
