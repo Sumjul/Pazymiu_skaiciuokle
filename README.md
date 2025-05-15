@@ -1,6 +1,44 @@
-# > Programos naudojimosi instrukcija <
+# > Programos diegimo instrukcija <
+
+**Ši programa pateikiama kaip diegiamasis failas `setup.exe`, kurį galite paleisti ir sekti paprastais žingsniais, kad sėkmingai įdiegtumėte ją savo kompiuteryje.**
+
+## ✅ Diegimo žingsniai
+
+1. Atsisiųskite ir **paleiskite failą `setup.exe`** (du kartus spustelėkite).
+
+2. Vykdykite ekrane rodomas instrukcijas, kol diegimas bus baigtas.
+
+3. Po sėkmingo diegimo:
+   - **Darbalaukyje** (Desktop) atsiras programos **sutrumpinimas** (shortcut),
+   - Taip pat programą rasite per **Pradžios meniu** (Start Menu),
+   - Programa bus įdiegta į katalogą:
+
+      ```path
+      C:\Program Files\Vilniaus Universitetas\Julius       Vilkanec\PazymiuSkaiciuokle.exe
+      ```
+
+---
+
+## ▶️ Programos paleidimas
+
+Programą galite paleisti dviem būdais:
+
+- Spustelėkite **sutrumpinimą (shortcut)** darbalaukyje arba per **Pradžios meniu** (Start Menu).
+- Arba atverkite programos katalogą rankiniu būdu:
+
+```path
+C:\Program Files\Vilniaus Universitetas\Julius Vilkanec\PazymiuSkaiciuokle.exe
+ ```
+
+## ℹ️ Tolimesni žingsniai
+
+Kai programa bus atidaryta, vadovaukitės jos pateikiamomis instrukcijomis ekrane. Viskas paruošta darbui!
 
 Šis projektas naudoja CMake kompiliavimui ir yra suskirstytas pagal aiškią struktūrą su `include/` ir `src/` katalogais.
+
+## > **Programos paleidimas naudojant CmakeLists** <
+
+**Tai yra **alternatyvus būdas** paleisti programos exe failą.**
 
 ## ✅ Reikalavimai
 
@@ -77,6 +115,11 @@ Jeigu reikia paleisti testus:
 ### Catch2 testavimas
 
 - `catch2/` – Catch2 testavimo sistema.
+
+### Diegimo failai
+
+- `setup.exe` – paleidžiamasis diegimo failas, kuris pradeda programos įdiegimo procesą (Windows).
+- `setup.msi` – pagrindinis diegimo paketas, kuriame yra visa reikalinga informacija ir failai, skirti programos įdiegimui.
 
 ---
 ---

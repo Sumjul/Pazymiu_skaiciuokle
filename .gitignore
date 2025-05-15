@@ -1,9 +1,8 @@
-*.exe
-*.txt
-!CMakeLists.txt
-!st10000.txt
-!st100000.txt
-.qodo
-*.qodo
+main.exe
+tests.exe
+st1000.txt
+st10000.txt
+st100000.txt
+st1000000.txt
+st10000000.txt
 .vscode
-*.json
